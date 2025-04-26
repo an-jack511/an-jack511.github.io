@@ -2,12 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:6173/</loc>
+    <loc>https://an-jack511.github.io/</loc>
+    <lastmod>2025-04-26T19:47:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:6173/archives/</loc>
+    <loc>https://an-jack511.github.io/posts/</loc>
+    <lastmod>2025-04-26T19:47:50+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:6173/categories/</loc>
+    <loc>https://an-jack511.github.io/tags/blog/</loc>
+    <lastmod>2025-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:6173/tags/</loc>
+    <loc>https://an-jack511.github.io/posts/hugo%E8%AF%95%E8%BF%90%E8%A1%8C/</loc>
+    <lastmod>2025-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://an-jack511.github.io/tags/</loc>
+    <lastmod>2025-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://an-jack511.github.io/archives/</loc>
+  </url><url>
+    <loc>https://an-jack511.github.io/categories/</loc>
   </url>
 </urlset>
