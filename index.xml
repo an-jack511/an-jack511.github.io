@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AnJaCk</title>
-    <link>https://an-jack511.github.io/blog/</link>
+    <link>https://an-jack511.github.io/</link>
     <description>Recent content on AnJaCk</description>
     <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 26 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://an-jack511.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://an-jack511.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo试运行</title>
-      <link>https://an-jack511.github.io/blog/posts/hugo%E8%AF%95%E8%BF%90%E8%A1%8C/</link>
+      <link>https://an-jack511.github.io/posts/hugo%E8%AF%95%E8%BF%90%E8%A1%8C/</link>
       <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://an-jack511.github.io/blog/posts/hugo%E8%AF%95%E8%BF%90%E8%A1%8C/</guid>
+      <guid>https://an-jack511.github.io/posts/hugo%E8%AF%95%E8%BF%90%E8%A1%8C/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/an-jack511/blogIMG/main/myimg/202504262031152.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;test test tesst1!!&#xA;fadfadfadfadf&lt;/p&gt;</description>
     </item>
   </channel>
