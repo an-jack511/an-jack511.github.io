@@ -28,7 +28,7 @@ googleAnalytics = "Toracking ID"
   name = "An_Jack"
   # Gravatar or Abatar image
   # gravatar = "Gravatar email or MD5 Hash"
-  avatar = "X://DOCUMENTS_OTHERS//MyBlog//repo//avatar.jpg"
+  avatar = "avatar.jpg"
   
 
 [[params.author.social]]
