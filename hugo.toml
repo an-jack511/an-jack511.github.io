@@ -21,7 +21,7 @@ googleAnalytics = "Toracking ID"
   # whether to include external sharing scripts and icons for twitter, facebook and co.
   #showShareIcons = false
   # Date format
-  #dateFormat = "2006-01-02"
+  dateFormat = "2006-01-02"
 
 # This is displayer in About page.
 [params.author]
