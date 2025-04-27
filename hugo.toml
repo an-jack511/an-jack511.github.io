@@ -3,7 +3,7 @@ title = "AnJaCk"
 theme = "whiteplain"
 languageCode = "en"
 # Disqus shortname
-disqusShortname = "Shortname"
+# disqusShortname = "Shortname"
 # google analytics tracking id
 googleAnalytics = "Toracking ID"
 
@@ -29,7 +29,6 @@ googleAnalytics = "Toracking ID"
   # Gravatar or Abatar image
   # gravatar = "Gravatar email or MD5 Hash"
   avatar = "avatar.jpg"
-  
 
 [[params.author.social]]
   name = "知乎"
