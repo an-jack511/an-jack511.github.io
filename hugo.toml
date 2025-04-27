@@ -1,6 +1,5 @@
-baseURL = 'https://an-jack511.github.io/'
-languageCode = 'en-us'
-title = 'AnJaCk'
+baseurl = 'https://an-jack511.github.io/'
+title = "AnJaCk"
 theme = "whiteplain"
 languageCode = "en"
 # Disqus shortname
@@ -9,7 +8,12 @@ disqusShortname = "Shortname"
 googleAnalytics = "Toracking ID"
 
 # Copyright notice. This is displayer in the footer.
-copyright = "&copy; Copyright 2017 Your name"
+# copyright = "&copy; Copyright 2017 Your name"
+
+[languages]
+  [languages.zh]
+    languageName = "zh"
+    weight = 2
 
 [params]
   # whether to use CDN or local file for fontawesome
@@ -17,41 +21,45 @@ copyright = "&copy; Copyright 2017 Your name"
   # whether to include external sharing scripts and icons for twitter, facebook and co.
   #showShareIcons = false
   # Date format
-  #dateFormat = "January 2, 2006"
+  #dateFormat = "2006-01-02"
 
 # This is displayer in About page.
 [params.author]
-  name = "Your name"
+  name = "An_Jack"
   # Gravatar or Abatar image
   gravatar = "Gravatar email or MD5 Hash"
-  #avatar = "/path/to/avatar"
+  avatar = "X://DOCUMENTS_OTHERS//MyBlog//repo//avatar.jpg"
+  
+
+[[params.author.social]]
+  name = "知乎"
+  url = "https://www.zhihu.com/people/an-jack511"
+
+[[params.author.social]]
+  name = "B站"
+  url = "https://space.bilibili.com/398661867"
 
 [taxonomies]
   category = "categories"
   tag = "tags"
-  series = "series"
+  archive = "archives"
 
 # Header Menu
 [[menu.main]]
-  name = "Categories"
+  name = "分类"
   identifier = "categories"
   url = "/categories/"
   weight = 1
 [[menu.main]]
-  name = "Tags"
+  name = "标签"
   identifier = "tags"
   url = "/tags/"
   weight = 2
 [[menu.main]]
-  name = "Archives"
+  name = "开发"
   identifier = "archives"
   url = "/archives/"
   weight = 3
-[[menu.main]]
-  name = "About"
-  identifier = "about"
-  url = "/about/"
-  weight = 4
 
 # Footer Menu
 [[menu.footer]]
