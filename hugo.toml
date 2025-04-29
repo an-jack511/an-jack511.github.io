@@ -38,6 +38,10 @@ googleAnalytics = "Toracking ID"
   name = "B站"
   url = "https://space.bilibili.com/398661867"
 
+[params.shareButtons]
+  size = "small"
+  networks = []
+
 [taxonomies]
   category = "categories"
   tag = "tags"
