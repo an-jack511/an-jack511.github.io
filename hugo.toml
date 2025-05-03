@@ -58,11 +58,11 @@ googleAnalytics = "Toracking ID"
   identifier = "tags"
   url = "/tags/"
   weight = 2
-[[menu.main]]
-  name = "开发"
-  identifier = "archives"
-  url = "/archives/"
-  weight = 3
+# [[menu.main]]
+#  name = "开发"
+#  identifier = "archives"
+#  url = "/archives/"
+#  weight = 3
 
 # Footer Menu
 [[menu.footer]]
