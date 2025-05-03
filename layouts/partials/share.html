@@ -1,12 +1,12 @@
-{{- if .Site.Params.showShareIcons | default false }}
+{{- if .Site.Params.showShareIcons | default true }}
 <ul class="article-share">
   <!-- Sharingbutton Facebook -->
-  <!-- <li>
+  <li>
     <a class="resp-sharing-button__link" href="{{ replace (.Permalink | absURL) "%" "%25" | printf "https://facebook.com/sharer/sharer.php?u=%s" | safeURL }}" target="_blank" rel="noopener" aria-label="Facebook">
       <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--medium"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
         <i class="fa-brands fa-facebook-f"></i></div>Facebook</div>
     </a>
-  </li> -->
+  </li>
 
   <!-- Sharingbutton Twitter -->
   <!-- <li>
@@ -17,11 +17,11 @@
   </li> -->
 
   <!-- Sharingbutton X -->
-  <!-- <li>
+  <li>
     <a class="resp-sharing-button__link" href="{{ printf "https://x.com/intent/tweet/?text=%s - %s&url=%s" (.Title | safeURL) (.Site.Title | safeURL) (replace (.Permalink | absURL) "%" "%25") | safeURL }}" target="_blank" rel="noopener" aria-label="Twitter">
       <div class="resp-sharing-button resp-sharing-button--x resp-sharing-button--medium"><i class="fa-brands fa-x-twitter"></i></div>
     </a>
-  </li> -->
+  </li>
 
   <!-- Sharingbutton Bluesky -->
   <!-- <li>

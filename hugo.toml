@@ -59,7 +59,7 @@ googleAnalytics = "Toracking ID"
   url = "/tags/"
   weight = 2
 [[menu.main]]
-  name = "开发"
+  name = "归档"
   identifier = "archives"
   url = "/archives/"
   weight = 3
