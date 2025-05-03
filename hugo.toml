@@ -45,7 +45,7 @@ googleAnalytics = "Toracking ID"
 [taxonomies]
   category = "categories"
   tag = "tags"
-  archive = "archives"
+  series = "series"
 
 # Header Menu
 [[menu.main]]
