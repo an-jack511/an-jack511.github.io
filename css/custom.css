@@ -1,6 +1,6 @@
 /* 禁用所有链接的访问状态变化 */
 a:visited {
-    color: inherit !important; /* 继承父元素颜色 */
+    color: blue !important; /* 继承父元素颜色 */
     text-decoration: none !important;
     pointer-events: none !important; /* 禁用点击事件 */
 }
