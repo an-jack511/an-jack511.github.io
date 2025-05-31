@@ -44,15 +44,18 @@
         {{- if .Params.image }}
         <a href="{{ .Permalink | relURL }}"><img src="{{ .Params.image }}" class="article-image" /></a>
         {{- end }}
-        <div class="article-content">
-          {{- if .Truncated }}
-          {{ .Summary }}
-          {{- else }}
-          {{ .Content }}
-          {{- end }}
+        <div class="post-summary">
+          {{ if .Params.summary }}
+            {{ .Params.summary | markdownify }}
+          {{ else }}
+            {{ .Summary | truncate 150 }}
+          {{ end }}
         </div>
-        <div class="article-readmore"><a href="{{ .Permalink | relURL }}">Read more...</a></div>
-        <div class="article-floatclear"></div>
+      
+      <!-- 阅读更多按钮 -->
+        <div class="read-more">
+          <a href="{{ .RelPermalink }}">阅读全文 →</a>
+        </div>
       </article>
       {{- end }}
     </section>

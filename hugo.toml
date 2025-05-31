@@ -23,6 +23,8 @@ googleAnalytics = "Toracking ID"
   # Date format
   dateFormat = "2006-01-02"
   customCSS = ["css/custom.css"] # 加载自定义样式
+  summaryLength = 150 # 摘要字符数（约150字符）
+  showFullContent = false # 不在首页显示全文
   
 # This is displayer in About page.
 [params.math]
