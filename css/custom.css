@@ -91,3 +91,49 @@ article img:hover {
     max-width: 100%; /* 小屏幕图片全宽 */
   }
 }
+
+/* 摘要容器 */
+.post-summary {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-height: 8.9em; /* 限制为3行高度 */
+  overflow: hidden;
+  position: relative;
+}
+
+/* 渐变遮罩效果 */
+/* .post-summary::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+} */
+
+/* 阅读更多按钮 */
+.read-more {
+  text-align: right;
+  font-size: 0.9em;
+}
+
+.read-more a {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed #3498db;
+}
+
+@media (max-width: 768px) {
+  .post-summary {
+    max-height: 4.2em; /* 减少移动端显示行数 */
+    font-size: 0.9em;
+  }
+  
+  .read-more {
+    font-size: 0.85em;
+  }
+}
