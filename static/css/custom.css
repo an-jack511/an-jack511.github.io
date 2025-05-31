@@ -91,10 +91,3 @@ article img:hover {
     max-width: 100%; /* 小屏幕图片全宽 */
   }
 }
-
-.container {
-  max-width: 1200px; /* 原主题通常为 800-1000px */
-  width: 90%; /* 在超大屏幕上保持边距 */
-  margin: 0 auto;
-  padding: 0 20px;
-}
