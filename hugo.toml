@@ -24,6 +24,10 @@ googleAnalytics = "Toracking ID"
   dateFormat = "2006-01-02"
 
 # This is displayer in About page.
+[params.math]
+  enable = true
+  provider = "mathjax"
+
 [params.author]
   name = "An_Jack"
   # Gravatar or Abatar image
