@@ -5,20 +5,19 @@
 &lt;p>其中一次回来后突然向我们说“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。&lt;/p>
 &lt;h2 id="参数方程">参数方程&lt;/h2>
 &lt;p>$$
-\left{
-\begin{aligned}
-x = f(t) \ y = g(t)
-\end{aligned}
-\right.
+\begin{cases}
+x = f(t) \\ y = g(t)
+\end{cases}
 $$&lt;/p>
 &lt;p>参数方程的切线：&lt;/p>
 &lt;p>$$
 \begin{aligned}
-l_{\text{at} \ (x(t), y(t))}: y - g(t) &amp;amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\
-&amp;amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\
+l_{\text{at} \ (x(t), y(t))}: y - g(t) &amp;amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\\
+&amp;amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\\
 &amp;amp;= \frac{g&amp;rsquo;(t)}{f&amp;rsquo;(t)}(x - f(t))
 \end{aligned}
-\
+$$&lt;/p>
+&lt;p>$$
 \color{red} l_{\text{at} \ (x(t), y(t))}: f&amp;rsquo;(t)(y - g(t)) = g&amp;rsquo;(t)(x - f(t))
 $$&lt;/p>
 &lt;h2 id="极坐标-rho-theta">极坐标 $(\rho, \theta)$&lt;/h2>
