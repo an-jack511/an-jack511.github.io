@@ -1,0 +1,87 @@
+/* ========================
+   全局字体放大
+   ======================== */
+body {
+  font-size: 18px; /* 基础字体大小 */
+  line-height: 1.75; /* 增加行高提升可读性 */
+}
+
+/* 标题放大 */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 2.0rem;
+  margin-bottom: 1.0rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.9rem;
+}
+
+/* 正文内容放大 */
+article p {
+  font-size: 1.1em; /* 相对基础字体放大10% */
+  margin-bottom: 1.2rem;
+}
+
+/* 列表项放大 */
+article ul, article ol {
+  font-size: 1.1em;
+}
+
+/* 代码块放大 */
+pre, code {
+  font-size: 0.95em; /* 代码保持原大小或微调 */
+}
+
+/* ========================
+   图片缩小与优化
+   ======================== */
+/* 内容区域图片 */
+article img {
+  max-width: 75%; /* 图片最大宽度为容器75% */
+  height: auto; /* 保持比例 */
+  display: block; /* 居中显示 */
+  margin: 1.5rem auto; /* 上下边距 */
+  border-radius: 6px; /* 圆角效果 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 柔和阴影 */
+  transition: transform 0.3s ease; /* 悬停动画 */
+}
+
+/* 图片悬停效果 */
+article img:hover {
+  transform: scale(1.02); /* 轻微放大 */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* 文章封面图调整 */
+.post-cover img {
+  max-width: 85%; /* 封面图稍大 */
+}
+
+/* 响应式调整：移动设备 */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* 移动端字体略小 */
+  }
+  
+  article img {
+    max-width: 95%; /* 移动端图片几乎全宽 */
+    margin: 1rem auto;
+  }
+}
+
+/* 小屏幕设备优化 */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  article img {
+    max-width: 100%; /* 小屏幕图片全宽 */
+  }
+}

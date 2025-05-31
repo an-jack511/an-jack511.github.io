@@ -22,7 +22,8 @@ googleAnalytics = "Toracking ID"
   #showShareIcons = false
   # Date format
   dateFormat = "2006-01-02"
-
+  customCSS = ["css/custom.css"] # 加载自定义样式
+  
 # This is displayer in About page.
 [params.math]
   enable = true
@@ -74,3 +75,12 @@ googleAnalytics = "Toracking ID"
   weight = 1
   identifier = "about"
   url = "/about/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许原始 HTML/LaTeX
+
+  [markup.math]
+    enable = true
+    provider = "mathjax"  # 或 "katex"  
