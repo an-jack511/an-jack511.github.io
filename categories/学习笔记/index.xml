@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学习笔记 on AnJaCk</title><link>https://an-jack511.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><description>Recent content in 学习笔记 on AnJaCk</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sat, 31 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://an-jack511.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>廿五年端午一周与参数方程和极坐标</title><link>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88-250531/</link><pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88-250531/</guid><description>&lt;p>随感集以后权当周记好了，大概每周一篇的频率。&lt;/p>
+&lt;p>语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。&lt;/p>
+&lt;p>周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。&lt;/p>
+&lt;p>昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。&lt;/p>
+&lt;p>其中一次回来后突然向我们说“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。&lt;/p>
+&lt;h2 id="参数方程">参数方程&lt;/h2>
+&lt;p>$$
+\left{
+\begin{aligned}
+x = f(t) \ y = g(t)
+\end{aligned}
+\right.
+$$&lt;/p>
+&lt;p>参数方程的切线：&lt;/p>
+&lt;p>$$
+\begin{aligned}
+l_{\text{at} \ (x(t), y(t))}: y - g(t) &amp;amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\
+&amp;amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\
+&amp;amp;= \frac{g&amp;rsquo;(t)}{f&amp;rsquo;(t)}(x - f(t))
+\end{aligned}
+\
+\color{red} l_{\text{at} \ (x(t), y(t))}: f&amp;rsquo;(t)(y - g(t)) = g&amp;rsquo;(t)(x - f(t))
+$$&lt;/p>
+&lt;h2 id="极坐标-rho-theta">极坐标 $(\rho, \theta)$&lt;/h2>
+&lt;p>应用圆锥曲线的第二定义，假设圆锥曲线上的点 $A(x, y)$：&lt;/p>
+&lt;p>$$
+\frac{d(A, F(-c, 0))}{d(A, l: x = -\frac{a^2}{c})} = e
+$$&lt;/p></description></item></channel></rss>
