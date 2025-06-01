@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>记事 on AnJaCk</title><link>https://an-jack511.github.io/tags/%E8%AE%B0%E4%BA%8B/</link><description>Recent content in 记事 on AnJaCk</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://an-jack511.github.io/tags/%E8%AE%B0%E4%BA%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>混乱的一天</title><link>https://an-jack511.github.io/posts/2025-4/%E9%9A%8F%E6%84%9F%E9%9B%86-%E6%B7%B7%E4%B9%B1%E7%9A%84%E4%B8%80%E5%A4%A9-250430/</link><pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-4/%E9%9A%8F%E6%84%9F%E9%9B%86-%E6%B7%B7%E4%B9%B1%E7%9A%84%E4%B8%80%E5%A4%A9-250430/</guid><description>&lt;p>我轻轻的穿过图书馆的走廊，和宿舍长在初中楼里绕了两圈。HLS 告诉我，我们班的披萨是被高一九班拿走的。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>记事 on AnJaCk</title><link>https://an-jack511.github.io/tags/%E8%AE%B0%E4%BA%8B/</link><description>Recent content in 记事 on AnJaCk</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sat, 31 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://an-jack511.github.io/tags/%E8%AE%B0%E4%BA%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>廿五年端午一周与参数方程和极坐标</title><link>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</link><pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</guid><description>&lt;p>随感集以后权当周记好了，大概每周一篇的频率。&lt;/p>
+&lt;p>语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。&lt;/p>
+&lt;p>周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。&lt;/p>
+&lt;p>昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。&lt;/p>
+&lt;p>其中一次回来后突然向我们说：“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。&lt;/p>
+&lt;p>upd on 6.1：儿童节，和爸妈去看了《碟中谍8：最终清算》。打斗戏和大场面少了点，不够爽，但是质量都挺高的。至于剧情……无所谓了，依旧是魔戒——夺宝奇兵模板，找东西，灭反派。又糅了进去点智械危机的玩意，虽然我对智械危机挺无感的。但谁在乎剧情呢，反正阿汤哥扒飞机挺帅的。背景感情戏啥的我低头就好了，也没有必要指责啥的，总有人喜欢，也有人觉得好。我只看我觉得爽快的地方就好了。&lt;/p>
+&lt;h2 id="参数方程">参数方程&lt;/h2>
+&lt;p>$$
+\begin{cases}
+x = f(t) \\ y = g(t)
+\end{cases}
+$$&lt;/p>
+&lt;p>参数方程的切线：&lt;/p>
+&lt;p>$$
+\begin{aligned}
+l_{\text{at} \ (x(t), y(t))}: y - g(t) &amp;amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\\
+&amp;amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\\
+&amp;amp;= \frac{g&amp;rsquo;(t)}{f&amp;rsquo;(t)}(x - f(t))
+\end{aligned}
+$$&lt;/p>
+&lt;p>$$
+\color{red} l_{\text{at} \ (x(t), y(t))}: f&amp;rsquo;(t)(y - g(t)) = g&amp;rsquo;(t)(x - f(t))
+$$&lt;/p>
+&lt;h3 id="内摆线与星形线">内摆线与星形线&lt;/h3>
+&lt;p>当小圆在大圆内滚动，小圆上一点轨迹所成图形称为 &lt;strong>内摆线&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250531205002.png" alt="20250531205002">&lt;/p>
+&lt;p>结合上图，设小圆半径 $r$，大圆半径 $R$，$\angle AOB = \alpha, \angle PQB = \beta$. 当 $P(x, y)$ 从 $A$ 点开始滚动时，我们有以下方程成立：&lt;/p></description></item><item><title>学生节等等</title><link>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%AD%A6%E7%94%9F%E8%8A%82%E7%AD%89%E7%AD%89-250524/</link><pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%AD%A6%E7%94%9F%E8%8A%82%E7%AD%89%E7%AD%89-250524/</guid><description>&lt;p>天气不错，班级摊位在树荫下，空气很温和。昨夜睡得不太好，因为夜赶了几道校史小问题（第二天发现出的过于难了），所以有些困。但是稍微捎带一点困倦的状态也别有感觉，时间流逝得很慢，没有精力去细致地逛展，免去了一些徒增的消耗，虽然大家的产品与活动都设计得很好。反而能够随意地、漫无目的地在校园里逛逛，享受氛围感，大家热热闹闹地。&lt;/p>
+&lt;p>阳光不是很强烈，所以逛起来没什么体力上的压力，找了幸老师作伴，聊了聊天，不是很无聊。ZJ 瞒天过海，整了套初音未来的行当，回到班里看到背影霎时没有认出来，惊叹。在班里和大家说了会儿话，很闲适。曾建川来了我们就溜走了，然后又被发送回来布置考场，姑娘们把教室当成了卡拉OK，在唱歌，大声发笑。下楼倚靠在红墙上，默默看一会儿偶研社的coser跳舞，活力四射，很羡慕他们的热情。&lt;/p>
+&lt;p>去体育馆做志愿者搬了两三趟桌椅，电声乐队在耳侧整了曲河北墨麒麟和唐朝的国际歌，跟劳动号子一样，干活还是挺爽的。&lt;/p>
+&lt;p>前面两周过的有些累，不知道为什么，预备学生节的小东西挺烦人的，最近我戾气很重。&lt;/p></description></item><item><title>混乱的一天</title><link>https://an-jack511.github.io/posts/2025-4/%E9%9A%8F%E6%84%9F%E9%9B%86-%E6%B7%B7%E4%B9%B1%E7%9A%84%E4%B8%80%E5%A4%A9-250430/</link><pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-4/%E9%9A%8F%E6%84%9F%E9%9B%86-%E6%B7%B7%E4%B9%B1%E7%9A%84%E4%B8%80%E5%A4%A9-250430/</guid><description>&lt;p>我轻轻的穿过图书馆的走廊，和宿舍长在初中楼里绕了两圈。HLS 告诉我，我们班的披萨是被高一九班拿走的。&lt;/p>
 &lt;p>我们在辩解与返回，返回与争论之中徘徊着……&lt;/p>
 &lt;p>我试图平抚同学们，虽然无人注意。我周旋在同学们的愤恨的臂膀间，用一些无关紧要的话语，只是为了维持一点体面。然而在大家脆弱的情绪面前，只有声声吼叫，此起彼伏，令我昏昏。我试图包容着大家的暴怒，尤其在这样一个误会之中。我试图声称谈钱财是不必，尤其在学生间，因为这不干我们的事。但钱财终究被当成了一个名头，甚至拒绝了对方的补偿，以至显得有些冷酷。我突然感到有些迂腐，竟然试图在充满冲劲的团簇的人群中维系着一丝人情世故的旧道德。&lt;/p>
 &lt;p>我猛然忆起了初中时那次不知因何而起的班级矛盾，大约是足球场的口角，我当时是局外人，一无所知，但目睹着大家的情绪步步激发，以至产生了一种群体性的仇恨与对立。当然，我当时也言不得体，将自己的迂腐的道德信条用着十分伤害同学感情的谩骂表达了出来。“都不是好东西”。之前我也调解过初中班内对于某位我虽然厌恶但是不愿毁灭的同学的仇恨，尽管我受其的影响最深。&lt;/p>
