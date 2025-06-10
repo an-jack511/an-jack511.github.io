@@ -85,3 +85,103 @@ article img:hover {
     max-width: 100%; /* 小屏幕图片全宽 */
   }
 }
+/* 定理证明容器 */
+.theorem-proof {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.theorem-proof:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 证明头部 */
+.proof-header {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proof-title {
+  font-size: 1.1em;
+}
+
+.proof-ref {
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+/* 证明内容 */
+.proof-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  line-height: 1.8;
+}
+
+/* 证明结束标记 */
+.proof-end {
+  text-align: right;
+  padding: 10px 20px;
+  background-color: #e3f2fd;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* 不同类型的证明 */
+.theorem-proof.theorem {
+  border-left: 4px solid #2ecc71;
+}
+
+.theorem-proof.theorem .proof-header {
+  background-color: #2ecc71;
+}
+
+.theorem-proof.lemma {
+  border-left: 4px solid #f39c12;
+}
+
+.theorem-proof.lemma .proof-header {
+  background-color: #f39c12;
+}
+
+.theorem-proof.corollary {
+  border-left: 4px solid #9b59b6;
+}
+
+.theorem-proof.corollary .proof-header {
+  background-color: #9b59b6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .theorem-proof {
+    margin: 1.5rem -15px;
+    border-radius: 0;
+  }
+  
+  .proof-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .proof-content {
+    padding: 15px;
+  }
+}
+.toggle-icon {
+  font-size: 0.8em;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.proof-header.active .toggle-icon {
+  transform: rotate(180deg);
+}

@@ -86,3 +86,7 @@ googleAnalytics = "Toracking ID"
   [markup.math]
     enable = true
     provider = "mathjax"  # 或 "katex"  
+
+[template]
+  # 显式声明 shortcode 目录
+  shortcodes = ["layouts/shortcodes"]

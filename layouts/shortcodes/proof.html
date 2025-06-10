@@ -1,0 +1,30 @@
+<div class="theorem-proof">
+  <div class="proof-header">
+    {{ with .Get "title" }}
+      <span class="proof-title">{{ . }}</span>
+    {{ else }}
+      <span class="proof-title">证明</span>
+    {{ end }}
+  </div>
+  
+  <div class="proof-content">
+    {{ .Inner | markdownify }}  <!-- 使用 safeHTML 而非 markdownify -->
+  </div>
+  
+  <div class="proof-end">□</div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.proof-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+    
+    // 添加指示器
+    header.style.cursor = 'pointer';
+    header.insertAdjacentHTML('beforeend', '<span class="toggle-icon">▼（点击隐藏）</span>');
+  });
+});
+</script>
