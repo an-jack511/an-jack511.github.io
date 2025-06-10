@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AnJaCk</title><link>https://an-jack511.github.io/</link><description>Recent content on AnJaCk</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Sat, 31 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://an-jack511.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>廿五年端午一周与参数方程和极坐标</title><link>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</link><pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</guid><description>&lt;p>随感集以后权当周记好了，大概每周一篇的频率。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AnJaCk</title><link>https://an-jack511.github.io/</link><description>Recent content on AnJaCk</description><generator>Hugo</generator><language>zh</language><lastBuildDate>Fri, 06 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://an-jack511.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>导数小总结</title><link>https://an-jack511.github.io/posts/2025-6/%E5%AD%A6%E4%B9%A0%E5%BF%97-%E5%AF%BC%E6%95%B0%E5%B0%8F%E6%80%BB%E7%BB%93-250603/</link><pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-6/%E5%AD%A6%E4%B9%A0%E5%BF%97-%E5%AF%BC%E6%95%B0%E5%B0%8F%E6%80%BB%E7%BB%93-250603/</guid><description>&lt;h2 id="一取点经典模型">一、取点经典模型&lt;/h2>
+&lt;h3 id="1-x-to-infty--ex---ax--0--a--e">1. $x \to +\infty,\ \ e^x - ax &amp;gt; 0 \ (a &amp;gt; e)$&lt;/h3>
+&lt;p>&lt;strong>取点 $x = 4a$&lt;/strong>。&lt;/p>
+&lt;p>左侧是指数式，右侧是一次多项式，我们期望左侧放成&lt;strong>二次多项式&lt;/strong>。应用放缩技巧（注：需补充不等式 $e^x \geq x + 1$ 的证明）。&lt;/p>
+&lt;p>$$
+e^x = \left(e^{x/2}\right)^2 \geq \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}
+$$&lt;/p>
+&lt;p>我们得到&lt;/p>
+&lt;p>$$
+e^x - ax \geq \frac{x^2}{4} - ax = x\left(\frac{x}{4} - a\right)
+$$&lt;/p>
+&lt;p>如需令上式大于 $0$，只需取 $x_0 = 4a &amp;gt; x_{极小值点} = \ln a$ 即可。&lt;/p>
+&lt;h3 id="2-x-to-infty--ln-x---ax--0--0--a--e-1">2. $x \to +\infty,\ \ \ln x - ax &amp;lt; 0 \ (0 &amp;lt; a &amp;lt; e^{-1})$&lt;/h3>
+&lt;p>&lt;strong>取点 $x = \dfrac{4}{a^2}$&lt;/strong>。&lt;/p></description></item><item><title>廿五年端午一周与参数方程和极坐标</title><link>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</link><pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate><guid>https://an-jack511.github.io/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</guid><description>&lt;p>随感集以后权当周记好了，大概每周一篇的频率。&lt;/p>
 &lt;p>语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。&lt;/p>
 &lt;p>周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。&lt;/p>
 &lt;p>昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。&lt;/p>
