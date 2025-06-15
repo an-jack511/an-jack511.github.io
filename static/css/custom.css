@@ -212,6 +212,26 @@ article img:hover {
   background-color: #9b59b6;
 }
 
+@media (prefers-color-scheme: dark) {
+  .theorem-proof {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .proof-content {
+    background-color: #252526;
+    color: #e0e0e0;
+  }
+  
+  .proof-end {
+    background-color: #2d2d30;
+  }
+  
+  .theorem-proof.theorem .proof-header { background-color: #2a6e2a; }
+  .theorem-proof.lemma .proof-header { background-color: #8a6d3b; }
+  .theorem-proof.corollary .proof-header { background-color: #5d3a78; }
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .theorem-proof {
@@ -237,4 +257,158 @@ article img:hover {
 
 .proof-header.active .toggle-icon {
   transform: rotate(180deg);
+}
+
+blockquote {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #3498db;
+  border-radius: 0 6px 6px 0;
+  font-style: normal;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+/* 引用块标题样式 */
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  color: #3498db;
+  opacity: 0.2;
+  line-height: 1;
+}
+
+/* 折叠状态指示器 */
+.collapse-toggle {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3498db;
+  background: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* 折叠状态内容 */
+.collapsed-content {
+  overflow: hidden;
+  max-height: 1000px; /* 初始较大值 */
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+/* 折叠状态 */
+.collapsed .collapsed-content {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* 折叠状态下的图标变化 */
+.collapsed .collapse-toggle {
+  transform: rotate(180deg);
+}
+
+/* 引用块内部元素样式 */
+blockquote p {
+  margin: 0.8rem 0;
+  color: #333;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .quote-title {
+    color: #4da8ff;
+    border-bottom-color: #444;
+  }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background-color: #1e1e1e;
+    border-left-color: #4da8ff;
+  }
+  
+  blockquote::before {
+    color: #4da8ff;
+  }
+  
+  blockquote p {
+    color: #e0e0e0;
+  }
+  
+  .collapse-toggle {
+    background: #252526;
+    color: #4da8ff;
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  blockquote {
+    padding: 1rem;
+    margin: 1.2rem 0;
+  }
+  
+  .collapse-toggle {
+    top: 8px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .quote-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* 多级引用样式 */
+blockquote blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  border-left-width: 3px;
+  background-color: #f0f0f0;
+}
+
+blockquote blockquote::before {
+  content: ""; /* 移除二级引用的引号 */
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  blockquote blockquote {
+    background-color: #252526;
+  }
 }

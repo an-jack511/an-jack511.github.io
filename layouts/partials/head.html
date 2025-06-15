@@ -76,4 +76,6 @@
   {{ if .Site.Params.dynamicFavicon }}
   <script defer src="{{ "js/favicon.js" | absURL }}"></script>
   {{ end }}
+   {{ $css := resources.Get "css/custom.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>

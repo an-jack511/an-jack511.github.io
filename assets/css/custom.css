@@ -1,8 +1,14 @@
+/* 禁用所有链接的访问状态变化 */
+a:visited {
+    color: inherit !important; /* 继承父元素颜色 */
+    text-decoration: none !important;
+    pointer-events: none !important; /* 禁用点击事件 */
+}
 /* ========================
    全局字体放大
    ======================== */
 body {
-  font-size: 60px; /* 基础字体大小 */
+  font-size: 18px; /* 基础字体大小 */
   line-height: 1.75; /* 增加行高提升可读性 */
 }
 
@@ -85,6 +91,53 @@ article img:hover {
     max-width: 100%; /* 小屏幕图片全宽 */
   }
 }
+
+/* 摘要容器 */
+.post-summary {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-height: 8.9em; /* 限制为3行高度 */
+  overflow: hidden;
+  position: relative;
+}
+
+/* 渐变遮罩效果 */
+/* .post-summary::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+} */
+
+/* 阅读更多按钮 */
+.read-more {
+  text-align: right;
+  font-size: 0.9em;
+}
+
+.read-more a {
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed #3498db;
+}
+
+@media (max-width: 768px) {
+  .post-summary {
+    max-height: 4.2em; /* 减少移动端显示行数 */
+    font-size: 0.9em;
+  }
+  
+  .read-more {
+    font-size: 0.85em;
+  }
+}
+
 /* 定理证明容器 */
 .theorem-proof {
   border-radius: 8px;
@@ -159,6 +212,26 @@ article img:hover {
   background-color: #9b59b6;
 }
 
+@media (prefers-color-scheme: dark) {
+  .theorem-proof {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .proof-content {
+    background-color: #252526;
+    color: #e0e0e0;
+  }
+  
+  .proof-end {
+    background-color: #2d2d30;
+  }
+  
+  .theorem-proof.theorem .proof-header { background-color: #2a6e2a; }
+  .theorem-proof.lemma .proof-header { background-color: #8a6d3b; }
+  .theorem-proof.corollary .proof-header { background-color: #5d3a78; }
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .theorem-proof {
@@ -184,4 +257,221 @@ article img:hover {
 
 .proof-header.active .toggle-icon {
   transform: rotate(180deg);
+}
+
+blockquote {
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #3498db;
+  border-radius: 0 6px 6px 0;
+  font-style: normal;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+/* 引用块标题样式 */
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  color: #3498db;
+  opacity: 0.2;
+  line-height: 1;
+}
+
+/* 折叠状态指示器 */
+.collapse-toggle {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3498db;
+  background: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* 折叠状态内容 */
+.collapsed-content {
+  overflow: hidden;
+  max-height: 1000px; /* 初始较大值 */
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+/* 折叠状态 */
+.collapsed .collapsed-content {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* 折叠状态下的图标变化 */
+.collapsed .collapse-toggle {
+  transform: rotate(180deg);
+}
+
+/* 引用块内部元素样式 */
+blockquote p {
+  margin: 0.8rem 0;
+  color: #333;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .quote-title {
+    color: #4da8ff;
+    border-bottom-color: #444;
+  }
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background-color: #1e1e1e;
+    border-left-color: #4da8ff;
+  }
+  
+  blockquote::before {
+    color: #4da8ff;
+  }
+  
+  blockquote p {
+    color: #e0e0e0;
+  }
+  
+  .collapse-toggle {
+    background: #252526;
+    color: #4da8ff;
+  }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+  blockquote {
+    padding: 1rem;
+    margin: 1.2rem 0;
+  }
+  
+  .collapse-toggle {
+    top: 8px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .quote-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* 多级引用样式 */
+blockquote blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  border-left-width: 3px;
+  background-color: #f0f0f0;
+}
+
+blockquote blockquote::before {
+  content: ""; /* 移除二级引用的引号 */
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  blockquote blockquote {
+    background-color: #252526;
+  }
+}
+
+/* ========================
+   列表分级字号调整
+   ======================== */
+
+/* 重置所有列表基础样式 */
+:root {
+  --list-level-0: 1rem;   /* 顶级列表 */
+  --list-level-1: 1rem;  /* 第一级嵌套 */
+  --list-level-2: 1rem;   /* 第二级嵌套 */
+  --list-level-3: 1rem;  /* 第三级嵌套 */
+  --list-level-4: 1rem;   /* 第四级嵌套 */
+}
+
+ul, ol {
+  font-size: var(--list-level-0);
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  font-size: var(--list-level-1);
+}
+
+ul ul ul, ol ol ol {
+  font-size: var(--list-level-2);
+}
+
+ul ul ul ul, ol ol ol ol {
+  font-size: var(--list-level-3);
+}
+
+ul ul ul ul ul, ol ol ol ol ol {
+  font-size: var(--list-level-4);
+}
+
+/* 特殊情况：当需要强调深层内容时 */
+li li strong {
+  font-size: 1em; /* 保持相对大小 */
+  color: #e74c3c; /* 使用颜色而非字号强调 */
+}
+
+/* 有序列表数字样式调整 */
+ol {
+  counter-reset: list-item;
+}
+
+ol li::before {
+  font-size: 0.9em; /* 数字比文字稍小 */
+}
+
+/* 响应式调整：移动设备保持合适大小 */
+@media (max-width: 768px) {
+  ul, ol {
+    font-size: 1rem;
+  }
+  
+  ul ul, ol ol {
+    font-size: 1rem;
+  }
+  
+  ul ul ul, ol ol ol {
+    font-size: 1rem;
+  }
 }
