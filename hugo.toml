@@ -25,6 +25,7 @@ googleAnalytics = "Toracking ID"
   customCSS = ["css/custom.css"] # 加载自定义样式
   summaryLength = 150 # 摘要字符数（约150字符）
   showFullContent = false # 不在首页显示全文
+  archivePaginate = 100
   
 # This is displayer in About page.
 [params.math]
