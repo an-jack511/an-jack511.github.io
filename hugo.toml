@@ -2,6 +2,9 @@ baseurl = 'https://an-jack511.github.io/'
 title = "AnJaCk"
 theme = "whiteplain"
 languageCode = "en"
+# paginate = 100  # 已弃用，删除或注释
+[pagination]
+  pagerSize = 100  # 新增：默认每页显示 100 条
 # Disqus shortname
 # disqusShortname = "Shortname"
 # google analytics tracking id
@@ -25,7 +28,6 @@ googleAnalytics = "Toracking ID"
   customCSS = ["css/custom.css"] # 加载自定义样式
   summaryLength = 150 # 摘要字符数（约150字符）
   showFullContent = false # 不在首页显示全文
-  archivePaginate = 100
   
 # This is displayer in About page.
 [params.math]
