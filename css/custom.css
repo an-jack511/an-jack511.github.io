@@ -16,6 +16,7 @@ h1 {
   font-size: 2.4rem;
   margin-bottom: 1.2rem;
 /* 引用块：灰色底，边缘渐变，简洁展开控件 */
+}
 blockquote{
   position:relative;
   margin:1.25rem 0;
@@ -30,166 +31,119 @@ blockquote{
 blockquote p{margin:0.6rem 0}
 
 /* 更简洁、可触控的展开按钮，放右上角 */
-/* blockquote collapse styles intentionally minimal here; detailed styles in ux.css */
+.blockquote-toggle{
+  position:absolute;right:10px;top:10px;background:rgba(255,255,255,0.9);border:1px solid rgba(0,0,0,0.06);padding:4px 8px;border-radius:6px;font-size:0.85rem;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,0.06)
+}
+
+.collapsed blockquote .blockquote-toggle{transform:rotate(180deg)}
+
+/* 展开区域 */
+.blockquote-content{transition:max-height .28s ease,opacity .18s;overflow:hidden}
+.blockquote-content.collapsed{max-height:0;opacity:0;padding:0;margin:0}
+
+@media (prefers-color-scheme: dark){
+  blockquote{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01) 6%, #1f1f1f 6%, #1f1f1f 94%, rgba(255,255,255,0.01) 94%, rgba(255,255,255,0.02));color:#e6e6e6}
+  .blockquote-toggle{background:rgba(30,30,30,0.9);color:#e6e6e6;border-color:rgba(255,255,255,0.04)}
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* 证明/定理等的展示已迁移至新的 `ux-block` 短代码与样式（见 `layouts/shortcodes/*` 和 `static/css/ux.css`）。
-   旧的 `.proof-*` / `.theorem-proof` 选择器已移除，避免样式冲突。 */
-
-blockquote {
-  position: relative;
-  margin: 1.5rem 0;
-  padding: 1.25rem 1.5rem;
-  background-color: #f9f9f9;
-  border-left: 4px solid #3498db;
-  border-radius: 0 6px 6px 0;
-  font-style: normal;
-  line-height: 1.7;
-  transition: all 0.3s ease;
+.proof-title {
+  font-size: 1.1em;
 }
 
-/* 引用块标题样式 */
-blockquote::before {
-  content: "“";
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  font-size: 3rem;
-  font-family: Georgia, serif;
-  color: #3498db;
-  opacity: 0.2;
-  line-height: 1;
+.proof-ref {
+  font-size: 0.85em;
+  opacity: 0.9;
 }
 
-/* 折叠状态指示器 */
-.collapse-toggle {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  cursor: pointer;
-  font-size: 1.1rem;
+/* 证明内容 */
+.proof-content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  line-height: 1.8;
+}
+
+/* 证明结束标记 */
+.proof-end {
+  text-align: right;
+  padding: 10px 20px;
+  background-color: #e3f2fd;
   font-weight: bold;
-  color: #3498db;
-  background: #fff;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  font-size: 1.2em;
 }
 
-/* 折叠状态内容 */
-.collapsed-content {
-  overflow: hidden;
-  max-height: 1000px; /* 初始较大值 */
-  transition: max-height 0.3s ease, opacity 0.2s ease;
+/* 不同类型的证明 */
+.theorem-proof.theorem {
+  border-left: 4px solid #2ecc71;
 }
 
-/* 折叠状态 */
-.collapsed .collapsed-content {
-  max-height: 0;
-  opacity: 0;
+.theorem-proof.theorem .proof-header {
+  background-color: #2ecc71;
 }
 
-/* 折叠状态下的图标变化 */
-.collapsed .collapse-toggle {
-  transform: rotate(180deg);
+.theorem-proof.lemma {
+  border-left: 4px solid #f39c12;
 }
 
-/* 引用块内部元素样式 */
-blockquote p {
-  margin: 0.8rem 0;
-  color: #333;
+.theorem-proof.lemma .proof-header {
+  background-color: #f39c12;
 }
 
-blockquote p:first-child {
-  margin-top: 0;
+.theorem-proof.corollary {
+  border-left: 4px solid #9b59b6;
 }
 
-blockquote p:last-child {
-  margin-bottom: 0;
+.theorem-proof.corollary .proof-header {
+  background-color: #9b59b6;
 }
 
-.quote-title {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-  color: #2c3e50;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px dashed #e0e0e0;
-}
-
-/* 深色模式适配 */
 @media (prefers-color-scheme: dark) {
-  .quote-title {
-    color: #4da8ff;
-    border-bottom-color: #444;
-  }
-}
-
-/* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  blockquote {
+  .theorem-proof {
     background-color: #1e1e1e;
-    border-left-color: #4da8ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
   
-  blockquote::before {
-    color: #4da8ff;
-  }
-  
-  blockquote p {
+  .proof-content {
+    background-color: #252526;
     color: #e0e0e0;
   }
   
-  .collapse-toggle {
-    background: #252526;
-    color: #4da8ff;
+  .proof-end {
+    background-color: #2d2d30;
   }
+  
+  .theorem-proof.theorem .proof-header { background-color: #2a6e2a; }
+  .theorem-proof.lemma .proof-header { background-color: #8a6d3b; }
+  .theorem-proof.corollary .proof-header { background-color: #5d3a78; }
 }
 
-/* 移动端优化 */
+/* 响应式设计 */
 @media (max-width: 768px) {
-  blockquote {
-    padding: 1rem;
-    margin: 1.2rem 0;
+  .theorem-proof {
+    margin: 1.5rem -15px;
+    border-radius: 0;
   }
   
-  .collapse-toggle {
-    top: 8px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 0.9rem;
+  .proof-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
   
-  .quote-title {
-    font-size: 0.95rem;
+  .proof-content {
+    padding: 15px;
   }
 }
-
-/* 多级引用样式 */
-blockquote blockquote {
-  margin-left: 0;
-  margin-right: 0;
-  border-left-width: 3px;
-  background-color: #f0f0f0;
+.toggle-icon {
+  font-size: 0.8em;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
 }
 
-blockquote blockquote::before {
-  content: ""; /* 移除二级引用的引号 */
+.proof-header.active .toggle-icon {
+  transform: rotate(180deg);
 }
 
-/* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  blockquote blockquote {
-    background-color: #252526;
-  }
-}

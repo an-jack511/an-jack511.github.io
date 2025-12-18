@@ -9,7 +9,7 @@
 }
 
 /* 布局容器 */
-.container-article{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start;max-width:1100px;margin:0 auto;padding:24px;transform: translateX(var(--ux-page-shift));}
+.container-article{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start;max-width:1100px;margin:0 auto;padding:24px}
 .main{grid-column: 1}
 .sidebar{grid-column: 2; width:320px}
 
@@ -33,8 +33,12 @@
 /* 限制浮动目录高度并允许滚动，避免溢出覆盖正文 */
 .ux-toc-floating { max-height: calc(100vh - 140px); overflow: auto; }
 
-/* 让头部与页脚也随正文一起平移，以保持对齐 */
-.site-header, header, .site-footer { transform: translateX(var(--ux-page-shift)); }
+/* 头部/页脚不再全局平移；正文平移仅在存在浮动 TOC 时生效（见下方规则） */
+
+/* 全站整体平移：为左侧 TOC 预留空间，无论页面是否包含 TOC */
+.site-header, header, .container-article, .site-footer {
+  transform: translateX(var(--ux-page-shift));
+}
 
 /* 可选：内联 TOC（默认显示在小屏） */
 .ux-toc-inline{display:block;margin-bottom:16px}
@@ -46,10 +50,10 @@
 }
 
 /* 在小屏上禁用页面右移与 header/footer 平移 */
-@media (max-width: 1200px){
+/* 小屏保底：当屏幕过窄时可适当减小或清零平移量以免造成可视区域溢出 */
+@media (max-width: 520px) {
   :root { --ux-page-shift: 0px; }
-  .container-article{transform:none}
-  .site-header, header, .site-footer { transform:none }
+  .site-header, header, .container-article, .site-footer { transform: none; }
 }
 .ux-toc{position:relative}
 
@@ -67,7 +71,12 @@
 .ux-toc-block .ux-toc-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:4px}
 
 /* 保持正文宽度与旧版一致：约 752px（1100 - 320 - 28） */
-.main .article { max-width: 752px; margin: 24px auto 40px; width: 100%; box-sizing: border-box; }
+.main { min-width: 0; }
+.main .article { display: block; max-width: 752px; margin: 24px auto 40px; width: 100%; box-sizing: border-box; min-width: 0; }
+
+/* 在 Grid 布局下，确保主列不会因为子元素的短内容而缩小 */
+.container-article { grid-auto-columns: 1fr; }
+.list .article { min-width: 0; }
 
 /* 侧栏块 */
 .sidebar-block{background:var(--card-bg);padding:16px;border-radius:8px;margin-bottom:16px}
@@ -76,8 +85,8 @@
 .sidebar-block li{margin:6px 0}
 
 /* 引用样式：移除左侧竖线，使用楷体与缩进 */
-blockquote{border-left:none;padding-left:1.25rem;margin:1.2rem 0;font-family: "KaiTi", "楷体", Georgia, serif;font-style:normal;background:transparent}
-blockquote p{margin:0}
+blockquote{border-left:none;padding-left:1.25rem;margin:1.2rem 0;font-family: 'Times New Roman', "KaiTi", "楷体";font-style:normal;background:transparent}
+blockquote p{margin:1.2em}
 
 /* 代码/自定义块统一灰色背景（证明由新 ux-block 管理） */
 pre, .proof-content{background:#f3f4f6;border-radius:8px;padding:14px;border:1px solid rgba(0,0,0,0.06)}
@@ -148,7 +157,7 @@ a, a:link, a:visited { color: inherit; text-decoration: none; }
 .article-readmore a { color: var(--ux-muted); border-bottom: 1px dashed rgba(0,0,0,0.06); }
 
 /* blockquote 折叠按钮样式（确保与脚本共用） */
-.blockquote-toggle { position: absolute; right: 12px; top: 12px; background: transparent; border: 1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; font-size:0.85rem; cursor:pointer; color:var(--ux-muted); }
+.blockquote-toggle { position: absolute; right: 12px; top: 8px; background: #fff; border: 1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; font-size:0.85rem; cursor:pointer; color:var(--ux-muted); }
 
 /* 小屏幕按钮更大以便触控 */
 @media (max-width:480px){
@@ -160,8 +169,8 @@ a, a:link, a:visited { color: inherit; text-decoration: none; }
 .collapse-toggle, .collapse-btn, .blockquote-toggle {
   position: absolute !important;
   right: 12px !important;
-  top: 12px !important;
-  background: transparent !important;
+  top: 8px !important;
+  background: #fff !important;
   border: 1px solid rgba(0,0,0,0.06) !important;
   color: var(--ux-muted) !important;
   padding: 6px 8px !important;
