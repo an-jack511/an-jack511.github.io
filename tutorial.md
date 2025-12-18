@@ -1,50 +1,103 @@
-# 前端重构教程（简明）
+# 前端重构教程（详细）
+
+本文件记录本次前端重构思路、如何启用/维护评论、常用 Markdown/shortcode 写法与 KaTeX 速查，便于今后维护与扩展。
 
 概览
-- 本次重构主要在 `layouts/`、`static/css/`、`static/js/`、`data/` 中添加/修改文件，实现：评论区（本地示例）、引用样式优化、代码/证明块折叠、可折叠多层列表、右侧侧栏（近期文章 + 最新评论）、移动端适配。
+- 本次改动涉及：`layouts/`、`layouts/partials/`、`static/css/`、`static/js/`、`data/`。
+- 功能要点：统一的 `ux` 样式、可折叠代码/证明块、可折叠多层列表、侧栏近期文章与最新评论（仅在存在真实数据时显示）、评论后端可选（Giscus/Utterances/Disqus/GitHub-Issues）。
 
-主要文件
-- `layouts/_default/single.html`：插入评论区与侧栏。
-- `layouts/partials/comments.html`：评论区（本地表单示例）。
-- `layouts/partials/sidebar.html`：近期文章与最新评论展示（支持 `data/comments.json`）。
-- `layouts/partials/head_style.html`：引入 `css/ux.css`。
-- `static/css/ux.css`：新增的交互样式。
-- `static/js/ux.js`：交互脚本，实现折叠与本地评论提交演示。
-- `data/comments.json`：示例评论数据（可替换为真实数据源）。
+关键文件说明
+- `layouts/_default/single.html`：文章页主模板，包含 TOC 与 `partials/comments.html`。
+- `layouts/partials/comments.html`：根据 `config` 或 `params.comments` 条件加载评论系统（Giscus/Utterances/Disqus）或回退到本地展示（读取 `data/comments.json`）。
+- `layouts/partials/sidebar.html`：侧栏模板，已改为仅在 `data/comments.json` 有数据时才展示“最新评论”。
+- `layouts/partials/head.html` & `head_style.html`：样式加载顺序管理，`ux.css` 放在主样式之后以覆盖主题样式。
+- `static/css/ux.css`：UX 覆盖样式（TOC、ux-block、列表折叠、整体平移等）。
+- `static/js/ux.js`：交互脚本（折叠、TOC、列表切换、示例评论渲染）。
+- `data/comments.json`：本地评论数据格式，构建时可由脚本生成真实数据。
 
-如何维护与修改
-1. 评论持久化
-   - 选项 A：启用 Disqus（在 `config` 中设置 `disqusShortname`），并在 `single.html` 保留/启用 Disqus 模板。
-   - 选项 B：使用 GitHub Issues + 静态渲染（推荐）——需要一个小的 serverless 函数（Netlify/Azure/AWS Lambda）来将评论推送到 Issues，并在构建时拉取到 `data/comments.json`。
-   - 选项 C：使用第三方评论平台（Valine、Giscus、Utterances 等），在 `comments.html` 中替换表单与加载脚本。
+启用评论（推荐）
+- Giscus（最简单，基于 GitHub Discussions）：在 `hugo.toml` 的 `[params.comments]` 中配置 `provider = "giscus"` 与 `giscus_repo`、`giscus_category` 等字段；`partials/comments.html` 会在检测到配置后自动插入 Giscus 脚本。
+- Utterances：类似 Giscus，需要在 `params.comments.provider = "utterances"` 并提供 `repo`、`issue-term` 等配置。
+- GitHub Issues + 静态渲染：适合完全控制的方案。工作流程：用户评论触发 serverless 函数将评论写入 Issue，CI 在构建时拉取 Issues 并写入 `data/comments.json`，模板从 `data/` 渲染最新评论。
+- Disqus：设置 `disqusShortname` 即可使用（请注意 GDPR 与隐私问题）。
 
-2. 调整引用样式
-   - 在 `static/css/ux.css` 中修改 `blockquote` 的 `font-family` 或 `padding-left`，若要使用其他字体请在 `head` 中加载。
-
-3. 代码/证明块样式
-   - `pre` 的边界样式与折叠逻辑在 `ux.css` 与 `ux.js` 中统一管理。若要更改边界样式，编辑 `pre` 的 `border-style` 与 `.theorem-proof` 的 `border-style`。
-
-4. 多层列表交互
-   - 折叠逻辑由 `ux.js` 的多层列表代码添加。如果要默认全部折叠，请修改脚本使其在页面加载时对 `.post-content li` 添加 `collapsed` 类。
-
-5. 侧栏最新评论
-   - 当前优先使用 `data/comments.json`。若想在构建时从第三方加载，请在 `data/` 生成脚本中写入对应数据（建议添加 `post_url` 字段使跳转正确）。
-
-运行与调试
-- 本地运行 Hugo 服务器：
-
-```powershell
-hugo server -D
+数据格式（`data/comments.json`）
+示例：
+```
+{
+   "posts/some-post.md": [
+      { "author": "张三", "body": "很棒的文章！", "date": "2025-12-01", "post_url": "/posts/some-post/" }
+   ]
+}
 ```
 
-- 打开浏览器访问 `http://localhost:1313` 并打开开发者工具查看 `ux.js` 是否加载。
+如何在侧栏显示最新评论
+- 逻辑已实现：`layouts/partials/sidebar.html` 会检查 `.Site.Data.comments` 是否存在且非空，最多列出最近 6 条评论。
 
-注意事项与限制
-- 本次提供的评论表单为前端展示；不含后端持久化，生产环境请接入外部服务或 GitHub Issues。
-- 若主题或现有样式与 `ux.css` 冲突，可能需要增加更高的选择器优先级或调整变量。
+本地调试
+- 运行 Hugo 本地服务器并在浏览器打开：
 
-下一步建议
-- 决定评论持久化方案（我可以帮你实现 Giscus / Utterances / GitHub-Issues + Netlify Functions 的集成）。
-- 若需要，我可以将样式进一步精简并增加主题变量支持（颜色/圆角/间距）。
+```powershell
+hugo server --disableFastRender -D
+```
+
+短语速查：Markdown 常用写法
+- 标题：`# 一级标题` 、`## 二级`。
+- 段落：空行分隔。
+- 行内代码：`` `code` ``。
+- 代码块（带语言）：
+   ```
+   ```python
+   def f():
+      return 1
+   ```
+   ```
+- 图片：`![alt](path/to/img.jpg)`。
+- 链接：`[文本](url)`。
+- 列表：`
+   - 无序项
+   1. 有序项
+   `。
+- 引用：`> 引用文本`。
+
+Shortcode 写法（示例）
+- 在 `layouts/shortcodes/` 下可以添加短代码，例如 `theorem.html`：
+
+```html
+<div class="ux-block ux-block--theorem">
+   <div class="ux-block__header">
+      <div class="ux-block__title">{{ .Get "title" }}</div>
+   </div>
+   <div class="ux-block__content">{{ .Inner }}</div>
+</div>
+```
+
+使用方式（文章中）：
+```
+{{< theorem title="引理 1" >}}
+证明内容……
+{{< /theorem >}}
+```
+
+KaTeX / MathJax 常用符号速查
+- 行内公式：`$a^2 + b^2 = c^2$`。
+- 行间公式：`$$\int_0^1 x^2 dx$$`。
+- 常用符号：
+   - 上标/下标：`x^2`, `a_{i}`
+   - 分数：`\frac{a}{b}`
+   - 根号：`\sqrt{2}`
+   - 求和：`\sum_{i=1}^n i`
+   - 积分：`\int_a^b f(x) dx`
+   - 希腊字母：`\alpha, \beta, \gamma` 等
+
+进阶：如果你使用 MathJax 的 `physics` 扩展，可以直接写 `\vec{v}`、`\nabla` 等符号。
+
+常见问题与排查
+- 样式冲突：如果主题样式覆盖了 `ux.css`，调整 `head` 中的引入顺序，确保 `ux.css` 在主样式之后，或在选择器中增加命名空间（例如 `.ux-` 前缀）以提高权重。
+- 首篇文章宽度收缩：在 Grid 布局下，子元素最小内容宽度可能导致列收缩，已在 `ux.css` 中通过 `min-width:0` 和 `grid-auto-columns:1fr` 解决。
+
+后续工作建议
+- 决定评论后端并配置 `hugo.toml` 中的 `params.comments`。
+- 如需，我可以为你实现一个小的 Netlify Function/ GitHub Action 来把 Issue 评论拉取到 `data/comments.json`，并配置自动构建。
 
 作者：自动生成重构助手

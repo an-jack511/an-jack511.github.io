@@ -1,6 +1,1 @@
-{
-  "posts/example.md": [
-    {"author": "张三", "body": "这是一个示例评论。", "date": "2025-01-01", "post_url": "/posts/example/"},
-    {"author": "李四", "body": "第二条评论示例，稍长的文本用来展示截断效果。", "date": "2025-01-02", "post_url": "/posts/example/"}
-  ]
-}
+{}

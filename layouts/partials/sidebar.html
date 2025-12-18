@@ -1,3 +1,4 @@
+{{/* 侧栏：近期文章（保持） */}}
 <div class="sidebar-block recent-posts">
   <h3>近期文章</h3>
   <ul>
@@ -8,32 +9,31 @@
   </ul>
 </div>
 
-<div class="sidebar-block recent-comments">
-  <h3>最新评论</h3>
-  <div id="recent-comments-container">
-    <!-- JS will render comments from /data/comments.json or from Hugo data if available -->
-    {{ with site.Data.comments }}
-      {{ $count := 0 }}
-      <ul>
-      {{ range $k, $v := . }}
-        {{ range $i, $c := $v }}
-          {{ if lt $count 6 }}
-            <li class="rc-item"><a href="{{ $c.post_url }}">{{ $c.author }}：{{ (truncate 48 $c.body) }}</a></li>
-            {{ $count = add $count 1 }}
+{{/* 仅当存在 data/comments.json 且含有评论时展示“最新评论” */}}
+{{ with .Site.Data.comments }}
+  {{ if gt (len .) 0 }}
+    <div class="sidebar-block recent-comments">
+      <h3>最新评论</h3>
+      <div id="recent-comments-container">
+        <ul>
+        {{ $count := 0 }}
+        {{ range $postpath, $cmts := . }}
+          {{ range $i, $c := $cmts }}
+            {{ if lt $count 6 }}
+              <li class="rc-item"><a href="{{ $c.post_url }}">{{ $c.author }}：{{ (truncate 48 $c.body) }}</a></li>
+              {{ $count = add $count 1 }}
+            {{ end }}
           {{ end }}
         {{ end }}
-      {{ end }}
-      </ul>
-    {{ else }}
-      <p class="muted">暂无评论</p>
-    {{ end }}
-  </div>
-</div>
+        </ul>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
 
 <div class="sidebar-block tips">
   <h3>快捷</h3>
   <ul>
-    <li><a href="#comments">去评论区</a></li>
     <li><a href="/archives/">文章归档</a></li>
   </ul>
 </div>
