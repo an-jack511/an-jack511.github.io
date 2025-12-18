@@ -46,7 +46,6 @@
 
   {{- partial "head_style.html" . }}
   <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" media="all" />
-  <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}" media="all" />
 
   <script src="{{ "js/script.js" | relURL }}"></script>
   <script src="{{ "js/custom.js" | relURL }}"></script>
@@ -78,4 +77,6 @@
   {{ end }}
    {{ $css := resources.Get "css/custom.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <!-- UX 覆盖样式放在主样式之后以确保生效 -->
+  <link rel="stylesheet" href="{{ "css/ux.css" | relURL }}" media="all" />
 </head>

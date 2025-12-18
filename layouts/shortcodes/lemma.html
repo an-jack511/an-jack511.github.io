@@ -1,6 +1,6 @@
-<div class="ux-block ux-block--proof">
+<div class="ux-block ux-block--lemma">
   <div class="ux-block__header">
-    <div class="ux-block__title">{{ if .Get 0 }}{{ .Get 0 }}{{ else }}证明{{ end }}</div>
+    <div class="ux-block__title">{{ if .Get 0 }}{{ .Get 0 }}{{ else }}引理{{ end }}</div>
     {{ with .Get "ref" }}<div class="ux-block__ref">{{ . }}</div>{{ end }}
     <button class="ux-block__toggle" aria-expanded="true" aria-label="折叠/展开">
       <svg class="ux-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -11,5 +11,4 @@
   <div class="ux-block__content">
     {{ .Inner | markdownify }}
   </div>
-  <div class="ux-block__end">□</div>
 </div>

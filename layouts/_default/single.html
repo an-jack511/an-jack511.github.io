@@ -1,7 +1,23 @@
 
 {{ define "main" }}
-  <div class="main" role="main">
-    <article class="article">
+  {{/* 浮动 TOC：仅在页面有目录项且未被作者禁用时渲染 */}}
+  {{ $tocDisabled := eq (printf "%v" .Params.toc) "false" }}
+  {{ $tocBody := .TableOfContents }}
+  {{ $tocHasItems := gt (len (findRE "<li" $tocBody)) 0 }}
+  {{ if and (not $tocDisabled) $tocHasItems }}
+    <aside class="ux-toc ux-toc-floating" role="navigation" aria-label="Table of contents">
+      {{ partial "toc.html" . }}
+    </aside>
+  {{ end }}
+  <div class="container-article" role="main">
+    <main class="main" role="main">
+      {{/* 内嵌 TOC（用于小屏或占位模式） */}}
+      {{ if and (not $tocDisabled) $tocHasItems }}
+      <div class="ux-toc-inline">
+        {{ partial "toc.html" . }}
+      </div>
+      {{ end }}
+      <article class="article">
       {{ with .Params.image }}<img src="{{ . }}" class="article-image" />{{ end }}
       {{ with .Params.series }}<p class="article-title-series"><a href="{{ "/" | relURL }}series/{{ index . 0 | urlize }}/">{{ index . 0 }}</a>&nbsp;/</p>{{ end }}
       <h1 class="article-title">{{ .Title }}</h1>
@@ -30,9 +46,16 @@
         {{- end }}
         {{- end }}
       </ul>
-      {{ partial "toc.html" . }}
       {{ .Content }}
-    </article>
+      </article>
+
+      {{ partial "comments.html" . }}
+    </main>
+
+    <aside class="sidebar" role="complementary">
+      {{ partial "sidebar.html" . }}
+    </aside>
+  </div>
 
     {{- if .Params.series }}
     <section class="article-series">

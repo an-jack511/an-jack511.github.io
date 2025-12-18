@@ -1,8 +1,7 @@
-/* 禁用所有链接的访问状态变化 */
+/* 访问过的链接保持朴素但可点击（移除阻止点击的设置） */
 a:visited {
-    color: inherit !important; /* 继承父元素颜色 */
-    text-decoration: none !important;
-    pointer-events: none !important; /* 禁用点击事件 */
+  color: inherit !important; /* 继承父元素颜色，避免默认蓝色 */
+  text-decoration: none !important;
 }
 /* ========================
    全局字体放大
@@ -16,248 +15,30 @@ body {
 h1 {
   font-size: 2.4rem;
   margin-bottom: 1.2rem;
+/* 引用块：灰色底，边缘渐变，简洁展开控件 */
+blockquote{
+  position:relative;
+  margin:1.25rem 0;
+  padding:1rem 1.25rem;
+  border-radius:8px;
+  background:linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.02) 6%, #f6f7f8 6%, #f6f7f8 94%, rgba(0,0,0,0.02) 94%, rgba(0,0,0,0.03));
+  color: #222;
+  line-height:1.7;
+  overflow:hidden;
 }
 
-h2 {
-  font-size: 2.0rem;
-  margin-bottom: 1.0rem;
-}
+blockquote p{margin:0.6rem 0}
 
-h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.9rem;
-}
-
-/* 正文内容放大 */
-article p {
-  font-size: 1.1em; /* 相对基础字体放大10% */
-  margin-bottom: 1.2rem;
-}
-
-/* 列表项放大 */
-article ul, article ol {
-  font-size: 1.1em;
-}
-
-/* 代码块放大 */
-pre, code {
-  font-size: 0.95em; /* 代码保持原大小或微调 */
-}
-
-/* ========================
-   图片缩小与优化
-   ======================== */
-/* 内容区域图片 */
-article img {
-  max-width: 75%; /* 图片最大宽度为容器75% */
-  height: auto; /* 保持比例 */
-  display: block; /* 居中显示 */
-  margin: 1.5rem auto; /* 上下边距 */
-  border-radius: 6px; /* 圆角效果 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 柔和阴影 */
-  transition: transform 0.3s ease; /* 悬停动画 */
-}
-
-/* 图片悬停效果 */
-article img:hover {
-  transform: scale(1.02); /* 轻微放大 */
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-/* 文章封面图调整 */
-.post-cover img {
-  max-width: 85%; /* 封面图稍大 */
-}
-
-/* 响应式调整：移动设备 */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px; /* 移动端字体略小 */
-  }
-  
-  article img {
-    max-width: 95%; /* 移动端图片几乎全宽 */
-    margin: 1rem auto;
-  }
-}
-
-/* 小屏幕设备优化 */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  article img {
-    max-width: 100%; /* 小屏幕图片全宽 */
-  }
-}
-
-/* 摘要容器 */
-.post-summary {
-  font-size: 0.95em;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  max-height: 8.9em; /* 限制为3行高度 */
-  overflow: hidden;
-  position: relative;
-}
-
-/* 渐变遮罩效果 */
-/* .post-summary::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2em;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
-} */
-
-/* 阅读更多按钮 */
-.read-more {
-  text-align: right;
-  font-size: 0.9em;
-}
-
-.read-more a {
-  color: #3498db;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 1px dashed #3498db;
-}
-
-@media (max-width: 768px) {
-  .post-summary {
-    max-height: 4.2em; /* 减少移动端显示行数 */
-    font-size: 0.9em;
-  }
-  
-  .read-more {
-    font-size: 0.85em;
-  }
-}
-
-/* 定理证明容器 */
-.theorem-proof {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin: 2rem 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.theorem-proof:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-
-/* 证明头部 */
-.proof-header {
-  background-color: #3498db;
-  color: white;
-  padding: 12px 20px;
+/* 更简洁、可触控的展开按钮，放右上角 */
+/* blockquote collapse styles intentionally minimal here; detailed styles in ux.css */
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.proof-title {
-  font-size: 1.1em;
-}
-
-.proof-ref {
-  font-size: 0.85em;
-  opacity: 0.9;
-}
-
-/* 证明内容 */
-.proof-content {
-  padding: 20px;
-  background-color: #f8f9fa;
-  line-height: 1.8;
-}
-
-/* 证明结束标记 */
-.proof-end {
-  text-align: right;
-  padding: 10px 20px;
-  background-color: #e3f2fd;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-/* 不同类型的证明 */
-.theorem-proof.theorem {
-  border-left: 4px solid #2ecc71;
-}
-
-.theorem-proof.theorem .proof-header {
-  background-color: #2ecc71;
-}
-
-.theorem-proof.lemma {
-  border-left: 4px solid #f39c12;
-}
-
-.theorem-proof.lemma .proof-header {
-  background-color: #f39c12;
-}
-
-.theorem-proof.corollary {
-  border-left: 4px solid #9b59b6;
-}
-
-.theorem-proof.corollary .proof-header {
-  background-color: #9b59b6;
-}
-
-@media (prefers-color-scheme: dark) {
-  .theorem-proof {
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  }
-  
-  .proof-content {
-    background-color: #252526;
-    color: #e0e0e0;
-  }
-  
-  .proof-end {
-    background-color: #2d2d30;
-  }
-  
-  .theorem-proof.theorem .proof-header { background-color: #2a6e2a; }
-  .theorem-proof.lemma .proof-header { background-color: #8a6d3b; }
-  .theorem-proof.corollary .proof-header { background-color: #5d3a78; }
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .theorem-proof {
-    margin: 1.5rem -15px;
-    border-radius: 0;
-  }
-  
-  .proof-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-  
-  .proof-content {
-    padding: 15px;
-  }
-}
-.toggle-icon {
-  font-size: 0.8em;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-.proof-header.active .toggle-icon {
-  transform: rotate(180deg);
-}
+/* 证明/定理等的展示已迁移至新的 `ux-block` 短代码与样式（见 `layouts/shortcodes/*` 和 `static/css/ux.css`）。
+   旧的 `.proof-*` / `.theorem-proof` 选择器已移除，避免样式冲突。 */
 
 blockquote {
   position: relative;

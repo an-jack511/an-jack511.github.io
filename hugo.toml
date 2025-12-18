@@ -29,6 +29,18 @@ googleAnalytics = "Toracking ID"
   summaryLength = 150 # 摘要字符数（约150字符）
   showFullContent = false # 不在首页显示全文
   
+  [params.comments]
+    provider = "giscus" # e.g. "giscus" or "utterances" or "disqus"
+    # Giscus settings (fill when provider = "giscus")
+    giscus_repo = "an-jack511/an-jack511.github.io"         # 格式: owner/repo
+    giscus_repo_id = ""      # 可选，giscus repo-id
+    giscus_category = "Comments"     # Discussion category name
+    giscus_category_id = ""  # 可选，giscus category-id
+    giscus_mapping = "pathname" # pathname | url | title | specific
+    giscus_reactions = true
+    giscus_metadata = false
+    giscus_theme = "light"
+  
 # This is displayer in About page.
 [params.math]
   enable = true

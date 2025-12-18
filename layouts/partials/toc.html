@@ -1,0 +1,18 @@
+{{/*
+  Robust TOC partial override for theme.
+  - Shows TOC whenever the page has a non-empty .TableOfContents and the page author hasn't explicitly disabled it via `params.toc = "false"`.
+  - Provides a small toggle button for mobile/small screens.
+  - Uses safeHTML to render Hugo-generated TableOfContents.
+*/}}
+{{ $disabled := eq (printf "%v" .Params.toc) "false" }}
+{{ $toc := .TableOfContents }}
+{{/* More robust: ensure TOC actually contains list items (<li>) before rendering. Hugo may emit an empty wrapper even when no headings exist. */}}
+{{ $hasItems := gt (len (findRE "<li" $toc)) 0 }}
+{{ if and (not $disabled) $hasItems }}
+  <div class="sidebar-block ux-toc-block" aria-label="文章目录">
+    <h3>目录</h3>
+    <div id="TableOfContents" class="ux-toc-body">
+      {{ $toc | safeHTML }}
+    </div>
+  </div>
+{{ end }}

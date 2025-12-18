@@ -1,0 +1,60 @@
+<section id="comments" class="comments-section">
+  <h2>评论</h2>
+
+  {{/* Giscus integration: only render when provider=giscus and repo is configured */}}
+  {{ $c := .Site.Params.comments }}
+  {{ if and (eq $c.provider "giscus") (ne $c.giscus_repo "") }}
+    {{/* Ensure required props are present; giscus will still work with repo alone. */}}
+    <div id="giscus-container">
+      <script src="https://giscus.app/client.js"
+        data-repo="{{ $c.giscus_repo }}"
+        {{ if ne $c.giscus_repo_id "" }}data-repo-id="{{ $c.giscus_repo_id }}"{{ end }}
+        {{ if ne $c.giscus_category "" }}data-category="{{ $c.giscus_category }}"{{ end }}
+        {{ if ne $c.giscus_category_id "" }}data-category-id="{{ $c.giscus_category_id }}"{{ end }}
+        data-mapping="{{ default "pathname" $c.giscus_mapping }}"
+        data-reactions-enabled="{{ if $c.giscus_reactions }}1{{ else }}0{{ end }}"
+        data-emit-metadata="{{ if $c.giscus_metadata }}1{{ else }}0{{ end }}"
+        data-theme="{{ default "light" $c.giscus_theme }}"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+
+    <noscript>请启用 JavaScript 查看评论。</noscript>
+
+  {{ else }}
+    {{/* Fallback: local data-driven demo comments + local form (non-persistent) */}}
+    <div id="comments-list">
+      {{ $page := . }}
+      {{ with site.Data.comments }}
+        {{ range $post, $comments := . }}
+          {{ if eq $post $page.File.Path }}
+            <ul>
+              {{ range $comments }}
+                <li class="comment-item">
+                  <div class="comment-author">{{ .author }}</div>
+                  <div class="comment-body">{{ .body }}</div>
+                  <div class="comment-meta">{{ .date }}</div>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        <p class="muted">暂无评论。要启用在线评论，请在 `hugo.toml` 中设置 `params.comments.provider = "giscus"` 并填写 `params.comments.giscus_repo`。</p>
+      {{ end }}
+    </div>
+
+    <div class="comment-form">
+      <h3>添加评论（本地示例表单）</h3>
+      <form id="comment-form" onsubmit="return submitComment(event)">
+        <label>名称<input type="text" id="c-author" required></label>
+        <label>内容<textarea id="c-body" rows="4" required></textarea></label>
+        <input type="hidden" id="c-post" value="{{ .File.Path }}">
+        <button type="submit" class="btn">提交（本地示例）</button>
+      </form>
+      <p class="muted small">注意：示例表单不会持久化到 GitHub Pages。启用 Giscus 后，评论将使用 GitHub Discussions 存储。</p>
+    </div>
+  {{ end }}
+
+</section>
