@@ -1,0 +1,338 @@
+/* 站点统一 UX 样式：引用、代码/证明块、侧边栏、折叠交互 */
+:root{
+  --ux-bg:#f5f7fb;
+  --ux-ink:#2b2b2b;
+  --ux-muted:#6b7280;
+  --accent:#3498db;
+  --card-bg:#f3f4f6;
+  --ux-page-shift: 120px; /* 页面右移量，可调（已调整为 120px） */
+}
+
+/* 布局容器 */
+.container-article{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start;max-width:1100px;margin:0 auto;padding:24px;transform: translateX(var(--ux-page-shift));}
+.main{grid-column: 1}
+.sidebar{grid-column: 2; width:320px}
+
+/* 将 TOC 悬挂在左侧（不占正文宽度）：使用负 margin 拉出布局 */
+/* 浮动 TOC：放到容器外，基于页面中心定位（1100px 宽度假设） */
+.ux-toc-floating{
+  /* look like the right sidebar blocks; force width so other rules can't expand it */
+  position: fixed;
+  top: 84px;
+  width: 300px !important;
+  left: auto;
+  z-index: 920;
+  transition: left 0.16s ease, opacity 0.12s ease;
+  /* transparent background (no gray fill) per user request */
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* 限制浮动目录高度并允许滚动，避免溢出覆盖正文 */
+.ux-toc-floating { max-height: calc(100vh - 140px); overflow: auto; }
+
+/* 让头部与页脚也随正文一起平移，以保持对齐 */
+.site-header, header, .site-footer { transform: translateX(var(--ux-page-shift)); }
+
+/* 可选：内联 TOC（默认显示在小屏） */
+.ux-toc-inline{display:block;margin-bottom:16px}
+
+/* 在大屏上启用浮动 TOC，隐藏内联 TOC */
+@media (min-width: 1360px) {
+  .ux-toc-floating{display:block}
+  .ux-toc-inline{display:none}
+}
+
+/* 在小屏上禁用页面右移与 header/footer 平移 */
+@media (max-width: 1200px){
+  :root { --ux-page-shift: 0px; }
+  .container-article{transform:none}
+  .site-header, header, .site-footer { transform:none }
+}
+.ux-toc{position:relative}
+
+/* TOC block styling to match sidebar blocks */
+.ux-toc-block{background:transparent;padding:8px;border-radius:6px;margin-bottom:12px;border:1px solid rgba(0,0,0,0.03)}
+.ux-toc-block h3{margin:0 0 8px 0;font-size:1rem}
+.ux-toc-block .ux-toc-body{padding-left:0}
+.ux-toc-block .ux-toc-body ul{list-style: none;margin:0;padding-left:0}
+.ux-toc-block .ux-toc-body li{margin:6px 0}
+.ux-toc-block .ux-toc-body a{color:var(--ux-ink);text-decoration:none;display:inline-block;white-space:nowrap}
+
+/* 如果 TOC 项很长，允许水平滚动而不是换行 */
+.ux-toc-block .ux-toc-body{overflow-x:auto; -webkit-overflow-scrolling: touch;}
+.ux-toc-block .ux-toc-body::-webkit-scrollbar{height:8px}
+.ux-toc-block .ux-toc-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:4px}
+
+/* 保持正文宽度与旧版一致：约 752px（1100 - 320 - 28） */
+.main .article { max-width: 752px; margin: 24px auto 40px; width: 100%; box-sizing: border-box; }
+
+/* 侧栏块 */
+.sidebar-block{background:var(--card-bg);padding:16px;border-radius:8px;margin-bottom:16px}
+.sidebar-block h3{margin:0 0 8px 0;font-size:1rem}
+.sidebar-block ul{margin:0;padding-left:1rem}
+.sidebar-block li{margin:6px 0}
+
+/* 引用样式：移除左侧竖线，使用楷体与缩进 */
+blockquote{border-left:none;padding-left:1.25rem;margin:1.2rem 0;font-family: "KaiTi", "楷体", Georgia, serif;font-style:normal;background:transparent}
+blockquote p{margin:0}
+
+/* 代码/自定义块统一灰色背景（证明由新 ux-block 管理） */
+pre, .proof-content{background:#f3f4f6;border-radius:8px;padding:14px;border:1px solid rgba(0,0,0,0.06)}
+
+/* 区分边界：代码块为虚线 */
+pre{border-style:dashed;border-color:rgba(0,0,0,0.08);position:relative}
+
+/* 折叠控制 */
+.collapse-btn{position:absolute;top:8px;right:8px;background:#fff;border-radius:6px;padding:4px 8px;font-size:0.85rem;border:1px solid rgba(0,0,0,0.08);cursor:pointer}
+.collapsed .collapse-btn{transform:rotate(180deg)}
+
+/* 折叠目标 */
+.collapsible{overflow:hidden;transition:max-height 0.28s ease,opacity 0.2s ease}
+.collapsible.collapsed{max-height:0;opacity:0;padding:0}
+
+/* 代码块展开按钮位置调整 */
+pre .collapse-btn{position:absolute;right:8px;top:8px}
+
+/* 多层列表：支持折叠/展开 */
+.post-content ul, .post-content ol{counter-reset:item;margin-left:1.1rem}
+.post-content li{position:relative;margin:6px 0;padding:4px 8px;border-radius:4px}
+.post-content li .list-toggle{position:absolute;left:-1rem;top:6px;width:18px;height:18px;border-radius:3px;background:transparent;border:1px solid rgba(0,0,0,0.06);font-size:0.75rem;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.post-content li.collapsed > ul, .post-content li.collapsed > ol{display:none}
+
+/* 不同嵌套级别字体微调 */
+.post-content ul,
+.post-content ol {
+  font-size: 1rem !important; /* 基础级别，确保一致 */
+}
+.post-content ul ul,
+.post-content ol ul,
+.post-content ul ol,
+.post-content ol ol {
+  font-size: 0.95rem !important; /* 第二级：略小 */
+}
+.post-content ul ul ul,
+.post-content ol ul ul,
+.post-content ul ol ul,
+.post-content ol ol ul {
+  font-size: 0.92rem !important; /* 第三级：继续略小 */
+}
+.post-content ul ul ul ul,
+.post-content ol ul ul ul,
+.post-content ul ol ul ul,
+.post-content ol ol ol ol {
+  font-size: 0.90rem !important; /* 第四级及更深：保持或更小 */
+}
+
+/* 响应式 */
+@media (max-width: 900px){
+  .container-article{flex-direction:column;padding:12px}
+  .sidebar{width:100%}
+}
+
+/* 评论区 */
+.comments-section{margin-top:2rem;padding:12px;background:transparent}
+.comments-section .comment-item{border-bottom:1px dashed rgba(0,0,0,0.06);padding:8px 0}
+.comments-section .comment-author{font-weight:600}
+.comment-form label{display:block;margin:8px 0}
+.comment-form input[type=text], .comment-form textarea{width:100%;padding:8px;border:1px solid rgba(0,0,0,0.08);border-radius:6px}
+.btn{background:#4a4a4a;color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer;transition:background 0.2s ease}
+.btn:hover{background:#333}
+#comment-form button, .comment-form button{background:#4a4a4a;color:#fff}
+#comment-form button:hover, .comment-form button:hover{background:#333}
+
+/* 全站中性链接：去除默认蓝色指示，但保留可点击性 */
+a, a:link, a:visited { color: inherit; text-decoration: none; }
+.article-readmore a { color: var(--ux-muted); border-bottom: 1px dashed rgba(0,0,0,0.06); }
+
+/* blockquote 折叠按钮样式（确保与脚本共用） */
+.blockquote-toggle { position: absolute; right: 12px; top: 12px; background: transparent; border: 1px solid rgba(0,0,0,0.06); padding:6px 8px; border-radius:6px; font-size:0.85rem; cursor:pointer; color:var(--ux-muted); }
+
+/* 小屏幕按钮更大以便触控 */
+@media (max-width:480px){
+  .collapse-btn{padding:6px 10px}
+  .post-content li .list-toggle{left:-1.6rem}
+}
+
+/* 覆盖老样式：统一折叠/展开按钮外观（兼容 .collapse-toggle / .collapse-btn / .blockquote-toggle） */
+.collapse-toggle, .collapse-btn, .blockquote-toggle {
+  position: absolute !important;
+  right: 12px !important;
+  top: 12px !important;
+  background: transparent !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  color: var(--ux-muted) !important;
+  padding: 6px 8px !important;
+  border-radius: 6px !important;
+  font-size: 0.85rem !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+}
+
+.collapse-toggle { width: auto !important; height: auto !important; }
+.collapsed .collapse-toggle, .collapsed .collapse-btn, .collapsed .blockquote-toggle { transform: rotate(180deg); }
+
+/* 如果仍然有蓝色边框或图标，强制设置为中性色 */
+.collapse-toggle, .collapse-toggle * { color: var(--ux-muted) !important; background: transparent !important; border-color: rgba(0,0,0,0.06) !important; }
+
+/* 可选：更高优先级选择器，确保生效 */
+/* 强制样式（移除 all:unset，避免焦点导致插入符闪烁） */
+body .collapse-toggle, body .collapse-btn, body .blockquote-toggle {
+  display: inline-block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+  color: var(--ux-muted);
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* 点击时不显示插入符（caret）或默认 outline，但保留可访问性（建议保留 :focus-visible 样式可选） */
+
+/* 新的封装块样式（ux-block）：统一定理/证明/定义/例子/注记等 */
+/* 更现代的“阴影悬浮”卡片样式：去掉灰色描线，使用轻微投影与悬浮交互 */
+.ux-block{
+  background: transparent; /* 纯透明卡片背景，保留投影以表现悬浮感 */
+  border-radius:10px;
+  margin:1rem 0;
+  overflow:visible;
+  position:relative;
+  border: none;
+  box-shadow: 0 8px 20px rgba(11,22,40,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.ux-block:hover{transform: translateY(-6px);box-shadow: 0 20px 40px rgba(11,22,40,0.08)}
+.ux-block__header{display:flex;align-items:center;gap:8px;padding:12px 14px;background:transparent}
+.ux-block__title{font-weight:700;color:var(--ux-ink);font-size:1rem}
+.ux-block__ref{margin-left:auto;font-size:0.85rem;color:var(--ux-muted)}
+.ux-block__toggle{margin-left:8px;background:transparent;border:1px solid rgba(0,0,0,0.06);padding:6px 8px;border-radius:6px;cursor:pointer;color:var(--ux-muted)}
+.ux-block__content{padding:14px 16px;background:transparent;color:var(--ux-ink);line-height:1.75}
+
+/* 专门针对 proof 的微调：标题与结尾符号更醒目，内容字体与正文一致 */
+.ux-block--proof .ux-block__title{font-size:1.2rem;font-weight:800}
+.ux-block--proof .ux-block__content{font-size:inherit}
+.ux-block--proof .ux-block__end{font-size:1.6rem}
+.ux-block__end{text-align:right;padding:8px 14px;font-weight:700;color:var(--ux-muted)}
+
+/* 类型色块：通过修饰类更改 header 左侧色带或背景 */
+.ux-block--theorem{border-left:5px solid #16a34a}
+.ux-block--lemma{border-left:5px solid #d97706}
+.ux-block--corollary{border-left:5px solid #7c3aed}
+.ux-block--definition{border-left:5px solid #0284c7}
+.ux-block--example{border-left:5px solid #059669}
+.ux-block--remark{border-left:5px solid #6b7280}
+.ux-block--proposition{border-left:5px solid #0ea5a6}
+.ux-block--proof{border-left:5px solid rgba(0,0,0,0.12)}
+
+/* 折叠状态 */
+.ux-block--collapsed .ux-block__content{display:none}
+.ux-block--collapsed .ux-block__toggle{transform:rotate(180deg)}
+
+/* 更小屏时简化边距 */
+@media (max-width: 768px){
+  .ux-block{margin:0.9rem -12px;border-radius:8px;box-shadow: 0 6px 18px rgba(11,22,40,0.06)}
+  .ux-block__content{padding:10px}
+  .ux-block:hover{transform:none}
+}
+
+/* 深色模式下的阴影/背景微调，保证可读性 */
+@media (prefers-color-scheme: dark){
+  .ux-block{background: color-mix(in srgb, #111 85%, var(--card-bg) 15%);box-shadow: 0 10px 30px rgba(0,0,0,0.6)}
+  .ux-block:hover{box-shadow: 0 24px 48px rgba(0,0,0,0.7)}
+}
+
+/* Toggle icon sizing and rotation (use SVG inside button) */
+.ux-block__toggle{width:40px;height:36px;padding:8px;display:inline-flex;align-items:center;justify-content:center}
+.ux-toggle-icon{width:20px;height:20px;color:var(--ux-muted);transition:transform 0.18s ease}
+.ux-block--collapsed .ux-block__toggle .ux-toggle-icon{transform:rotate(-90deg)}
+
+/* proof header subtle background */
+.ux-block--proof .ux-block__header{background: rgba(0,0,0,0.03);border-bottom-left-radius:8px;border-bottom-right-radius:8px}
+@media (prefers-color-scheme: dark){
+  .ux-block--proof .ux-block__header{background: rgba(255,255,255,0.02)}
+}
+
+.collapse-toggle:focus, .collapse-btn:focus, .blockquote-toggle:focus {
+  outline: none;
+  box-shadow: none;
+  caret-color: transparent;
+}
+
+/* 头部/侧栏/页脚对齐和吸顶 */
+.site-header, header, .site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* 顶部导航吸顶：移除灰色背景，仅保留下方分割线 */
+.site-header, header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+/* 侧栏吸顶（与头部保留一定间距） */
+.sidebar{position:sticky;top:72px;align-self:flex-start}
+
+/* 目录（TOC）左侧布局：移至左侧栏，主内容向右调整 */
+/* TOC 放到左列（由 Grid 布局控制），不使用绝对定位 */
+/* Only apply sticky full-width behavior for non-floating TOC (fallback) */
+.ux-toc:not(.ux-toc-floating) {
+  position: sticky;
+  top: 84px;
+  width: 100%;
+}
+
+.main { position: relative; }
+
+/* 目录样式优化 */
+aside.ux-toc .ux-toc-body ul { list-style: none; padding-left: 0; }
+aside.ux-toc .ux-toc-body li { margin: 4px 0; padding-left: 1rem; position: relative; }
+aside.ux-toc .ux-toc-body a { color: var(--ux-ink); font-size: 0.98rem; font-weight:500; }
+aside.ux-toc .ux-toc-body a:hover { color: var(--accent); }
+aside.ux-toc .ux-toc-body ul ul { margin-left: 0.6rem; }
+
+/* TOC list spacing and readability */
+aside.ux-toc .ux-toc-body li { margin: 6px 0; }
+aside.ux-toc .ux-toc-body li a { display: inline-block; padding: 2px 4px; }
+aside.ux-toc .ux-toc-body > ul > li > a { font-size: 1.02rem; font-weight:600; }
+
+/* 响应式隐藏TOC左侧栏（屏幕太小时）*/
+@media (max-width: 1200px) {
+  .container-article{grid-template-columns: 1fr;}
+  aside.ux-toc, .ux-toc-floating { display: none; }
+}
+
+/* 摘要行截断（用于文章列表） */
+.post-summary, .post-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-height: 1.5em;
+  max-height: calc(1.5em * 3);
+}
+
+/* 吸顶 header 滚动后的背景 */
+.site-header.scrolled, header.scrolled {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(16,24,40,0.06);
+}
+
+/* 折叠按钮可访问性微调 */
+.collapse-btn, .collapse-toggle, .blockquote-toggle, .list-toggle {
+  user-select: none;
+}
+
+
