@@ -1,0 +1,163 @@
+/* ========================================
+   深色模式适配
+   ======================================== */
+
+/* 深色模式主题变量已在 ux-variables.css 定义 */
+
+/* Blockquote 深色模式 */
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    /* Use solid card background in dark mode to avoid narrow gradient banding */
+    background: var(--card-bg);
+    color: var(--text);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+  }
+
+  .blockquote-toggle {
+    background: rgba(30,30,30,0.9);
+    color: #e6e6e6;
+    border-color: rgba(255,255,255,0.04);
+  }
+}
+
+/* 证明块深色模式 */
+@media (prefers-color-scheme: dark) {
+  .theorem-proof {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .proof-content {
+    background-color: #252526;
+    color: #e0e0e0;
+  }
+
+  .proof-end {
+    background-color: #2d2d30;
+  }
+
+  .theorem-proof.theorem .proof-header {
+    background-color: #2a6e2a;
+  }
+
+  .theorem-proof.lemma .proof-header {
+    background-color: #8a6d3b;
+  }
+
+  .theorem-proof.corollary .proof-header {
+    background-color: #5d3a78;
+  }
+}
+
+/* 现代证明块深色模式 */
+@media (prefers-color-scheme: dark) {
+  .ux-block {
+    background: color-mix(in srgb, #111 85%, var(--card-bg) 15%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+
+  .ux-block:hover {
+    box-shadow: 0 24px 48px rgba(0,0,0,0.7);
+  }
+
+  .ux-block--proof .ux-block__header {
+    background: rgba(255,255,255,0.02);
+  }
+}
+
+/* 列表深色模式 */
+@media (prefers-color-scheme: dark) {
+  .post-content ul > li::before,
+  .post-content ol > li::before {
+    background-color: #6b7280 !important;
+  }
+
+  .post-content li:hover {
+    background-color: rgba(59, 130, 246, 0.25) !important;
+  }
+
+  .post-content ul ul ul ul {
+    color: #93c5fd !important;
+  }
+}
+
+/* body.dark-mode 类选择器的深色模式 */
+body.dark-mode blockquote {
+  background: var(--card-bg) !important;
+  color: var(--text) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 1rem 1.25rem !important;
+  border-radius: 8px !important;
+}
+
+body.dark-mode .blockquote-toggle {
+  background: rgba(30,30,30,0.9);
+  color: #e6e6e6;
+  border-color: rgba(255,255,255,0.04);
+}
+
+body.dark-mode .theorem-proof {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .proof-content {
+  background-color: #252526;
+  color: #e0e0e0;
+}
+
+body.dark-mode .proof-end {
+  background-color: #2d2d30;
+}
+
+body.dark-mode .post-content ul > li::before,
+body.dark-mode .post-content ol > li::before {
+  background-color: #6b7280 !important;
+}
+
+body.dark-mode .post-content li:hover {
+  background-color: rgba(59, 130, 246, 0.25) !important;
+}
+
+body.dark-mode .ux-block {
+  background: color-mix(in srgb, #111 85%, var(--card-bg) 15%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .ux-block:hover {
+  box-shadow: 0 24px 48px rgba(0,0,0,0.7);
+}
+
+/* 强制覆盖：确保 TOC、评论区、证明块在深色模式下不被白色覆盖 */
+body.dark-mode .ux-toc-block {
+  background: var(--card-bg) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .toc, body.dark-mode aside.toc {
+  background: var(--card-bg) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .mobile-toc-content {
+  background: var(--bg) !important;
+  border-left-color: var(--border) !important;
+}
+
+body.dark-mode .comments-section {
+  background: var(--card-bg) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .proof-content {
+  background: var(--card-bg) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .ux-block__header {
+  background: var(--surface) !important;
+}

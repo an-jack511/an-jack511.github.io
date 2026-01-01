@@ -1,0 +1,40 @@
+/* ========================================
+   CSS 变量和主题定义
+   ======================================== */
+
+:root {
+  --ux-bg: #f5f7fb;
+  --ux-ink: var(--text);
+  --ux-muted: rgba(0,0,0,0.54);
+  --accent: #3498db;
+  --card-bg: #f3f4f6;
+  --ux-page-shift: 120px; /* 页面右移量，可调（已调整为 120px） */
+  /* 自定义主题变量（来自 custom.css） */
+  --bg: #ffffff;
+  --text: #111827;
+  --link: #1d4ed8;
+}
+
+/* 暗色主题（通过 body.dark-mode 或 data-theme="dark" 启用） */
+[data-theme="dark"],
+body.dark-mode {
+  --bg: #0b0f12;
+  --text: #e6e6e6;
+  --link: #60a5fa;
+}
+
+/* 深色模式下的卡片与表面颜色、边框变量 */
+[data-theme="dark"],
+body.dark-mode {
+  --card-bg: #111315;
+  --surface: rgba(255,255,255,0.02);
+  --border: rgba(255,255,255,0.06);
+  --ux-ink: var(--text);
+  --ux-muted: rgba(255,255,255,0.72);
+}
+
+/* 默认（亮色）边框与表面 */
+:root {
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.06);
+}
