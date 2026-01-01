@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=10852&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>廿五年端午一周与参数方程和极坐标 - AnJaCk</title>
+  <meta property="og:title" content="廿五年端午一周与参数方程和极坐标 - AnJaCk" />
+  <meta name="twitter:title" content="廿五年端午一周与参数方程和极坐标 - AnJaCk" />
+  <meta name="description" content="随感集以后权当周记好了，大概每周一篇的频率。
+语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。
+周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。
+昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。
+其中一次回来后突然向我们说：“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。
+upd on 6.1：儿童节，和爸妈去看了《碟中谍8：最终清算》。打斗戏和大场面少了点，不够爽，但是质量都挺高的。至于剧情……无所谓了，依旧是魔戒——夺宝奇兵模板，找东西，灭反派。又糅了进去点智械危机的玩意，虽然我对智械危机挺无感的。但谁在乎剧情呢，反正阿汤哥扒飞机挺帅的。背景感情戏啥的我低头就好了，也没有必要指责啥的，总有人喜欢，也有人觉得好。我只看我觉得爽快的地方就好了。
+参数方程
+$$
+\begin{cases}
+x = f(t) \\ y = g(t)
+\end{cases}
+$$
+参数方程的切线：
+$$
+\begin{aligned}
+l_{\text{at} \  (x(t), y(t))}: y - g(t) &amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\\
+&amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\\
+&amp;= \frac{g&rsquo;(t)}{f&rsquo;(t)}(x - f(t))
+\end{aligned}
+$$
+$$
+\color{red} l_{\text{at} \  (x(t), y(t))}: f&rsquo;(t)(y - g(t)) = g&rsquo;(t)(x - f(t))
+$$
+内摆线与星形线
+当小圆在大圆内滚动，小圆上一点轨迹所成图形称为 内摆线。
+
+结合上图，设小圆半径 $r$，大圆半径 $R$，$\angle AOB = \alpha, \angle PQB = \beta$. 当 $P(x, y)$ 从 $A$ 点开始滚动时，我们有以下方程成立：">
+  <meta property="og:description" content="随感集以后权当周记好了，大概每周一篇的频率。
+语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。
+周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。
+昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。
+其中一次回来后突然向我们说：“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。
+upd on 6.1：儿童节，和爸妈去看了《碟中谍8：最终清算》。打斗戏和大场面少了点，不够爽，但是质量都挺高的。至于剧情……无所谓了，依旧是魔戒——夺宝奇兵模板，找东西，灭反派。又糅了进去点智械危机的玩意，虽然我对智械危机挺无感的。但谁在乎剧情呢，反正阿汤哥扒飞机挺帅的。背景感情戏啥的我低头就好了，也没有必要指责啥的，总有人喜欢，也有人觉得好。我只看我觉得爽快的地方就好了。
+参数方程
+$$
+\begin{cases}
+x = f(t) \\ y = g(t)
+\end{cases}
+$$
+参数方程的切线：
+$$
+\begin{aligned}
+l_{\text{at} \  (x(t), y(t))}: y - g(t) &amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\\
+&amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\\
+&amp;= \frac{g&rsquo;(t)}{f&rsquo;(t)}(x - f(t))
+\end{aligned}
+$$
+$$
+\color{red} l_{\text{at} \  (x(t), y(t))}: f&rsquo;(t)(y - g(t)) = g&rsquo;(t)(x - f(t))
+$$
+内摆线与星形线
+当小圆在大圆内滚动，小圆上一点轨迹所成图形称为 内摆线。
+
+结合上图，设小圆半径 $r$，大圆半径 $R$，$\angle AOB = \alpha, \angle PQB = \beta$. 当 $P(x, y)$ 从 $A$ 点开始滚动时，我们有以下方程成立：">
+  <meta name="twitter:description" content="随感集以后权当周记好了，大概每周一篇的频率。
+语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。
+周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。
+昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老 …">
+  <meta name="author" content="An_Jack"/>
+  <meta property="og:site_name" content="AnJaCk" />
+  <meta property="og:url" content="http://localhost:10852/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.147.0">
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/style-dark.css" media="all and (prefers-color-scheme: dark)" />
+  
+  
+
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+
+  <script src="/js/script.js"></script>
+  <script src="/js/custom.js"></script>
+  <script defer src="/fontawesome/all.min.js"></script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      packages: {'[+]': ['physics']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    loader: {
+      load: ['[tex]/physics']
+    },
+    startup: {
+      ready: () => {
+        MathJax.startup.defaultReady();
+        console.log('MathJax initialized');
+      }
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:10852/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:10852/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:10852/favicons/favicon-16x16.png">
+  <link rel="manifest" href="http://localhost:10852/favicons/site.webmanifest">
+  <link rel="mask-icon" href="http://localhost:10852/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="http://localhost:10852/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="http://localhost:10852/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <meta name="favicon-version" content="1.0">
+
+  
+   
+  <link rel="stylesheet" href="/css/custom.min.611c02b8e8b3bebaf123210fa5659214c87c50d053e1e9ef1f4e58e5bc71fc8e.css" integrity="sha256-YRwCuOizvrrxIyEPpWWSFMh8UNBT4envH05Y5bxx/I4=">
+  
+  <link rel="stylesheet" href="/css/ux.css" media="all" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">AnJaCk</a></h1>
+    <button id="theme-toggle" class="theme-toggle" aria-label="切换明暗模式">🌙</button>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-categories"><a href="/categories/" title="分类">分类</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="标签">标签</a></li>
+      <li class="site-navi-item-archives"><a href="/archives/" title="归档">归档</a></li>
+    </ul>
+  </nav>
+</header>
+<hr class="site-header-bottom">
+
+  
+  
+  
+  
+  
+    <aside class="ux-toc ux-toc-floating" role="navigation" aria-label="Table of contents">
+      
+
+
+
+
+
+  <div class="sidebar-block ux-toc-block" aria-label="文章目录">
+    <h3>目录</h3>
+    <div id="TableOfContents" class="ux-toc-body">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#参数方程">参数方程</a>
+      <ul>
+        <li><a href="#内摆线与星形线">内摆线与星形线</a></li>
+      </ul>
+    </li>
+    <li><a href="#极坐标-rho-theta">极坐标 $(\rho, \theta)$</a>
+      <ul>
+        <li><a href="#卡西尼卵形线">卡西尼卵形线</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+
+    </aside>
+  
+  <div class="container-article" role="main">
+    <main class="main" role="main">
+      
+      
+      <div class="ux-toc-inline">
+        
+
+
+
+
+
+  <div class="sidebar-block ux-toc-block" aria-label="文章目录">
+    <h3>目录</h3>
+    <div id="TableOfContents" class="ux-toc-body">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#参数方程">参数方程</a>
+      <ul>
+        <li><a href="#内摆线与星形线">内摆线与星形线</a></li>
+      </ul>
+    </li>
+    <li><a href="#极坐标-rho-theta">极坐标 $(\rho, \theta)$</a>
+      <ul>
+        <li><a href="#卡西尼卵形线">卡西尼卵形线</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+
+      </div>
+      
+      <article class="article">
+      
+      
+      <h1 class="article-title">廿五年端午一周与参数方程和极坐标</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>2025-05-31</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/%E9%9A%8F%E6%84%9F%E9%9B%86/">
+            <i class="fa-solid fa-folder"></i>
+            随感集
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-categories">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%BF%97/">
+            <i class="fa-solid fa-folder"></i>
+            学习志
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+            <i class="fa-solid fa-tag"></i>
+            学习
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/%E7%94%9F%E6%B4%BB/">
+            <i class="fa-solid fa-tag"></i>
+            生活
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/%E8%AE%B0%E4%BA%8B/">
+            <i class="fa-solid fa-tag"></i>
+            记事
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/%E6%95%B0%E5%AD%A6/">
+            <i class="fa-solid fa-tag"></i>
+            数学
+          </a>&nbsp;
+        </li>
+      </ul>
+      <p>随感集以后权当周记好了，大概每周一篇的频率。</p>
+<p>语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。</p>
+<p>周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。</p>
+<p>昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。</p>
+<p>其中一次回来后突然向我们说：“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。</p>
+<p>upd on 6.1：儿童节，和爸妈去看了《碟中谍8：最终清算》。打斗戏和大场面少了点，不够爽，但是质量都挺高的。至于剧情……无所谓了，依旧是魔戒——夺宝奇兵模板，找东西，灭反派。又糅了进去点智械危机的玩意，虽然我对智械危机挺无感的。但谁在乎剧情呢，反正阿汤哥扒飞机挺帅的。背景感情戏啥的我低头就好了，也没有必要指责啥的，总有人喜欢，也有人觉得好。我只看我觉得爽快的地方就好了。</p>
+<h2 id="参数方程">参数方程</h2>
+<p>$$
+\begin{cases}
+x = f(t) \\ y = g(t)
+\end{cases}
+$$</p>
+<p>参数方程的切线：</p>
+<p>$$
+\begin{aligned}
+l_{\text{at} \  (x(t), y(t))}: y - g(t) &amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\\
+&amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\\
+&amp;= \frac{g&rsquo;(t)}{f&rsquo;(t)}(x - f(t))
+\end{aligned}
+$$</p>
+<p>$$
+\color{red} l_{\text{at} \  (x(t), y(t))}: f&rsquo;(t)(y - g(t)) = g&rsquo;(t)(x - f(t))
+$$</p>
+<h3 id="内摆线与星形线">内摆线与星形线</h3>
+<p>当小圆在大圆内滚动，小圆上一点轨迹所成图形称为 <strong>内摆线</strong>。</p>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250531205002.png" alt="20250531205002"></p>
+<p>结合上图，设小圆半径 $r$，大圆半径 $R$，$\angle AOB = \alpha, \angle PQB = \beta$. 当 $P(x, y)$ 从 $A$ 点开始滚动时，我们有以下方程成立：</p>
+<p>$$
+\begin{aligned}
+x = (R - r)\cos \alpha + r \cos (\beta - \alpha) \\
+y = (R - r)\sin \alpha - r \sin (\beta - \alpha) \\
+\overset{\frown}{AB} = \overset{\frown}{PB} \Longleftrightarrow R \cdot \alpha = r \cdot \beta
+\end{aligned}
+$$</p>
+<p>联立，得到内摆线的参数方程为：</p>
+<p>$$
+\begin{cases}
+x = (R - r)\cos \alpha + r \cos \left(\tfrac{R-r}{r} \cdot \alpha\right) \\
+y = (R - r)\sin \alpha - r \sin \left(\tfrac{R-r}{r} \cdot \alpha\right)
+\end{cases}
+$$</p>
+<p>如果 $R = 4r$，则此时形成的曲线为 <strong>星形线</strong>。</p>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250531212055.png" alt="20250531212055"></p>
+<p>将 $R = 4r$ 代入内摆线参数方程得：</p>
+<p>$$
+x = 3r\cos\alpha + r\cos 3\alpha, \ y = 3r \sin \alpha - r \sin 3\alpha
+$$</p>
+<p>依据三倍角公式</p>
+<p>$$
+\cos 3\alpha  = 4\cos ^3 \alpha - 3 \cos \alpha, \ \sin 3\alpha = 3\sin \alpha - 4\sin ^3 \alpha
+$$</p>
+<p>代入得星形线的参数方程为：</p>
+<p>$$
+\begin{cases}
+x = 4r\cos ^3 \alpha  = R\cos ^3 \alpha\\
+y = 4r\sin ^3 \alpha  = R\sin ^3 \alpha
+\end{cases}
+$$</p>
+<p>依据 $\sin ^2 \alpha+ \cos ^2 \alpha = 1 $ 消参，得到标准方程：</p>
+<p>$$
+\color{red} x^\frac{2}{3} + y^\frac{2}{3} = R^\frac{2}{3}
+$$</p>
+<h2 id="极坐标-rho-theta">极坐标 $(\rho, \theta)$</h2>
+<p>应用圆锥曲线的第二定义，假设圆锥曲线上的点 $A(x, y)$：</p>
+<p>$$
+\frac{d(A, F(-c, 0))}{d(A, l: x = -\frac{a^2}{c})} = e
+$$</p>
+<p>方便起见，我们将焦点 $F$ 设置为极坐标系的原点，这样准线变成了 $x = \frac{a^2}{c} - c$. 令 $\theta = \angle xFA$. 这样对于 $A \rightarrow (\rho, \theta)$：</p>
+<p>$$
+\begin{gather}
+d(A, F(0, 0)) = \rho \\
+d(A, l: x = -\tfrac{a^2}{c} + c) = \rho\cos \theta + \frac{a^2}{c} - c
+\end{gather}
+$$</p>
+<p>于是</p>
+<p>$$
+\rho\cos \theta + \tfrac{a^2}{c} - c = \frac{\rho}{e} <br>
+\Rightarrow \rho = \frac{\frac{a^2}{c} - c}{\frac{1}{e} - \cos \theta}
+$$</p>
+<h3 id="卡西尼卵形线">卡西尼卵形线</h3>
+<p>卡西尼卵形线，其上一点 $P$ 到两点 $M$, $N$ 乘积为定值：$$|PM|\cdot |PN| = t^2 = \text{const}$$
+<img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250531193435.png" alt="20250531193435"></p>
+<p>随着 $t$ 增大，图形发生两次突变，一次合并，一次变凸。</p>
+<p>下文中我们令 $M(-a, 0), N(a, 0)$，$P(x, y)$。</p>
+<p><strong>标准方程：</strong></p>
+<p>$$
+\begin{aligned}
+\sqrt{(x + a)^2 + y^2} \cdot \sqrt{(x - a)^2 + y^2} &amp;= t^2 \\
+\left[(x + a)^2 + y^2\right]\left[(x - a)^2 + y^2\right] &amp;= t^4 \\
+x^4 + y^4 + a^4 + 2x^2y^2 +2a^2y^2 - 2a^2x^2 &amp;= t^4 \\
+\color{red}(x^2 + y^2)^2 - 2a^2 (x^2 - y^2) &amp;\color{red}= t^4 - a^4
+\end{aligned}
+$$</p>
+<p>极坐标形式，代换 $x^2 + y^2 = \rho ^2, \ x = \rho \cos \theta,\  y = \rho \sin \theta$：</p>
+<p>$$
+\rho ^4  - 2a^2\cos 2\theta = t^4 - a^4
+$$</p>
+<p><strong>特别地：</strong> 当 $a = t$ 时，卵形线变为自交于二定点中点的上图中蓝色 <strong>伯努利双纽线</strong>，标准方程和极坐标形式特化成：</p>
+<p>$$
+\begin{gather}
+(x^2 + y^2)^2 = 2a^2 (x^2 - y^2) \\
+\rho ^4 = 2a^2\cos 2\theta
+\end{gather}
+$$</p>
+
+      </article>
+
+      <section id="comments" class="comments-section">
+  <h2>评论</h2>
+
+  
+  
+  
+    
+    <div id="giscus-container">
+      <script src="https://giscus.app/client.js"
+        data-repo="an-jack511/an-jack511.github.io"
+        
+        data-category="Comments"
+        
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+
+    <noscript>请启用 JavaScript 查看评论。</noscript>
+
+  
+
+</section>
+
+    </main>
+
+    <aside class="sidebar" role="complementary">
+      
+<div class="sidebar-block recent-posts">
+  <h3>近期文章</h3>
+  <ul>
+    
+    
+      <li><a href="/posts/2026-1/%E7%BA%AA%E5%BF%B5-%E4%B8%A4%E5%8D%83%E4%BA%8C%E4%BA%94%E8%87%B3%E4%B8%A4%E5%8D%83%E4%BA%8C%E5%85%AD/">两千二五至两千二六</a></li>
+    
+      <li><a href="/posts/2025-x2/%E6%B8%B8%E8%AE%B0-%E9%AB%98%E8%80%83%E5%90%AC%E5%8F%A3-i/">高考听口 I</a></li>
+    
+      <li><a href="/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88iii-20251130/">杂谈III</a></li>
+    
+      <li><a href="/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9C%9F%E4%B8%AD%E5%90%8E-20251115/">期中后</a></li>
+    
+      <li><a href="/posts/2025-x1/%E6%B2%89%E6%80%9D%E5%BD%95-%E5%91%93%E8%AF%AD%E8%AE%B0%E6%A2%A6%E7%BC%96-20251106/">呓语记梦</a></li>
+    
+      <li><a href="/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E9%AB%98%E4%B8%89%E7%A7%8B%E7%9A%84%E5%A3%B0%E5%85%89-20251101-copy/">高三秋的声光</a></li>
+    
+      <li><a href="/posts/2025-x0/%E9%9A%8F%E6%84%9F%E5%BD%95-%E5%BE%88%E7%B4%AF%E7%9A%84%E4%B8%80%E5%91%A8-20251025/">很累的一周</a></li>
+    
+      <li><a href="/posts/2025-x0/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88ii-20251018-copy/">杂谈II</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="sidebar-block tips">
+  <h3>快捷</h3>
+  <ul>
+    <li><a href="/archives/">文章归档</a></li>
+  </ul>
+</div>
+
+    </aside>
+  </div>
+
+    
+<ul class="article-share">
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+ 
+</ul>
+
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/posts/2025-6/%E5%AD%A6%E4%B9%A0%E5%BF%97-%E5%AF%BC%E6%95%B0%E5%B0%8F%E6%80%BB%E7%BB%93-250603/" data-toggle="tooltip" data-placement="top" title="导数小总结">&lt; Newer</a>
+      </li>
+      <li class="pager-older">
+        <a href="/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%AD%A6%E7%94%9F%E8%8A%82%E7%AD%89%E7%AD%89-250524/" data-toggle="tooltip" data-placement="top" title="学生节等等">Older &gt;</a>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright"></div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-about"><a href="/about/" title="About">About</a></li>
+  </ul>
+  <div class="powerdby">
+    Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/taikii/whiteplain">Whiteplain</a>
+  </div>
+</div>
+
+<script src="/js/ux.js"></script>
+</body>
+</html>

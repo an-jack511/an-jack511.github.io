@@ -1,0 +1,175 @@
+/* ========================================
+   组件样式：按钮、链接、列表、评论等
+   ======================================== */
+
+/* 主题切换按钮 */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--surface);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid rgba(37,99,235,0.15);
+}
+
+/* 全站中性链接 */
+a, a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-readmore a {
+  color: var(--ux-muted);
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+
+/* 按钮样式 */
+.btn {
+  background: #4a4a4a;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+#comment-form button,
+.comment-form button {
+  background: #4a4a4a;
+  color: #fff;
+}
+
+#comment-form button:hover,
+.comment-form button:hover {
+  background: #333;
+}
+
+/* 评论区 */
+.comments-section {
+  margin-top: 2rem;
+  padding: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.comments-section .comment-item {
+  border-bottom: 1px dashed var(--border);
+  padding: 8px 0;
+}
+
+.comments-section .comment-author {
+  font-weight: 600;
+}
+
+.comment-form label {
+  display: block;
+  margin: 8px 0;
+}
+
+.comment-form input[type=text],
+.comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* 多层列表：支持折叠/展开 */
+.post-content ul,
+.post-content ol {
+  counter-reset: item;
+  margin-left: 1.1rem;
+}
+
+.post-content li {
+  position: relative;
+  margin: 6px 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.post-content li .list-toggle {
+  position: absolute;
+  left: -1rem;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.post-content li.collapsed > ul,
+.post-content li.collapsed > ol {
+  display: none;
+}
+
+/* 不同嵌套级别字体微调 */
+.post-content ul,
+.post-content ol {
+  font-size: 1rem !important;
+}
+
+.post-content ul ul,
+.post-content ol ul,
+.post-content ul ol,
+.post-content ol ol {
+  font-size: 0.95rem !important;
+}
+
+.post-content ul ul ul,
+.post-content ol ul ul,
+.post-content ul ol ul,
+.post-content ol ol ul {
+  font-size: 0.92rem !important;
+}
+
+.post-content ul ul ul ul,
+.post-content ol ul ul ul,
+.post-content ul ol ul ul,
+.post-content ol ol ol ol {
+  font-size: 0.90rem !important;
+}
+
+/* 摘要行截断（用于文章列表） */
+.post-summary,
+.post-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-height: 1.5em;
+  max-height: calc(1.5em * 3);
+}
+
+/* 小屏幕触控优化 */
+@media (max-width: 480px) {
+  .post-content li .list-toggle {
+    left: -1.6rem;
+  }
+}

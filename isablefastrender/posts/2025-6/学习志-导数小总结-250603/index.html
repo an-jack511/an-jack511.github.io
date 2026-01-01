@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=10852&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>导数小总结 - AnJaCk</title>
+  <meta property="og:title" content="导数小总结 - AnJaCk" />
+  <meta name="twitter:title" content="导数小总结 - AnJaCk" />
+  <meta name="description" content="一、取点经典模型
+1. $x \to &#43;\infty,\ \ e^x - ax &gt; 0 \ (a &gt; e)$
+取点 $x = 4a$。
+左侧是指数式，右侧是一次多项式，我们期望左侧放成二次多项式。应用放缩技巧（注：需补充不等式 $e^x \geq x &#43; 1$ 的证明）。
+$$
+e^x = \left(e^{x/2}\right)^2 \geq \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}
+$$
+我们得到
+$$
+e^x - ax \geq \frac{x^2}{4} - ax = x\left(\frac{x}{4} - a\right)
+$$
+如需令上式大于 $0$，只需取 $x_0 = 4a &gt; x_{极小值点} = \ln a$  即可。
+2. $x \to &#43;\infty,\ \ \ln x - ax &lt; 0 \ (0 &lt; a &lt; e^{-1})$
+取点 $x = \dfrac{4}{a^2}$。">
+  <meta property="og:description" content="一、取点经典模型
+1. $x \to &#43;\infty,\ \ e^x - ax &gt; 0 \ (a &gt; e)$
+取点 $x = 4a$。
+左侧是指数式，右侧是一次多项式，我们期望左侧放成二次多项式。应用放缩技巧（注：需补充不等式 $e^x \geq x &#43; 1$ 的证明）。
+$$
+e^x = \left(e^{x/2}\right)^2 \geq \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}
+$$
+我们得到
+$$
+e^x - ax \geq \frac{x^2}{4} - ax = x\left(\frac{x}{4} - a\right)
+$$
+如需令上式大于 $0$，只需取 $x_0 = 4a &gt; x_{极小值点} = \ln a$  即可。
+2. $x \to &#43;\infty,\ \ \ln x - ax &lt; 0 \ (0 &lt; a &lt; e^{-1})$
+取点 $x = \dfrac{4}{a^2}$。">
+  <meta name="twitter:description" content="一、取点经典模型
+1. $x \to &#43;\infty,\ \ e^x - ax &gt; 0 \ (a &gt; e)$
+取点 $x = 4a$。
+左侧是指数式，右侧是一次多项式，我们期望左侧放成二次多项式。应用放缩技巧（注：需补充不等式 $e^x \geq x &#43; 1$ 的证明）。
+$$
+e^x = \left(e^{x/2}\right)^2 \geq …">
+  <meta name="author" content="An_Jack"/>
+  <meta property="og:site_name" content="AnJaCk" />
+  <meta property="og:url" content="http://localhost:10852/posts/2025-6/%E5%AD%A6%E4%B9%A0%E5%BF%97-%E5%AF%BC%E6%95%B0%E5%B0%8F%E6%80%BB%E7%BB%93-250603/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.147.0">
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/style-dark.css" media="all and (prefers-color-scheme: dark)" />
+  
+  
+
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+
+  <script src="/js/script.js"></script>
+  <script src="/js/custom.js"></script>
+  <script defer src="/fontawesome/all.min.js"></script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      packages: {'[+]': ['physics']}
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    loader: {
+      load: ['[tex]/physics']
+    },
+    startup: {
+      ready: () => {
+        MathJax.startup.defaultReady();
+        console.log('MathJax initialized');
+      }
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:10852/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:10852/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:10852/favicons/favicon-16x16.png">
+  <link rel="manifest" href="http://localhost:10852/favicons/site.webmanifest">
+  <link rel="mask-icon" href="http://localhost:10852/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="http://localhost:10852/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="http://localhost:10852/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <meta name="favicon-version" content="1.0">
+
+  
+   
+  <link rel="stylesheet" href="/css/custom.min.611c02b8e8b3bebaf123210fa5659214c87c50d053e1e9ef1f4e58e5bc71fc8e.css" integrity="sha256-YRwCuOizvrrxIyEPpWWSFMh8UNBT4envH05Y5bxx/I4=">
+  
+  <link rel="stylesheet" href="/css/ux.css" media="all" />
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">AnJaCk</a></h1>
+    <button id="theme-toggle" class="theme-toggle" aria-label="切换明暗模式">🌙</button>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-categories"><a href="/categories/" title="分类">分类</a></li>
+      <li class="site-navi-item-tags"><a href="/tags/" title="标签">标签</a></li>
+      <li class="site-navi-item-archives"><a href="/archives/" title="归档">归档</a></li>
+    </ul>
+  </nav>
+</header>
+<hr class="site-header-bottom">
+
+  
+  
+  
+  
+  
+    <aside class="ux-toc ux-toc-floating" role="navigation" aria-label="Table of contents">
+      
+
+
+
+
+
+  <div class="sidebar-block ux-toc-block" aria-label="文章目录">
+    <h3>目录</h3>
+    <div id="TableOfContents" class="ux-toc-body">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一取点经典模型">一、取点经典模型</a>
+      <ul>
+        <li><a href="#1-x-to-infty--ex---ax--0--a--e">1. $x \to +\infty,\ \ e^x - ax &gt; 0 \ (a &gt; e)$</a></li>
+        <li><a href="#2-x-to-infty--ln-x---ax--0--0--a--e-1">2. $x \to +\infty,\ \ \ln x - ax &lt; 0 \ (0 &lt; a &lt; e^{-1})$</a></li>
+      </ul>
+    </li>
+    <li><a href="#二实用不等式">二、实用不等式</a>
+      <ul>
+        <li><a href="#1-切线不等式">1. 切线不等式</a></li>
+        <li><a href="#2-二次放缩">2. 二次放缩</a></li>
+        <li><a href="#3-对数平均不等式">3. 对数平均不等式</a></li>
+      </ul>
+    </li>
+    <li><a href="#三六种常见含-e-复合函数">三、六种常见含 $e$ 复合函数</a>
+      <ul>
+        <li><a href="#1-fx--x-ex">1. $f(x) = x e^x$</a></li>
+        <li><a href="#2-fx--exx">2. $f(x) = e^x/x$</a></li>
+        <li><a href="#3-fx--xex">3. $f(x) = x/e^x$</a></li>
+        <li><a href="#4-fx--x-ln-x">4. $f(x) = x \ln x$</a></li>
+        <li><a href="#5-fx--ln-x--x">5. $f(x) = \ln x / x$</a></li>
+        <li><a href="#6-fx--x--ln-x">6. $f(x) = x / \ln x$</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+
+    </aside>
+  
+  <div class="container-article" role="main">
+    <main class="main" role="main">
+      
+      
+      <div class="ux-toc-inline">
+        
+
+
+
+
+
+  <div class="sidebar-block ux-toc-block" aria-label="文章目录">
+    <h3>目录</h3>
+    <div id="TableOfContents" class="ux-toc-body">
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一取点经典模型">一、取点经典模型</a>
+      <ul>
+        <li><a href="#1-x-to-infty--ex---ax--0--a--e">1. $x \to +\infty,\ \ e^x - ax &gt; 0 \ (a &gt; e)$</a></li>
+        <li><a href="#2-x-to-infty--ln-x---ax--0--0--a--e-1">2. $x \to +\infty,\ \ \ln x - ax &lt; 0 \ (0 &lt; a &lt; e^{-1})$</a></li>
+      </ul>
+    </li>
+    <li><a href="#二实用不等式">二、实用不等式</a>
+      <ul>
+        <li><a href="#1-切线不等式">1. 切线不等式</a></li>
+        <li><a href="#2-二次放缩">2. 二次放缩</a></li>
+        <li><a href="#3-对数平均不等式">3. 对数平均不等式</a></li>
+      </ul>
+    </li>
+    <li><a href="#三六种常见含-e-复合函数">三、六种常见含 $e$ 复合函数</a>
+      <ul>
+        <li><a href="#1-fx--x-ex">1. $f(x) = x e^x$</a></li>
+        <li><a href="#2-fx--exx">2. $f(x) = e^x/x$</a></li>
+        <li><a href="#3-fx--xex">3. $f(x) = x/e^x$</a></li>
+        <li><a href="#4-fx--x-ln-x">4. $f(x) = x \ln x$</a></li>
+        <li><a href="#5-fx--ln-x--x">5. $f(x) = \ln x / x$</a></li>
+        <li><a href="#6-fx--x--ln-x">6. $f(x) = x / \ln x$</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+
+
+      </div>
+      
+      <article class="article">
+      
+      
+      <h1 class="article-title">导数小总结</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>2025-06-06</time></li>
+        <li class="article-meta-categories">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%BF%97/">
+            <i class="fa-solid fa-folder"></i>
+            学习志
+          </a>&nbsp;
+        </li>
+        <li class="article-meta-tags">
+          <a href="/tags/%E6%95%B0%E5%AD%A6/">
+            <i class="fa-solid fa-tag"></i>
+            数学
+          </a>&nbsp;
+        </li>
+      </ul>
+      <h2 id="一取点经典模型">一、取点经典模型</h2>
+<h3 id="1-x-to-infty--ex---ax--0--a--e">1. $x \to +\infty,\ \ e^x - ax &gt; 0 \ (a &gt; e)$</h3>
+<p><strong>取点 $x = 4a$</strong>。</p>
+<p>左侧是指数式，右侧是一次多项式，我们期望左侧放成<strong>二次多项式</strong>。应用放缩技巧（注：需补充不等式 $e^x \geq x + 1$ 的证明）。</p>
+<p>$$
+e^x = \left(e^{x/2}\right)^2 \geq \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}
+$$</p>
+<p>我们得到</p>
+<p>$$
+e^x - ax \geq \frac{x^2}{4} - ax = x\left(\frac{x}{4} - a\right)
+$$</p>
+<p>如需令上式大于 $0$，只需取 $x_0 = 4a &gt; x_{极小值点} = \ln a$  即可。</p>
+<h3 id="2-x-to-infty--ln-x---ax--0--0--a--e-1">2. $x \to +\infty,\ \ \ln x - ax &lt; 0 \ (0 &lt; a &lt; e^{-1})$</h3>
+<p><strong>取点 $x = \dfrac{4}{a^2}$</strong>。</p>
+<p>事实上，原命题等价于</p>
+<p>$$
+e^{ax} - x &gt; 0 \overset{\underset{t = ax}{}}{\Longrightarrow} e^t - \tfrac{1}{a}t &gt; 0
+$$</p>
+<p>那么取 $t = ax = \dfrac{4}{a}$ 即可，此时 $x = \dfrac{4}{a^2}$。</p>
+<p>或者将 $\ln x$ 缩成根式次，应用</p>
+<p>$$
+\ln x = 2\ln \sqrt{x} &lt; 2\sqrt{x}
+$$</p>
+<p>我们得到</p>
+<p>$$
+\ln x - ax &lt; 2\sqrt x - ax = \sqrt x \left(2 - a\sqrt x\right) &lt; 0
+$$</p>
+<p>也得到此时可取点 $x = \dfrac{4}{a^2}$。</p>
+<h2 id="二实用不等式">二、实用不等式</h2>
+<h3 id="1-切线不等式">1. 切线不等式</h3>
+<p>$$
+\begin{aligned}
+e^x &amp;\geq x + 1 \quad &amp;\color{blue}\text{at } x = 0 \\
+e^x &amp;\geq ex \quad &amp;\color{blue}\text{at } x = 1 \\
+\ln x &amp;\leq x - 1 \quad &amp;\color{blue}\text{at } x = 1 \\
+\ln x &amp;\leq \frac{1}{e}x \quad &amp;\color{blue}\text{at } x = e \\
+\sin x &amp;\leq x \quad &amp;\color{blue}\forall x \geq 0<br>
+\end{aligned}
+$$</p>
+<p>等价变形 $$\ln x = -\ln \frac{1}{x} \geq -\frac{1}{x} + 1$$</p>
+<h3 id="2-二次放缩">2. 二次放缩</h3>
+<p>$$
+\begin{cases}
+e^x &gt; 1 + x + \frac{x^2}{2} \quad &amp;\color{blue}\forall x &gt; 0  \\
+e^x = 1 + x + \frac{x^2}{2} \quad &amp;\color{blue}x = 0 \\
+e^x &lt; 1 + x + \frac{x^2}{2} \quad &amp;\color{blue}\forall x &lt; 0
+\end{cases}
+$$</p>
+<p>$$
+\ln (x + 1) \geq x - \frac{1}{2}x^2
+$$</p>
+<h3 id="3-对数平均不等式">3. 对数平均不等式</h3>
+<p>$$
+\sqrt{ab} &lt; \frac{a - b}{\ln a - \ln b} &lt; \frac{a + b}{2}
+$$</p>
+<div class="ux-block ux-block--proof">
+  <div class="ux-block__header">
+    <div class="ux-block__title">证明</div>
+    
+    <button class="ux-block__toggle" aria-expanded="true" aria-label="折叠/展开">
+      <svg class="ux-toggle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  <div class="ux-block__content">
+    <p><strong>证明</strong>：
+<strong>首先证左边 $\sqrt{ab} &lt; \dfrac{a - b}{\ln a - \ln b}$，不妨令 $a &gt; b$.</strong></p>
+<p>$$
+\begin{aligned}
+原式 &amp;\Longleftrightarrow \ln a - \ln b &amp;&amp;&lt; \dfrac{a - b}{\sqrt{ab}} \\
+&amp; \Longleftrightarrow \ln{\frac{a}{b}} &amp;&amp;&lt; \sqrt{\frac{a}{b}} - \sqrt{\frac{b}{a}}= \sqrt{\frac{a}{b}} - \frac{1}{\sqrt{\frac{a}{b}}}\
+\end{aligned}
+$$</p>
+<p>令 $t = \sqrt{\dfrac{a}{b}} &gt; 1$，原式等价于： $\color{red}\ln t^2 = 2\ln t &lt; t - \dfrac{1}{t}$</p>
+<p>作差函数，令 $h(t) = 2\ln t - t + \dfrac{1}{t}$，$h&rsquo;(t) = \dfrac{-(t - 1)^2}{t^2} &lt; 0$. 所以</p>
+<p>$$
+\begin{aligned}
+2\ln t - t - \dfrac{1}{t} = h(t) &lt; h(1) = 0 \Longleftrightarrow \color{red}2\ln t &lt; t - \dfrac{1}{t} \ \ \color{black}\Box_1
+\end{aligned}
+$$</p>
+<p><strong>再证右边： $\dfrac{a - b}{\ln a - \ln b} &lt; \dfrac{a + b}{2}$, 不妨令 $a &gt; b$.</strong></p>
+<p>$$
+\begin{aligned}
+原式 &amp;\Longleftrightarrow \frac{1}{2}\left(\ln a - \ln b\right) &amp;&amp;&gt; \dfrac{a - b}{a + b} \\
+&amp; \Longleftrightarrow \frac{1}{2}\ln{\frac{a}{b}} &amp;&amp;&gt; 1 - \frac{2b}{a + b} = 1 - \frac{2}{\frac{a}{b} + 1}
+\end{aligned}
+$$</p>
+<p>令 $t = \dfrac{a}{b} &gt; 1$，原式等价于： $\color{red}\dfrac{1}{2}\ln t &lt; 1 - \dfrac{2}{t + 1}$</p>
+<p>作差函数，令 $h(t) = \dfrac{1}{2}\ln t - 1 + \dfrac{2}{t + 1}$，$h&rsquo;(t) = \dfrac{(t^2 - 1)}{2t(t + 1)^2} &gt; 0$. 所以</p>
+<p>$$
+\begin{aligned}
+\dfrac{1}{2}\ln t - 1 + \dfrac{2}{t + 1} = h(t) &gt; h(1) = 0 \Longleftrightarrow \color{red}\dfrac{1}{2}\ln t &lt; 1 - \dfrac{2}{t + 1} \ \ \color{black}\Box_2
+\end{aligned}
+$$</p>
+
+  </div>
+  <div class="ux-block__end">□</div>
+</div>
+<h2 id="三六种常见含-e-复合函数">三、六种常见含 $e$ 复合函数</h2>
+<h3 id="1-fx--x-ex">1. $f(x) = x e^x$</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">性质</th>
+          <th style="text-align: center">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>定义域/值域</strong></td>
+          <td style="text-align: center">$x\in \mathbf{R}$，$y \in [-1, +\infty)$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>导数</strong></td>
+          <td style="text-align: center">$f&rsquo;(x) = (x + 1) e^x$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>最值</strong></td>
+          <td style="text-align: center">$f(x)_{\min} = f(-1) = -\frac{1}{e}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>趋势</strong></td>
+          <td style="text-align: center">$f(-\infty) = 0^-$， $f(+\infty) = +\infty$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>不等式</strong></td>
+          <td style="text-align: center">$f(x) \geqslant x$</td>
+          <td style="text-align: center">当且仅当 $x = 0$ 时等号成立</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250603182122.png" alt="20250603182122"></p>
+<h3 id="2-fx--exx">2. $f(x) = e^x/x$</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">性质</th>
+          <th style="text-align: center">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>定义域/值域</strong></td>
+          <td style="text-align: center">$$\begin{gather}\ x \in (-\infty, 0) \cup (0, +\infty) \\ y \in (-\infty, 0) \cup (e, +\infty) \end{gather}$$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>导数</strong></td>
+          <td style="text-align: center">$f&rsquo;(x) = \dfrac{(x - 1)e^x}{x^2}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>极值</strong></td>
+          <td style="text-align: center">$f(x)_{极小} = f(1) = e$</td>
+          <td style="text-align: center">极小值非最小值</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>趋势</strong></td>
+          <td style="text-align: center">$f(-\infty) = 0^-$， $f(0^-) = -\infty$，$f(0^+) = +\infty$，$f(+\infty) = +\infty$</td>
+          <td style="text-align: center">$y = 0$ 为趋于负无穷时的渐近线</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250610121638.png" alt="20250610121638"></p>
+<h3 id="3-fx--xex">3. $f(x) = x/e^x$</h3>
+<p>不难发现</p>
+<p>$$
+f(x) = -(-x)e^{-x}
+$$</p>
+<p>说明此函数与 $xe^x$ 关于原点对称。</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">性质</th>
+          <th style="text-align: center">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>定义域/值域</strong></td>
+          <td style="text-align: center">$x\in \mathbf{R}$，$y \in (-\infty, 1]$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>导数</strong></td>
+          <td style="text-align: center">$f&rsquo;(x) = (1 - x) e^{-x}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>最值</strong></td>
+          <td style="text-align: center">$f(x)_{\max} = f(1) = \frac{1}{e}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>趋势</strong></td>
+          <td style="text-align: center">$f(-\infty) = -\infty$， $f(+\infty) = 0^+$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>不等式</strong></td>
+          <td style="text-align: center">$f(x) \leqslant x$</td>
+          <td style="text-align: center">当且仅当 $x = 0$ 时等号成立</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250603193520.png" alt="20250603193520"></p>
+<h3 id="4-fx--x-ln-x">4. $f(x) = x \ln x$</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">性质</th>
+          <th style="text-align: center">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>定义域/值域</strong></td>
+          <td style="text-align: center">$x\in \mathbf{R^+}$，$y \in [-\frac{1}{e}, +\infty)$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>导数</strong></td>
+          <td style="text-align: center">$f&rsquo;(x) = 1 + \ln x$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>最值</strong></td>
+          <td style="text-align: center">$f(x)_{\min} = f(\frac{1}{e}) = -\frac{1}{e}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>趋势</strong></td>
+          <td style="text-align: center">$f(0^+) = 0^-$， $f(+\infty) = +\infty$</td>
+          <td style="text-align: center">$$\begin{aligned}\lim\limits_{ x\to 0^+} x\ln x &amp;= \lim\limits_{ x\to 0^+}\frac{\ln x}{\frac{1}{x}}  = \lim\limits_{ x\to 0^+} \frac{\frac{1}{x}}{-\frac{1}{x^2}} \\ &amp;= \lim\limits_{ x\to 0^+} -x = 0^-\end{aligned}$$</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>不等式</strong></td>
+          <td style="text-align: center">$f(x) \geqslant x -1$</td>
+          <td style="text-align: center">当且仅当 $x = 1$ 时等号成立</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250610123043.png" alt="20250610123043"></p>
+<h3 id="5-fx--ln-x--x">5. $f(x) = \ln x / x$</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">性质</th>
+          <th style="text-align: center">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>定义域/值域</strong></td>
+          <td style="text-align: center">$x\in \mathbf{R^+}$，$y \in [-\frac{1}{e}, +\infty)$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>导数</strong></td>
+          <td style="text-align: center">$f&rsquo;(x) = (1 - \ln x)x^{-2}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>最值</strong></td>
+          <td style="text-align: center">$f(x)_{\max} = f(e) = \frac{1}{e}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>趋势</strong></td>
+          <td style="text-align: center">$f(0^+) = -\infty$， $f(+\infty) = 0^+$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>不等式</strong></td>
+          <td style="text-align: center">$f(x) \leqslant x - 1$</td>
+          <td style="text-align: center">当且仅当 $x = 1$ 时等号成立</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250610124525.png" alt="20250610124525"></p>
+<h3 id="6-fx--x--ln-x">6. $f(x) = x / \ln x$</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">性质</th>
+          <th style="text-align: center">备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"><strong>定义域/值域</strong></td>
+          <td style="text-align: center">$$\begin{gather}\ x \in (0, 1) \cup (1, +\infty) \\ y \in (-\infty, 0) \cup (e, +\infty) \end{gather}$$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>导数</strong></td>
+          <td style="text-align: center">$f&rsquo;(x) = (\ln x - 1)(\ln x)^{-2}$</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>最值</strong></td>
+          <td style="text-align: center">$f(x)_{极小} = f(e) = e$</td>
+          <td style="text-align: center">极小值非最小值</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"><strong>趋势</strong></td>
+          <td style="text-align: center">$f(0^+) = 0^-$， $f(1^-) = -\infty$，$f(1^+) = +\infty$，$f(+\infty) = +\infty$</td>
+          <td style="text-align: center">$x = 1$ 为渐近线</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250610125149.png" alt="20250610125149"></p>
+
+      </article>
+
+      <section id="comments" class="comments-section">
+  <h2>评论</h2>
+
+  
+  
+  
+    
+    <div id="giscus-container">
+      <script src="https://giscus.app/client.js"
+        data-repo="an-jack511/an-jack511.github.io"
+        
+        data-category="Comments"
+        
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+
+    <noscript>请启用 JavaScript 查看评论。</noscript>
+
+  
+
+</section>
+
+    </main>
+
+    <aside class="sidebar" role="complementary">
+      
+<div class="sidebar-block recent-posts">
+  <h3>近期文章</h3>
+  <ul>
+    
+    
+      <li><a href="/posts/2026-1/%E7%BA%AA%E5%BF%B5-%E4%B8%A4%E5%8D%83%E4%BA%8C%E4%BA%94%E8%87%B3%E4%B8%A4%E5%8D%83%E4%BA%8C%E5%85%AD/">两千二五至两千二六</a></li>
+    
+      <li><a href="/posts/2025-x2/%E6%B8%B8%E8%AE%B0-%E9%AB%98%E8%80%83%E5%90%AC%E5%8F%A3-i/">高考听口 I</a></li>
+    
+      <li><a href="/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88iii-20251130/">杂谈III</a></li>
+    
+      <li><a href="/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9C%9F%E4%B8%AD%E5%90%8E-20251115/">期中后</a></li>
+    
+      <li><a href="/posts/2025-x1/%E6%B2%89%E6%80%9D%E5%BD%95-%E5%91%93%E8%AF%AD%E8%AE%B0%E6%A2%A6%E7%BC%96-20251106/">呓语记梦</a></li>
+    
+      <li><a href="/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E9%AB%98%E4%B8%89%E7%A7%8B%E7%9A%84%E5%A3%B0%E5%85%89-20251101-copy/">高三秋的声光</a></li>
+    
+      <li><a href="/posts/2025-x0/%E9%9A%8F%E6%84%9F%E5%BD%95-%E5%BE%88%E7%B4%AF%E7%9A%84%E4%B8%80%E5%91%A8-20251025/">很累的一周</a></li>
+    
+      <li><a href="/posts/2025-x0/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88ii-20251018-copy/">杂谈II</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="sidebar-block tips">
+  <h3>快捷</h3>
+  <ul>
+    <li><a href="/archives/">文章归档</a></li>
+  </ul>
+</div>
+
+    </aside>
+  </div>
+
+    
+<ul class="article-share">
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+ 
+</ul>
+
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/posts/2025-6/%E9%9A%8F%E6%84%9F%E9%9B%86-%E9%AB%98%E8%80%83%E5%81%87-250612/" data-toggle="tooltip" data-placement="top" title="假的高考假">&lt; Newer</a>
+      </li>
+      <li class="pager-older">
+        <a href="/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/" data-toggle="tooltip" data-placement="top" title="廿五年端午一周与参数方程和极坐标">Older &gt;</a>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="site-footer">
+  <div class="copyright"></div>
+  <ul class="site-footer-items">
+    <li class="site-footer-item-about"><a href="/about/" title="About">About</a></li>
+  </ul>
+  <div class="powerdby">
+    Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/taikii/whiteplain">Whiteplain</a>
+  </div>
+</div>
+
+<script src="/js/ux.js"></script>
+</body>
+</html>

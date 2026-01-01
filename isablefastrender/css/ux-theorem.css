@@ -1,0 +1,240 @@
+/* ========================================
+   定理、证明、引理等数学块样式
+   ======================================== */
+
+/* 证明内容 */
+.proof-content {
+  padding: 20px;
+  line-height: 1.8;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid var(--border);
+}
+
+/* 证明结束标记 */
+.proof-end {
+  text-align: right;
+  padding: 10px 20px;
+  background-color: var(--surface);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* 证明标题和引用 */
+.proof-title {
+  font-size: 1.1em;
+}
+
+.proof-ref {
+  font-size: 0.85em;
+  opacity: 0.9;
+}
+
+/* 不同类型的证明 */
+.theorem-proof.theorem {
+  border-left: 4px solid #2ecc71;
+}
+
+.theorem-proof.theorem .proof-header {
+  background-color: #2ecc71;
+}
+
+.theorem-proof.lemma {
+  border-left: 4px solid #f39c12;
+}
+
+.theorem-proof.lemma .proof-header {
+  background-color: #f39c12;
+}
+
+.theorem-proof.corollary {
+  border-left: 4px solid #9b59b6;
+}
+
+.theorem-proof.corollary .proof-header {
+  background-color: #9b59b6;
+}
+
+/* 证明块切换图标 */
+.toggle-icon {
+  font-size: 0.8em;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.proof-header.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* 现代化证明块样式 */
+.ux-block {
+  background: transparent;
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow: visible;
+  position: relative;
+  border: none;
+  box-shadow: 0 8px 20px rgba(11,22,40,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ux-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(11,22,40,0.08);
+}
+
+.ux-block__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--surface);
+}
+
+.ux-block__title {
+  font-weight: 700;
+  color: var(--ux-ink);
+  font-size: 1rem;
+}
+
+.ux-block__ref {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--ux-muted);
+}
+
+.ux-block__toggle {
+  margin-left: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--ux-muted);
+  width: 40px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ux-block__content {
+  padding: 14px 16px;
+  background: var(--card-bg);
+  color: var(--ux-ink);
+  line-height: 1.75;
+}
+
+.ux-block__end {
+  text-align: right;
+  padding: 8px 14px;
+  font-weight: 700;
+  color: var(--ux-muted);
+}
+
+/* 专门针对 proof 的微调 */
+.ux-block--proof .ux-block__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.ux-block--proof .ux-block__content {
+  font-size: inherit;
+}
+
+.ux-block--proof .ux-block__end {
+  font-size: 1.6rem;
+}
+
+.ux-block--proof .ux-block__header {
+  background: rgba(0,0,0,0.03);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* 类型色块：通过修饰类更改 header 左侧色带 */
+.ux-block--theorem {
+  border-left: 5px solid #16a34a;
+}
+
+.ux-block--lemma {
+  border-left: 5px solid #d97706;
+}
+
+.ux-block--corollary {
+  border-left: 5px solid #7c3aed;
+}
+
+.ux-block--definition {
+  border-left: 5px solid #0284c7;
+}
+
+.ux-block--example {
+  border-left: 5px solid #059669;
+}
+
+.ux-block--remark {
+  border-left: 5px solid #6b7280;
+}
+
+.ux-block--proposition {
+  border-left: 5px solid #0ea5a6;
+}
+
+.ux-block--proof {
+  border-left: 5px solid rgba(0,0,0,0.12);
+}
+
+/* 折叠状态 */
+.ux-block--collapsed .ux-block__content {
+  display: none;
+}
+
+.ux-block--collapsed .ux-block__toggle {
+  transform: rotate(180deg);
+}
+
+/* 切换图标 */
+.ux-toggle-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--ux-muted);
+  transition: transform 0.18s ease;
+}
+
+.ux-block--collapsed .ux-block__toggle .ux-toggle-icon {
+  transform: rotate(-90deg);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .theorem-proof {
+    margin: 1.5rem -15px;
+    border-radius: 0;
+  }
+
+  .proof-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .proof-content {
+    padding: 15px;
+  }
+
+  .ux-block {
+    margin: 0.9rem -12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(11,22,40,0.06);
+  }
+
+  .ux-block__content {
+    padding: 10px;
+  }
+
+  .ux-block:hover {
+    transform: none;
+  }
+}

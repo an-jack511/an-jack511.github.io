@@ -1,0 +1,126 @@
+/* ========================================
+   移动端响应式样式
+   ======================================== */
+
+/* 移动端布局调整 */
+@media (max-width: 768px) {
+  .sidebar-block,
+  aside.toc,
+  .ux-toc-floating {
+    display: none !important;
+  }
+
+  .main {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+
+  .post-content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+    max-width: 100% !important;
+  }
+
+  .article {
+    max-width: 100% !important;
+  }
+
+  /* 移动端保留导航项，但以横向滚动展示以防溢出 */
+  .site-navi-items {
+    display: flex !important;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 0;
+    white-space: nowrap;
+  }
+
+  .post-content ul,
+  .post-content ol {
+    padding-left: 1.2em;
+  }
+
+  .post-content ul > li::before,
+  .post-content ol > li::before {
+    left: -0.9em;
+    width: 0.6em;
+    top: 0.8em;
+  }
+
+  .post-content ul,
+  .post-content ol,
+  .post-content li {
+    font-size: 1rem !important;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 侧边栏样式保持 */
+aside.toc #TableOfContents ul,
+aside.toc #TableOfContents ol,
+aside.toc #TableOfContents li {
+  font-size: 0.9rem !important;
+  background-color: transparent !important;
+}
+
+aside.toc #TableOfContents li:hover {
+  background-color: transparent !important;
+}
+
+/* 超小屏幕（<600px）额外调整 */
+@media (max-width: 600px) {
+  .container-article {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .main .article {
+    margin: 0 !important;
+    padding: 0 8px !important;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .post-content {
+    padding: 0 4px !important;
+  }
+}
+
+/* 非常小的屏幕（<400px） */
+@media (max-width: 400px) {
+  .container-article {
+    padding: 4px;
+  }
+
+  .main .article {
+    padding: 0 4px !important;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .post-content {
+    font-size: 0.95rem;
+  }
+}

@@ -48,7 +48,16 @@
   <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}" media="all" />
 
   <script src="{{ "js/script.js" | relURL }}"></script>
-  <script src="{{ "js/custom.js" | relURL }}"></script>
+  <script src="{{ "js/script.js" | relURL }}"></script>
+  <!-- UX modules: load combined UX scripts (theme, ui, pre, lists, blockquote, toc, blocks, comments) -->
+  <script src="{{ "js/ux/theme.js" | relURL }}"></script>
+  <script src="{{ "js/ux/ui.js" | relURL }}"></script>
+  <script src="{{ "js/ux/pre.js" | relURL }}"></script>
+  <script src="{{ "js/ux/lists.js" | relURL }}"></script>
+  <script src="{{ "js/ux/blockquote.js" | relURL }}"></script>
+  <script src="{{ "js/ux/toc.js" | relURL }}"></script>
+  <script src="{{ "js/ux/blocks.js" | relURL }}"></script>
+  <script src="{{ "js/ux/comments.js" | relURL }}"></script>
 
   {{- if .Site.Params.useCDN | default false }}
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>

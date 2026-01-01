@@ -1,0 +1,76 @@
+/* ========================================
+   导航栏和页头样式
+   ======================================== */
+
+/* 导航栏 */
+.site-navi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.site-navi-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-navi-items a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.site-navi-items a:hover {
+  background-color: var(--surface);
+}
+
+/* 页头吸顶 */
+.site-header, header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: transparent;
+  border-bottom: 1px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* 吸顶 header 滚动后的背景 */
+.site-header.scrolled, header.scrolled {
+  background: var(--bg);
+  box-shadow: 0 2px 8px rgba(16,24,40,0.06);
+  border-bottom-color: var(--border);
+}
+
+/* 移动端优化 */
+@media (max-width: 600px) {
+  .site-navi {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  
+  .site-title {
+    font-size: 1rem;
+  }
+  
+  .site-navi-items {
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+}

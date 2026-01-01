@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on AnJaCk</title>
+    <link>http://localhost:10852/tags/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on AnJaCk</description>
+    <generator>Hugo</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 06 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:10852/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>导数小总结</title>
+      <link>http://localhost:10852/posts/2025-6/%E5%AD%A6%E4%B9%A0%E5%BF%97-%E5%AF%BC%E6%95%B0%E5%B0%8F%E6%80%BB%E7%BB%93-250603/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:10852/posts/2025-6/%E5%AD%A6%E4%B9%A0%E5%BF%97-%E5%AF%BC%E6%95%B0%E5%B0%8F%E6%80%BB%E7%BB%93-250603/</guid>
+      <description>&lt;h2 id=&#34;一取点经典模型&#34;&gt;一、取点经典模型&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-x-to-infty--ex---ax--0--a--e&#34;&gt;1. $x \to +\infty,\ \ e^x - ax &amp;gt; 0 \ (a &amp;gt; e)$&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;取点 $x = 4a$&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;左侧是指数式，右侧是一次多项式，我们期望左侧放成&lt;strong&gt;二次多项式&lt;/strong&gt;。应用放缩技巧（注：需补充不等式 $e^x \geq x + 1$ 的证明）。&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;e^x = \left(e^{x/2}\right)^2 \geq \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;我们得到&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;e^x - ax \geq \frac{x^2}{4} - ax = x\left(\frac{x}{4} - a\right)&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;如需令上式大于 $0$，只需取 $x_0 = 4a &amp;gt; x_{极小值点} = \ln a$  即可。&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-x-to-infty--ln-x---ax--0--0--a--e-1&#34;&gt;2. $x \to +\infty,\ \ \ln x - ax &amp;lt; 0 \ (0 &amp;lt; a &amp;lt; e^{-1})$&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;取点 $x = \dfrac{4}{a^2}$&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>廿五年端午一周与参数方程和极坐标</title>
+      <link>http://localhost:10852/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:10852/posts/2025-5/%E9%9A%8F%E6%84%9F%E9%9B%86-%E5%BB%BF%E4%BA%94%E5%B9%B4%E7%AB%AF%E5%8D%88%E4%B8%80%E5%91%A8%E4%B8%8E%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87-250531/</guid>
+      <description>&lt;p&gt;随感集以后权当周记好了，大概每周一篇的频率。&lt;/p&gt;&#xA;&lt;p&gt;语文作文周一发了分，很烂，不知道什么情况，糊弄过去好了。但是最近语文课的确有些听不下去，很无趣。&lt;/p&gt;&#xA;&lt;p&gt;周四我妈来学校教包粽子，同学的姥姥带了一把艾草，班里很香，很清馨，很闲适。周五是高考加油会，哎，明年就是我们了，时光冉冉噫。很多认识的学长竟然就要高考了，感觉和几天前还与他们聊过天，回想已是半年前。祝好运。&lt;/p&gt;&#xA;&lt;p&gt;昨天水木上的数学，讲的参数方程和极坐标。孙宗汉老师讲的，其中间因为肚痛仓皇出恭两次，十分滑稽。虽云“不许笑”，但众人还是捧腹。&lt;/p&gt;&#xA;&lt;p&gt;其中一次回来后突然向我们说：“今天是五卅一百周年，而我们今天讲的曲线大多是以外国人命名的。你们作为改开后一代可能感受不到，但是我小学时经历过南海撞机、（北约轰炸）南联盟大使馆事件的。过去中国是真的不强大啊。” 虽说在数学讲堂上突然提到这些有些荒诞，但昨天（2025.5.30）的确是五卅一百周年，但是网上确实没有什么纪念的动静，有些反常而又正常。哎，五卅惨案。四天之后又是八八，还要化学考试。&lt;/p&gt;&#xA;&lt;p&gt;upd on 6.1：儿童节，和爸妈去看了《碟中谍8：最终清算》。打斗戏和大场面少了点，不够爽，但是质量都挺高的。至于剧情……无所谓了，依旧是魔戒——夺宝奇兵模板，找东西，灭反派。又糅了进去点智械危机的玩意，虽然我对智械危机挺无感的。但谁在乎剧情呢，反正阿汤哥扒飞机挺帅的。背景感情戏啥的我低头就好了，也没有必要指责啥的，总有人喜欢，也有人觉得好。我只看我觉得爽快的地方就好了。&lt;/p&gt;&#xA;&lt;h2 id=&#34;参数方程&#34;&gt;参数方程&lt;/h2&gt;&#xA;&lt;p&gt;$$&#xA;\begin{cases}&#xA;x = f(t) \\ y = g(t)&#xA;\end{cases}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;参数方程的切线：&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\begin{aligned}&#xA;l_{\text{at} \  (x(t), y(t))}: y - g(t) &amp;amp;= \frac{\mathrm{d}y}{\mathrm{d}x}(x - f(t))\\&#xA;&amp;amp;= \frac{\frac{\mathrm{d}y}{\mathrm{d}t}}{\frac{\mathrm{d}x}{\mathrm{d}t}}(x - f(t))\\&#xA;&amp;amp;= \frac{g&amp;rsquo;(t)}{f&amp;rsquo;(t)}(x - f(t))&#xA;\end{aligned}&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;\color{red} l_{\text{at} \  (x(t), y(t))}: f&amp;rsquo;(t)(y - g(t)) = g&amp;rsquo;(t)(x - f(t))&#xA;$$&lt;/p&gt;&#xA;&lt;h3 id=&#34;内摆线与星形线&#34;&gt;内摆线与星形线&lt;/h3&gt;&#xA;&lt;p&gt;当小圆在大圆内滚动，小圆上一点轨迹所成图形称为 &lt;strong&gt;内摆线&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20250531205002.png&#34; alt=&#34;20250531205002&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;结合上图，设小圆半径 $r$，大圆半径 $R$，$\angle AOB = \alpha, \angle PQB = \beta$. 当 $P(x, y)$ 从 $A$ 点开始滚动时，我们有以下方程成立：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
