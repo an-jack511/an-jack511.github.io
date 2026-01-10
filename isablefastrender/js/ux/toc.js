@@ -3,7 +3,8 @@
   function createMobileToc(tocElement){
     if(!tocElement) return;
     const existing = document.querySelector('.mobile-toc-btn'); if(existing) return;
-    const btn = document.createElement('button'); btn.className='mobile-toc-btn'; btn.innerHTML='📑'; btn.setAttribute('aria-label','打开目录');
+    const btn = document.createElement('button'); btn.className='mobile-toc-btn'; btn.setAttribute('aria-label','打开文章目录');
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="mobile-toc-label">目录</span>';
     const modal = document.createElement('div'); modal.className='mobile-toc-modal';
     const header = document.createElement('div'); header.className='mobile-toc-header'; header.innerHTML='<h3>文章目录</h3>';
     const closeBtn = document.createElement('button'); closeBtn.className='mobile-toc-close'; closeBtn.innerHTML='✕'; closeBtn.setAttribute('aria-label','关闭目录'); header.appendChild(closeBtn);

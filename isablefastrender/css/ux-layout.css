@@ -58,11 +58,15 @@
   min-width: 0;
 }
 
-/* 列表项间距优化：让文章预览在列表更宽松 */
+/* 列表项间距：文章卡片之间的垂直间隙 */
 .list .article {
-  margin: 18px 0 28px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  margin-bottom: 48px;
+  padding: 0;
+  border: none;
+}
+
+.list .article:last-child {
+  margin-bottom: 0;
 }
 
 /* 侧栏块 */

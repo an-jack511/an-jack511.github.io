@@ -126,6 +126,13 @@
   line-height: 1.75;
 }
 
+/* Ensure in dark mode the proof content clearly uses theme text color */
+body.dark-mode .ux-block__content,
+body.dark-mode .ux-block__content p,
+body.dark-mode .ux-block__content a {
+  color: var(--text) !important;
+}
+
 .ux-block__end {
   text-align: right;
   padding: 8px 14px;

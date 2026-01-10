@@ -7,8 +7,13 @@
 /* Blockquote 深色模式 */
 @media (prefers-color-scheme: dark) {
   blockquote {
-    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01) 6%, #1f1f1f 6%, #1f1f1f 94%, rgba(255,255,255,0.01) 94%, rgba(255,255,255,0.02));
-    color: #e6e6e6;
+    /* Use solid card background in dark mode to avoid narrow gradient banding */
+    background: var(--card-bg);
+    color: var(--text);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
   }
 
   .blockquote-toggle {
@@ -81,8 +86,12 @@
 
 /* body.dark-mode 类选择器的深色模式 */
 body.dark-mode blockquote {
-  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01) 6%, #1f1f1f 6%, #1f1f1f 94%, rgba(255,255,255,0.01) 94%, rgba(255,255,255,0.02));
-  color: #e6e6e6;
+  background: var(--card-bg) !important;
+  color: var(--text) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 1rem 1.25rem !important;
+  border-radius: 8px !important;
 }
 
 body.dark-mode .blockquote-toggle {

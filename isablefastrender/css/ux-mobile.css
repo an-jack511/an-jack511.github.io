@@ -25,6 +25,10 @@
   .article {
     max-width: 100% !important;
   }
+  
+  .list .article {
+    margin-bottom: 48px !important;
+  }
 
   /* 移动端保留导航项，但以横向滚动展示以防溢出 */
   .site-navi-items {
@@ -83,8 +87,12 @@ aside.toc #TableOfContents li:hover {
   }
 
   .main .article {
-    margin: 0 !important;
+    margin: 0 0 32px!important;
     padding: 0 8px !important;
+  }
+  
+  .list .article {
+    margin-bottom: 0 0 32px !important;
   }
 
   h1 {
