@@ -203,3 +203,44 @@ a, a:link, a:visited {
 .list .article .post-excerpt {
   margin-top: 0 !important;
 }
+/* 打印按钮样式 */
+.btn-print {
+  background: none;
+  border: 1px solid var(--text);
+  color: var(--text);
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.btn-print:hover {
+  background-color: var(--text);
+  color: var(--background);
+}
+
+.btn-print:active {
+  transform: scale(0.95);
+}
+
+.btn-print i {
+  font-size: 1.1rem;
+}
+
+/* 打印按钮在文章元数据中的位置 */
+.article-meta-print {
+  display: inline;
+}
+
+/* 不在打印模式中隐藏打印按钮 */
+@media print {
+  .btn-print,
+  .article-meta-print {
+    display: none !important;
+  }
+}
