@@ -50,6 +50,7 @@
     color: #000;
     background: #fff;
     font-size: 12pt;
+    font-family: 'SimSun', 'STZhongsong', 'Songti SC', serif;
   }
 
   /* 主容器和文章 */
@@ -180,6 +181,15 @@
     line-height: 1.5;
     orphans: 2;
     widows: 2;
+    font-family: 'SimSun', 'STZhongsong', 'Songti SC', serif;
+  }
+
+  /* 英文内容使用更可读的字体 */
+  .article-content em,
+  .article-content strong,
+  article em,
+  article strong {
+    font-family: 'Georgia', 'Times New Roman', serif;
   }
 
   /* 列表紧凑 */
@@ -188,10 +198,12 @@
     padding-left: 20pt;
     orphans: 2;
     widows: 2;
+    font-family: 'SimSun', 'STZhongsong', 'Songti SC', serif;
   }
 
   li {
     margin: 1pt 0;
+    font-family: 'SimSun', 'STZhongsong', 'Songti SC', serif;
   }
 
   /* 代码块 */
@@ -202,6 +214,7 @@
     border: 1px solid #e0e0e0;
     font-size: 10pt;
     page-break-inside: avoid;
+    font-family: 'Courier New', 'Monaco', monospace;
   }
 
   pre {
