@@ -33,3 +33,6 @@
 
 /* 10. 移动端响应式 */
 @import url('ux-mobile.css');
+
+/* 11. 打印样式 */
+@import url('ux-print.css');
