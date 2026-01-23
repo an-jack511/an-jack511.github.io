@@ -31,7 +31,12 @@
 &lt;p&gt;在杂交育种中，雄性不育植株的优点是无需进行 &lt;strong&gt;去雄&lt;/strong&gt;&lt;del&gt;（+套袋）&lt;/del&gt;，大大减轻了杂交操作的工作量（统练 1-17-2507）&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;叶片变黄主要是由于分生区细胞发生基因突变或 &lt;strong&gt;染色体变异&lt;/strong&gt;&lt;del&gt;（表观遗传）&lt;/del&gt;&lt;em&gt;注：除非题目明示，优先两大变异：基因突变和染色体变异&lt;/em&gt;（统练 3-20-2509）&lt;/p&gt;
+&lt;p&gt;ENU处理通常会造成DNA的碱基替换，引发基因组随机突变。从基因和蛋白质的关系分析，编码序列的改变可能导致的效应包括:个别氨基酸的改变导致蛋白质结构变化;终止密码子出现的位置改变，导致蛋白质截短或变长;以及因 &lt;strong&gt;密码子的简并性&lt;/strong&gt;，氨基酸序列不改变。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从密码子表可以看出,像苯丙氨酸、亮氨酸这样,绝大多数氨基酸都有几个密码子,这一现象称作密码子的 &lt;em&gt;简并&lt;/em&gt; ——B2 P67
+&lt;img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20260123193400.png" alt="20260123193400"&gt;
+可以从增强密码子容错性的角度来解释，当密码子中有一个碱基改变时，由于密码子的简并性，可能并不会改变其对应的氨基酸；也可以从密码子的使用频率来考虑；当某种氨基酸使用频率高时；几种不同的密码子都编码同一种氨基酸可以保证翻译的速度。——教师用书 B2 P216&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;现代遗传学研究发现，因缺刻翅果蝇不能产生 Notch 受体，从而影响翅的正常发育。翅形基因对性状的控制表明，基因可通过 &lt;strong&gt;控制蛋白质的结构&lt;/strong&gt;&lt;del&gt;（蛋白质的合成）&lt;/del&gt; 来直接控制生物的性状（月考 -21-2510）&lt;/p&gt;
@@ -40,39 +45,28 @@
 &lt;strong&gt;基因还能通过控制蛋白质的结构直接控制生物体的性状。&lt;/strong&gt; ——B2 P71-72&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;低温能抑制着丝粒分离，使染色体数目加倍：&lt;strong&gt;错误，抑制纺锤丝形成&lt;/strong&gt;（&lt;strong&gt;期末&lt;/strong&gt; -4A-2601）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人工诱导多倍体的方法很多，如低温处理、用秋水仙素诱发等。其中，用秋水仙素来处理萌发的种子或幼苗，是目前最常用且最有效的方法。当秋水仙素作用于正在分裂的细胞时，能够抑制纺锤体的形成，导致染色体不能移向细胞的两极，从而引起细胞内染色体数目加倍。（注：当然，低温处理使染色体数目加倍的原理也是抑制纺锤丝形成）——B2 P88&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;叶片变黄主要是由于分生区细胞发生基因突变或 &lt;strong&gt;染色体变异&lt;/strong&gt;&lt;del&gt;（表观遗传）&lt;/del&gt;&lt;em&gt;注：除非题目明示，优先两大变异：基因突变和染色体变异&lt;/em&gt;（统练 3-20-2509）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基因突变、基因重组和染色体变异是可遗传变异的来源。——B2 P97&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多种植物病原体独立进化，虽亲缘关系很远但均有与 C4 基因相似的基因。这是不同病原体在同一选择压力（如 SADR）下 &lt;strong&gt;进化的方向相同（趋同进化）&lt;/strong&gt; 的结果。（&lt;strong&gt;期末&lt;/strong&gt; -17-2601）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;趋同进化是指不同物种在相似的环境中发育出相似的性状的进化过程，它是不同生物在相同环境条件下得到相同选择的结果。例如，空中的鸟类与蝙蝠，海中的鲨鱼与海豚，它们在外形上都表现出明显的相似，但在亲缘关系上却分别隶属于不同的纲。又如，非洲的大戟属植物与美洲的多种仙人掌植物虽然是截然不同的种子植物，但外形却很相似。——教师用书 B2 P324&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="稳态调节"&gt;稳态调节&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;通过汗腺的分泌量增加维持细胞外液渗透压的相对稳定：&lt;strong&gt;错误&lt;/strong&gt;（统练 5-8-2510）&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;汗腺产生汗液，汗液蒸发散热（体温调节）——XB1 P58&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;T 淋巴细胞来源于 &lt;strong&gt;骨髓造血干细胞&lt;/strong&gt;的分裂（&lt;strong&gt;期中&lt;/strong&gt; -19-2511）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;免疫细胞是执行免疫功能的细胞，它们来自骨髓的造血干细胞，包括各种类型的白细胞，如淋巴细胞、树突状细胞和巨噬细胞等。——XB1 P68
-&lt;img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20260110232132.png" alt="20260110232132"&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;单核细胞能进一步分化为巨噬细胞，巨噬细胞在机体免疫中发挥的作用是 &lt;strong&gt;摄取、处理和呈递抗原&lt;/strong&gt;（期中练习 4-6-2510）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;树突状细胞：吞噬、呈递抗原功能 &lt;br&gt;
-巨噬细胞：吞噬消化、抗原处理和呈递功能。——XB1 P68
-&lt;img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20260118173934.png" alt="20260118173934"&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;神经系统与免疫系统的相互联系中，以信号分子 &lt;strong&gt;神经递质、细胞因子（种类）&lt;/strong&gt;&lt;del&gt;（神经递质、免疫活性物质）&lt;/del&gt; 作为相互通讯的分子“语言”&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;神经调节、体液调节和免疫调节的实现都离不开信号分子（如神经递质、激素和细胞因子等），这些信号分子的作用方式，都是直接与受体接触。受体一般是蛋白质分子，不同受体的结构各异，因此信号分子与受体的结合具有特异性。通过这些信号分子，复杂的机体才能够实现统一协调，稳态才能够得以保持。——XB1 P74 &lt;br&gt;
-&lt;img src="https://raw.githubusercontent.com/an-jack511/blogIMG/main/MyBlogImg20260110235816.png" alt="20260110235816"&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;赤霉素和脱落酸都是在植物体内合成，对植物春化作用具有&amp;lt;调节&amp;gt;作用的化学物质，其作用都具有 &lt;strong&gt;微量高效性/可移动性/内源性&lt;/strong&gt; &lt;del&gt;（低促高抑）&lt;/del&gt; 的特点。（统练 7-20-2512）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;由植物体内产生，能从产生部位运送到作用部位，对植物的生长发育有显著影响的微量有机物，叫作植物激素（phytohormone）。&lt;/strong&gt; ——XB1 P92 &lt;br&gt;
-&lt;strong&gt;生长素在浓度较低时促进生长，在浓度过高时则会抑制生长&lt;/strong&gt;（其他激素未提到此属性）——XB1 P94&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;汗腺产生汗液，汗液蒸发散热（体温调节）——XB1 P58&lt;/p&gt;</description></item></channel></rss>
