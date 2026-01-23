@@ -1,3 +1,19 @@
+{{/* 侧栏：置顶文章 */}}
+<div class="sidebar-block pinned-posts">
+  <h3>置顶文章</h3>
+  <ul>
+    {{ $pinnedPages := where .Site.RegularPages "Type" "posts" }}
+    {{ $pinnedPages = where $pinnedPages "Params.pinned" true }}
+    {{ if $pinnedPages }}
+      {{ range $pinnedPages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ else }}
+      <li style="color: #999; font-size: 0.9em;">暂无置顶文章</li>
+    {{ end }}
+  </ul>
+</div>
+
 {{/* 侧栏：近期文章（保持） */}}
 <div class="sidebar-block recent-posts">
   <h3>近期文章</h3>

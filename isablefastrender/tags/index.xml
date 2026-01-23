@@ -25,22 +25,8 @@
     <item>
       <title>北京</title>
       <link>http://localhost:1313/tags/%E5%8C%97%E4%BA%AC/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%8C%97%E4%BA%AC/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>清华大学</title>
-      <link>http://localhost:1313/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>游记</title>
-      <link>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</link>
-      <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
@@ -48,6 +34,13 @@
       <link>http://localhost:1313/tags/%E9%AB%98%E8%80%83/</link>
       <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E9%AB%98%E8%80%83/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>游记</title>
+      <link>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%E6%B8%B8%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
@@ -90,13 +83,6 @@
       <link>http://localhost:1313/tags/%E5%86%85%E8%92%99%E5%8F%A4/</link>
       <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/%E5%86%85%E8%92%99%E5%8F%A4/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>物理</title>
-      <link>http://localhost:1313/tags/%E7%89%A9%E7%90%86/</link>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E7%89%A9%E7%90%86/</guid>
       <description></description>
     </item>
     <item>
