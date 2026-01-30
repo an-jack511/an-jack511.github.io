@@ -13,7 +13,7 @@
   
   
       
-          Co-IP
+          Co-IP(In vivo/体外检测)
           利用抗体特异性抓取蛋白 A，若 A 与 B 有空间互补形成的非共价键，则 B 被一同拉下
           验证两个已知蛋白的相互作用；寻找某种受体蛋白的下游信号分子；研究内源性蛋白复合体的组成。
           Western Blot 电泳检测
@@ -21,7 +21,7 @@
           验证受体与下游信号转导蛋白的结合
       
       
-          Y2H
+          Y2H(In vivo)
           蛋白 A、B 结合使 BD 与 AD 空间靠近，重建完整的转录因子以驱动转录
           在大规模蛋白质库中筛选（海选）未知互作蛋白；在活细胞（酵母）环境中验证已知蛋白间的物理结合。
           报告基因活性
@@ -29,7 +29,7 @@
           筛选与病毒蛋白相互作用的宿主蛋白
       
       
-          Pull-down
+          Pull-down(In vitro)
           利用固定的融合标签捕获与之有亲和力的目标蛋白
           验证两个纯化蛋白在体外是否存在直接相互作用；从细胞提取物中捕获并鉴定未知的“猎物”蛋白。
           SDS-PAGE 染色或 WB
@@ -37,7 +37,7 @@
           验证两个纯化蛋白在体外直接作用
       
       
-          BiFC
+          BiFC(In vivo)
           A、B 结合带动荧光蛋白片段重新折叠，恢复活性
           在活细胞内实时观察蛋白结合的亚细胞定位；验证蛋白质在自然状态下是否形成二聚体或多聚体。
           荧光显微镜观察
@@ -45,7 +45,7 @@
           观察两个蛋白是否在细胞核内形成二聚体
       
       
-          FRET
+          FRET(In vivo)
           供体受激发后，通过能量传给极近距离的受体
           监测信号通路中蛋白构象动态变化；检测分子在纳米级下的精确结合距离；研究活细胞内动态作用。
           荧光光谱改变
@@ -53,7 +53,7 @@
           监测受体受配体诱导后的构象改变
       
       
-          SPR
+          SPR(In vitro)
           结合引起传感器表面折射率实时变化
           定量测定分子间结合亲和力($K_d$)；实时监测分子结合与解离动力学；评估药物与靶蛋白结合强度。
           响应信号值（RU）曲线
@@ -62,61 +62,7 @@
       
   
 
-2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表
-
-  
-      
-          名字
-          基本原理（分子间如何作用）
-          适用范围
-          检测手段
-          预期现象
-          示例
-      
-  
-  
-      
-          Y1H
-          待测蛋白结合 DNA 诱饵，驱动 RNA 聚合酶转录
-          验证已知转录因子与特定 DNA 序列的结合；从文库中筛选能够结合目标 DNA 序列的未知转录因子。
-          报告基因表达
-          酵母在缺失特定营养培养基上正常生长
-          证明转录因子 A 结合在抗盐基因启动子上
-      
-      
-          EMSA
-          蛋白结合 DNA 后体积增大，迁移速率减慢
-          在体外精确验证结合 DNA 的特定碱基序列位点；确定结合特异性及竞争性；分析结合所需辅助因子。
-          标记 DNA 探针电泳
-          出现位置高于游离探针的“滞后带”
-          验证转录因子是否直接结合启动子序列
-      
-      
-          ChIP
-          用甲醛将蛋白与 DNA “焊死”，再用抗体富集片段
-          在体内（活细胞真实情境）验证蛋白与 DNA 的结合；分析转录因子在全基因组范围内的靶位点。
-          PCR 或测序 (ChIP-seq)
-          测序结果中目标基因区域出现明显“峰值”
-          研究全基因组范围内转录因子的结合图谱
-      
-      
-          DNA 酶足迹法
-          蛋白结合 DNA 形成物理屏障，阻碍 DNase I 切割
-          精确确定蛋白质结合在 DNA 上的具体碱基位置（核苷酸级）；研究蛋白质结合对 DNA 结构的遮蔽。
-          变性聚丙烯酰胺凝胶电泳
-          电泳图谱中出现一段没有条带的“空白区”
-          确定阻遏蛋白结合在操作位点的具体碱基
-      
-      
-          双荧光素酶
-          转录因子结合启动子驱动荧光素酶基因转录
-          验证转录因子对靶基因的转录调节功能（促进或抑制转录）；定量评估不同启动子片段的转录活性。
-          化学发光仪检测
-          实验组荧光强度显著高于/低于对照组
-          证明某转录因子对靶基因有激活或抑制作用
-      
-  
-"><meta property="og:description" content="生物分子的相互作用——生物技术总结
+注意 Co-IP 和 Pull-down 的区分： 前者体内（in vivo），后者体外（in vitro）；前者验证真实结合情况；后者证明无其他介导。"><meta property="og:description" content="生物分子的相互作用——生物技术总结
 1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表
 
   
@@ -131,7 +77,7 @@
   
   
       
-          Co-IP
+          Co-IP(In vivo/体外检测)
           利用抗体特异性抓取蛋白 A，若 A 与 B 有空间互补形成的非共价键，则 B 被一同拉下
           验证两个已知蛋白的相互作用；寻找某种受体蛋白的下游信号分子；研究内源性蛋白复合体的组成。
           Western Blot 电泳检测
@@ -139,7 +85,7 @@
           验证受体与下游信号转导蛋白的结合
       
       
-          Y2H
+          Y2H(In vivo)
           蛋白 A、B 结合使 BD 与 AD 空间靠近，重建完整的转录因子以驱动转录
           在大规模蛋白质库中筛选（海选）未知互作蛋白；在活细胞（酵母）环境中验证已知蛋白间的物理结合。
           报告基因活性
@@ -147,7 +93,7 @@
           筛选与病毒蛋白相互作用的宿主蛋白
       
       
-          Pull-down
+          Pull-down(In vitro)
           利用固定的融合标签捕获与之有亲和力的目标蛋白
           验证两个纯化蛋白在体外是否存在直接相互作用；从细胞提取物中捕获并鉴定未知的“猎物”蛋白。
           SDS-PAGE 染色或 WB
@@ -155,7 +101,7 @@
           验证两个纯化蛋白在体外直接作用
       
       
-          BiFC
+          BiFC(In vivo)
           A、B 结合带动荧光蛋白片段重新折叠，恢复活性
           在活细胞内实时观察蛋白结合的亚细胞定位；验证蛋白质在自然状态下是否形成二聚体或多聚体。
           荧光显微镜观察
@@ -163,7 +109,7 @@
           观察两个蛋白是否在细胞核内形成二聚体
       
       
-          FRET
+          FRET(In vivo)
           供体受激发后，通过能量传给极近距离的受体
           监测信号通路中蛋白构象动态变化；检测分子在纳米级下的精确结合距离；研究活细胞内动态作用。
           荧光光谱改变
@@ -171,7 +117,7 @@
           监测受体受配体诱导后的构象改变
       
       
-          SPR
+          SPR(In vitro)
           结合引起传感器表面折射率实时变化
           定量测定分子间结合亲和力($K_d$)；实时监测分子结合与解离动力学；评估药物与靶蛋白结合强度。
           响应信号值（RU）曲线
@@ -180,61 +126,7 @@
       
   
 
-2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表
-
-  
-      
-          名字
-          基本原理（分子间如何作用）
-          适用范围
-          检测手段
-          预期现象
-          示例
-      
-  
-  
-      
-          Y1H
-          待测蛋白结合 DNA 诱饵，驱动 RNA 聚合酶转录
-          验证已知转录因子与特定 DNA 序列的结合；从文库中筛选能够结合目标 DNA 序列的未知转录因子。
-          报告基因表达
-          酵母在缺失特定营养培养基上正常生长
-          证明转录因子 A 结合在抗盐基因启动子上
-      
-      
-          EMSA
-          蛋白结合 DNA 后体积增大，迁移速率减慢
-          在体外精确验证结合 DNA 的特定碱基序列位点；确定结合特异性及竞争性；分析结合所需辅助因子。
-          标记 DNA 探针电泳
-          出现位置高于游离探针的“滞后带”
-          验证转录因子是否直接结合启动子序列
-      
-      
-          ChIP
-          用甲醛将蛋白与 DNA “焊死”，再用抗体富集片段
-          在体内（活细胞真实情境）验证蛋白与 DNA 的结合；分析转录因子在全基因组范围内的靶位点。
-          PCR 或测序 (ChIP-seq)
-          测序结果中目标基因区域出现明显“峰值”
-          研究全基因组范围内转录因子的结合图谱
-      
-      
-          DNA 酶足迹法
-          蛋白结合 DNA 形成物理屏障，阻碍 DNase I 切割
-          精确确定蛋白质结合在 DNA 上的具体碱基位置（核苷酸级）；研究蛋白质结合对 DNA 结构的遮蔽。
-          变性聚丙烯酰胺凝胶电泳
-          电泳图谱中出现一段没有条带的“空白区”
-          确定阻遏蛋白结合在操作位点的具体碱基
-      
-      
-          双荧光素酶
-          转录因子结合启动子驱动荧光素酶基因转录
-          验证转录因子对靶基因的转录调节功能（促进或抑制转录）；定量评估不同启动子片段的转录活性。
-          化学发光仪检测
-          实验组荧光强度显著高于/低于对照组
-          证明某转录因子对靶基因有激活或抑制作用
-      
-  
-"><meta name=twitter:description content="生物分子的相互作用——生物技术总结
+注意 Co-IP 和 Pull-down 的区分： 前者体内（in vivo），后者体外（in vitro）；前者验证真实结合情况；后者证明无其他介导。"><meta name=twitter:description content="生物分子的相互作用——生物技术总结
 1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表
 
   
@@ -249,10 +141,9 @@
   
   
       
-          Co-IP
-          利用抗 …"><meta name=author content="An_Jack"><meta property="og:site_name" content="AnJaCk"><meta property="og:url" content="https://an-jack511.github.io/posts/befront/%E7%94%9F%E7%89%A9%E7%AC%94%E8%AE%B0/"><meta property="og:type" content="article"><meta name=twitter:card content="summary"><meta name=generator content="Hugo 0.155.0"><link rel=stylesheet href=/css/style.css media=all><link rel=stylesheet href=/css/style-dark.css media="all and (prefers-color-scheme: dark)"><link rel=stylesheet href=/css/syntax.css media=all><script src=/js/script.js></script><script src=/js/script.js></script><script src=/js/ux/theme.js></script><script src=/js/ux/ui.js></script><script src=/js/ux/pre.js></script><script src=/js/ux/lists.js></script><script src=/js/ux/blockquote.js></script><script src=/js/ux/toc.js></script><script src=/js/ux/blocks.js></script><script src=/js/ux/comments.js></script><script defer src=/fontawesome/all.min.js></script><script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:!0,packages:{"[+]":["physics"]}},options:{skipHtmlTags:["script","noscript","style","textarea","pre"],ignoreHtmlClass:"tex2jax_ignore",processHtmlClass:"tex2jax_process"},loader:{load:["[tex]/physics"]},startup:{ready:()=>{MathJax.startup.defaultReady(),console.log("MathJax initialized")}}}</script><script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js async></script><link rel=apple-touch-icon sizes=180x180 href=https://an-jack511.github.io/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://an-jack511.github.io/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://an-jack511.github.io/favicons/favicon-16x16.png><link rel=manifest href=https://an-jack511.github.io/favicons/site.webmanifest><link rel=mask-icon href=https://an-jack511.github.io/favicons/safari-pinned-tab.svg color=#5bbad5><link rel="shortcut icon" href=https://an-jack511.github.io/favicons/favicon.ico><meta name=msapplication-TileColor content="#da532c"><meta name=msapplication-config content="https://an-jack511.github.io/favicons/browserconfig.xml"><meta name=theme-color content="#ffffff"><meta name=favicon-version content="1.0"><link rel=stylesheet href=/css/custom.min.f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5.css integrity="sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="><link rel=stylesheet href=/css/ux.css media=all></head><body><header class=site-header><nav class=site-navi><h1 class=site-title><a href=/>AnJaCk</a></h1><button id=theme-toggle class=theme-toggle aria-label=切换明暗模式>🌙</button><ul class=site-navi-items><li class=site-navi-item-categories><a href=/categories/ title=分类>分类</a></li><li class=site-navi-item-tags><a href=/tags/ title=标签>标签</a></li><li class=site-navi-item-archives><a href=/archives/ title=归档>归档</a></li></ul></nav></header><hr class=site-header-bottom><aside class="ux-toc ux-toc-floating" role=navigation aria-label="Table of contents"><div class="sidebar-block ux-toc-block" aria-label=文章目录><h3>目录</h3><div id=TableOfContents class=ux-toc-body><nav id=TableOfContents><ul><li><a href=#生物分子的相互作用生物技术总结>生物分子的相互作用——生物技术总结</a><ul><li><a href=#1-蛋白质-蛋白质相互作用-ppi-技术汇总表>1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表</a></li><li><a href=#2-蛋白质-dna-相互作用-protein-dna-技术汇总表>2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表</a></li></ul></li></ul></nav></div></div></aside><div class=container-article role=main><main class=main role=main><div class=ux-toc-inline><div class="sidebar-block ux-toc-block" aria-label=文章目录><h3>目录</h3><div id=TableOfContents class=ux-toc-body><nav id=TableOfContents><ul><li><a href=#生物分子的相互作用生物技术总结>生物分子的相互作用——生物技术总结</a><ul><li><a href=#1-蛋白质-蛋白质相互作用-ppi-技术汇总表>1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表</a></li><li><a href=#2-蛋白质-dna-相互作用-protein-dna-技术汇总表>2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表</a></li></ul></li></ul></nav></div></div></div><article class=article><h1 class=article-title>生物笔记</h1><hr class=article-title-bottom><ul class=article-meta><li class=article-meta-date><time>2026-01-30</time></li><li class=article-meta-categories><a href=/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/><i class="fa-solid fa-folder"></i>
+          Co-IP(In vivo/体外检测) …"><meta name=author content="An_Jack"><meta property="og:site_name" content="AnJaCk"><meta property="og:url" content="https://an-jack511.github.io/posts/befront/%E7%94%9F%E7%89%A9%E7%AC%94%E8%AE%B0/"><meta property="og:type" content="article"><meta name=twitter:card content="summary"><meta name=generator content="Hugo 0.155.0"><link rel=stylesheet href=/css/style.css media=all><link rel=stylesheet href=/css/style-dark.css media="all and (prefers-color-scheme: dark)"><link rel=stylesheet href=/css/syntax.css media=all><script src=/js/script.js></script><script src=/js/script.js></script><script src=/js/ux/theme.js></script><script src=/js/ux/ui.js></script><script src=/js/ux/pre.js></script><script src=/js/ux/lists.js></script><script src=/js/ux/blockquote.js></script><script src=/js/ux/toc.js></script><script src=/js/ux/blocks.js></script><script src=/js/ux/comments.js></script><script defer src=/fontawesome/all.min.js></script><script>MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:!0,packages:{"[+]":["physics"]}},options:{skipHtmlTags:["script","noscript","style","textarea","pre"],ignoreHtmlClass:"tex2jax_ignore",processHtmlClass:"tex2jax_process"},loader:{load:["[tex]/physics"]},startup:{ready:()=>{MathJax.startup.defaultReady(),console.log("MathJax initialized")}}}</script><script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js async></script><link rel=apple-touch-icon sizes=180x180 href=https://an-jack511.github.io/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://an-jack511.github.io/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://an-jack511.github.io/favicons/favicon-16x16.png><link rel=manifest href=https://an-jack511.github.io/favicons/site.webmanifest><link rel=mask-icon href=https://an-jack511.github.io/favicons/safari-pinned-tab.svg color=#5bbad5><link rel="shortcut icon" href=https://an-jack511.github.io/favicons/favicon.ico><meta name=msapplication-TileColor content="#da532c"><meta name=msapplication-config content="https://an-jack511.github.io/favicons/browserconfig.xml"><meta name=theme-color content="#ffffff"><meta name=favicon-version content="1.0"><link rel=stylesheet href=/css/custom.min.f1945cd6c19e56b3c1c78943ef5ec18116907a4ca1efc40a57d48ab1db7adfc5.css integrity="sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="><link rel=stylesheet href=/css/ux.css media=all></head><body><header class=site-header><nav class=site-navi><h1 class=site-title><a href=/>AnJaCk</a></h1><button id=theme-toggle class=theme-toggle aria-label=切换明暗模式>🌙</button><ul class=site-navi-items><li class=site-navi-item-categories><a href=/categories/ title=分类>分类</a></li><li class=site-navi-item-tags><a href=/tags/ title=标签>标签</a></li><li class=site-navi-item-archives><a href=/archives/ title=归档>归档</a></li></ul></nav></header><hr class=site-header-bottom><aside class="ux-toc ux-toc-floating" role=navigation aria-label="Table of contents"><div class="sidebar-block ux-toc-block" aria-label=文章目录><h3>目录</h3><div id=TableOfContents class=ux-toc-body><nav id=TableOfContents><ul><li><a href=#生物分子的相互作用生物技术总结>生物分子的相互作用——生物技术总结</a><ul><li><a href=#1-蛋白质-蛋白质相互作用-ppi-技术汇总表>1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表</a></li><li><a href=#2-蛋白质-dna-相互作用-protein-dna-技术汇总表>2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表</a></li></ul></li></ul></nav></div></div></aside><div class=container-article role=main><main class=main role=main><div class=ux-toc-inline><div class="sidebar-block ux-toc-block" aria-label=文章目录><h3>目录</h3><div id=TableOfContents class=ux-toc-body><nav id=TableOfContents><ul><li><a href=#生物分子的相互作用生物技术总结>生物分子的相互作用——生物技术总结</a><ul><li><a href=#1-蛋白质-蛋白质相互作用-ppi-技术汇总表>1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表</a></li><li><a href=#2-蛋白质-dna-相互作用-protein-dna-技术汇总表>2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表</a></li></ul></li></ul></nav></div></div></div><article class=article><h1 class=article-title>生物笔记</h1><hr class=article-title-bottom><ul class=article-meta><li class=article-meta-date><time>2026-01-30</time></li><li class=article-meta-categories><a href=/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/><i class="fa-solid fa-folder"></i>
 学习笔记
 </a>&nbsp;</li><li class=article-meta-tags><a href=/tags/%E7%94%9F%E7%89%A9/><i class="fa-solid fa-tag"></i>
 生物
 </a>&nbsp;</li><li class=article-meta-print><button class=btn-print id=print-btn title=打印文章>
-<i class="fa-solid fa-print"></i></button></li></ul><h2 id=生物分子的相互作用生物技术总结>生物分子的相互作用——生物技术总结</h2><h3 id=1-蛋白质-蛋白质相互作用-ppi-技术汇总表>1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表</h3><table><thead><tr><th style=text-align:left>名字</th><th style=text-align:left>基本原理（分子间如何作用）</th><th style=text-align:left>适用范围</th><th style=text-align:left>检测手段</th><th style=text-align:left>预期现象</th><th style=text-align:left>示例</th></tr></thead><tbody><tr><td style=text-align:left><strong>Co-IP</strong></td><td style=text-align:left>利用抗体特异性抓取蛋白 A，若 A 与 B 有空间互补形成的非共价键，则 B 被一同拉下</td><td style=text-align:left><strong>验证两个已知蛋白的相互作用；寻找某种受体蛋白的下游信号分子；研究内源性蛋白复合体的组成。</strong></td><td style=text-align:left>Western Blot 电泳检测</td><td style=text-align:left>沉淀物中同时检测到 A 和 B 蛋白条带</td><td style=text-align:left>验证受体与下游信号转导蛋白的结合</td></tr><tr><td style=text-align:left><strong>Y2H</strong></td><td style=text-align:left>蛋白 A、B 结合使 BD 与 AD 空间靠近，重建完整的转录因子以驱动转录</td><td style=text-align:left><strong>在大规模蛋白质库中筛选（海选）未知互作蛋白；在活细胞（酵母）环境中验证已知蛋白间的物理结合。</strong></td><td style=text-align:left>报告基因活性</td><td style=text-align:left>酵母变蓝或在选择培养基上生长</td><td style=text-align:left>筛选与病毒蛋白相互作用的宿主蛋白</td></tr><tr><td style=text-align:left><strong>Pull-down</strong></td><td style=text-align:left>利用固定的融合标签捕获与之有亲和力的目标蛋白</td><td style=text-align:left><strong>验证两个纯化蛋白在体外是否存在直接相互作用；从细胞提取物中捕获并鉴定未知的“猎物”蛋白。</strong></td><td style=text-align:left>SDS-PAGE 染色或 WB</td><td style=text-align:left>洗脱液中出现目标“猎物”蛋白的条带</td><td style=text-align:left>验证两个纯化蛋白在体外直接作用</td></tr><tr><td style=text-align:left><strong>BiFC</strong></td><td style=text-align:left>A、B 结合带动荧光蛋白片段重新折叠，恢复活性</td><td style=text-align:left><strong>在活细胞内实时观察蛋白结合的亚细胞定位；验证蛋白质在自然状态下是否形成二聚体或多聚体。</strong></td><td style=text-align:left>荧光显微镜观察</td><td style=text-align:left>细胞内特定部位发出荧光</td><td style=text-align:left>观察两个蛋白是否在细胞核内形成二聚体</td></tr><tr><td style=text-align:left><strong>FRET</strong></td><td style=text-align:left>供体受激发后，通过能量传给极近距离的受体</td><td style=text-align:left><strong>监测信号通路中蛋白构象动态变化；检测分子在纳米级下的精确结合距离；研究活细胞内动态作用。</strong></td><td style=text-align:left>荧光光谱改变</td><td style=text-align:left>激发 A 荧光观测到 B 的发射光谱</td><td style=text-align:left>监测受体受配体诱导后的构象改变</td></tr><tr><td style=text-align:left><strong>SPR</strong></td><td style=text-align:left>结合引起传感器表面折射率实时变化</td><td style=text-align:left><strong>定量测定分子间结合亲和力($K_d$)；实时监测分子结合与解离动力学；评估药物与靶蛋白结合强度。</strong></td><td style=text-align:left>响应信号值（RU）曲线</td><td style=text-align:left>RU 值随时间呈 S 型或线性爬升</td><td style=text-align:left>测量药物分子与靶点蛋白结合的亲和力</td></tr></tbody></table><h3 id=2-蛋白质-dna-相互作用-protein-dna-技术汇总表>2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表</h3><table><thead><tr><th style=text-align:left>名字</th><th style=text-align:left>基本原理（分子间如何作用）</th><th style=text-align:left>适用范围</th><th style=text-align:left>检测手段</th><th style=text-align:left>预期现象</th><th style=text-align:left>示例</th></tr></thead><tbody><tr><td style=text-align:left><strong>Y1H</strong></td><td style=text-align:left>待测蛋白结合 DNA 诱饵，驱动 RNA 聚合酶转录</td><td style=text-align:left><strong>验证已知转录因子与特定 DNA 序列的结合；从文库中筛选能够结合目标 DNA 序列的未知转录因子。</strong></td><td style=text-align:left>报告基因表达</td><td style=text-align:left>酵母在缺失特定营养培养基上正常生长</td><td style=text-align:left>证明转录因子 A 结合在抗盐基因启动子上</td></tr><tr><td style=text-align:left><strong>EMSA</strong></td><td style=text-align:left>蛋白结合 DNA 后体积增大，迁移速率减慢</td><td style=text-align:left><strong>在体外精确验证结合 DNA 的特定碱基序列位点；确定结合特异性及竞争性；分析结合所需辅助因子。</strong></td><td style=text-align:left>标记 DNA 探针电泳</td><td style=text-align:left>出现位置高于游离探针的“滞后带”</td><td style=text-align:left>验证转录因子是否直接结合启动子序列</td></tr><tr><td style=text-align:left><strong>ChIP</strong></td><td style=text-align:left>用甲醛将蛋白与 DNA “焊死”，再用抗体富集片段</td><td style=text-align:left><strong>在体内（活细胞真实情境）验证蛋白与 DNA 的结合；分析转录因子在全基因组范围内的靶位点。</strong></td><td style=text-align:left>PCR 或测序 (ChIP-seq)</td><td style=text-align:left>测序结果中目标基因区域出现明显“峰值”</td><td style=text-align:left>研究全基因组范围内转录因子的结合图谱</td></tr><tr><td style=text-align:left><strong>DNA 酶足迹法</strong></td><td style=text-align:left>蛋白结合 DNA 形成物理屏障，阻碍 DNase I 切割</td><td style=text-align:left><strong>精确确定蛋白质结合在 DNA 上的具体碱基位置（核苷酸级）；研究蛋白质结合对 DNA 结构的遮蔽。</strong></td><td style=text-align:left>变性聚丙烯酰胺凝胶电泳</td><td style=text-align:left>电泳图谱中出现一段没有条带的“空白区”</td><td style=text-align:left>确定阻遏蛋白结合在操作位点的具体碱基</td></tr><tr><td style=text-align:left><strong>双荧光素酶</strong></td><td style=text-align:left>转录因子结合启动子驱动荧光素酶基因转录</td><td style=text-align:left><strong>验证转录因子对靶基因的转录调节功能（促进或抑制转录）；定量评估不同启动子片段的转录活性。</strong></td><td style=text-align:left>化学发光仪检测</td><td style=text-align:left>实验组荧光强度显著高于/低于对照组</td><td style=text-align:left>证明某转录因子对靶基因有激活或抑制作用</td></tr></tbody></table></article><section id=comments class=comments-section><h2>评论</h2><div id=giscus-container><script src=https://giscus.app/client.js data-repo=an-jack511/an-jack511.github.io data-category=Comments data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-theme=light crossorigin=anonymous async></script></div><noscript>请启用 JavaScript 查看评论。</noscript></section></main><aside class=sidebar role=complementary><div class="sidebar-block pinned-posts"><h3>置顶文章</h3><ul><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E7%AC%94%E8%AE%B0/>生物笔记</a></li><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E5%9F%BA%E7%A1%80%E7%A9%BA%E9%94%99%E8%AF%AF/>生物基础空错误</a></li></ul></div><div class="sidebar-block recent-posts"><h3>近期文章</h3><ul><li><a href=/posts/2026-1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88-20260125/>杂谈 IV</a></li><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E7%AC%94%E8%AE%B0/>生物笔记</a></li><li><a href=/posts/2026-1/%E7%BA%AA%E5%BF%B5-%E4%B8%A4%E5%8D%83%E4%BA%8C%E4%BA%94%E8%87%B3%E4%B8%A4%E5%8D%83%E4%BA%8C%E5%85%AD/>两千二五至两千二六</a></li><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E5%9F%BA%E7%A1%80%E7%A9%BA%E9%94%99%E8%AF%AF/>生物基础空错误</a></li><li><a href=/posts/2025-x2/%E6%B8%B8%E8%AE%B0-%E9%AB%98%E8%80%83%E5%90%AC%E5%8F%A3-i/>高考听口 I</a></li><li><a href=/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88iii-20251130/>杂谈III</a></li><li><a href=/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9C%9F%E4%B8%AD%E5%90%8E-20251115/>期中后</a></li><li><a href=/posts/2025-x1/%E6%B2%89%E6%80%9D%E5%BD%95-%E5%91%93%E8%AF%AD%E8%AE%B0%E6%A2%A6%E7%BC%96-20251106/>呓语记梦</a></li></ul></div><div class="sidebar-block tips"><h3>快捷</h3><ul><li><a href=/archives/>文章归档</a></li></ul></div></aside></div><ul class=article-share></ul><ul class="pager article-pager"><li class="pager-newer pager-noitem">&lt; Newer</li><li class=pager-older><a href=/posts/2026-1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88-20260125/ data-toggle=tooltip data-placement=top title="杂谈 IV">Older ></a></li></ul></div><div class=site-footer><div class=copyright></div><ul class=site-footer-items><li class=site-footer-item-about><a href=/about/ title=About>About</a></li></ul><div class=powerdby>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://github.com/taikii/whiteplain>Whiteplain</a></div></div><script src=/js/ux.js></script></body></html>
+<i class="fa-solid fa-print"></i></button></li></ul><h2 id=生物分子的相互作用生物技术总结>生物分子的相互作用——生物技术总结</h2><h3 id=1-蛋白质-蛋白质相互作用-ppi-技术汇总表>1. 蛋白质-蛋白质相互作用 (PPI) 技术汇总表</h3><table><thead><tr><th style=text-align:left>名字</th><th style=text-align:left>基本原理（分子间如何作用）</th><th style=text-align:left>适用范围</th><th style=text-align:left>检测手段</th><th style=text-align:left>预期现象</th><th style=text-align:left>示例</th></tr></thead><tbody><tr><td style=text-align:left><strong>Co-IP(In vivo/体外检测)</strong></td><td style=text-align:left>利用抗体特异性抓取蛋白 A，若 A 与 B 有空间互补形成的非共价键，则 B 被一同拉下</td><td style=text-align:left><strong>验证两个已知蛋白的相互作用；寻找某种受体蛋白的下游信号分子；研究内源性蛋白复合体的组成。</strong></td><td style=text-align:left>Western Blot 电泳检测</td><td style=text-align:left>沉淀物中同时检测到 A 和 B 蛋白条带</td><td style=text-align:left>验证受体与下游信号转导蛋白的结合</td></tr><tr><td style=text-align:left><strong>Y2H(In vivo)</strong></td><td style=text-align:left>蛋白 A、B 结合使 BD 与 AD 空间靠近，重建完整的转录因子以驱动转录</td><td style=text-align:left><strong>在大规模蛋白质库中筛选（海选）未知互作蛋白；在活细胞（酵母）环境中验证已知蛋白间的物理结合。</strong></td><td style=text-align:left>报告基因活性</td><td style=text-align:left>酵母变蓝或在选择培养基上生长</td><td style=text-align:left>筛选与病毒蛋白相互作用的宿主蛋白</td></tr><tr><td style=text-align:left><strong>Pull-down(In vitro)</strong></td><td style=text-align:left>利用固定的融合标签捕获与之有亲和力的目标蛋白</td><td style=text-align:left><strong>验证两个纯化蛋白在体外是否存在直接相互作用；从细胞提取物中捕获并鉴定未知的“猎物”蛋白。</strong></td><td style=text-align:left>SDS-PAGE 染色或 WB</td><td style=text-align:left>洗脱液中出现目标“猎物”蛋白的条带</td><td style=text-align:left>验证两个纯化蛋白在体外直接作用</td></tr><tr><td style=text-align:left><strong>BiFC(In vivo)</strong></td><td style=text-align:left>A、B 结合带动荧光蛋白片段重新折叠，恢复活性</td><td style=text-align:left><strong>在活细胞内实时观察蛋白结合的亚细胞定位；验证蛋白质在自然状态下是否形成二聚体或多聚体。</strong></td><td style=text-align:left>荧光显微镜观察</td><td style=text-align:left>细胞内特定部位发出荧光</td><td style=text-align:left>观察两个蛋白是否在细胞核内形成二聚体</td></tr><tr><td style=text-align:left><strong>FRET(In vivo)</strong></td><td style=text-align:left>供体受激发后，通过能量传给极近距离的受体</td><td style=text-align:left><strong>监测信号通路中蛋白构象动态变化；检测分子在纳米级下的精确结合距离；研究活细胞内动态作用。</strong></td><td style=text-align:left>荧光光谱改变</td><td style=text-align:left>激发 A 荧光观测到 B 的发射光谱</td><td style=text-align:left>监测受体受配体诱导后的构象改变</td></tr><tr><td style=text-align:left><strong>SPR(In vitro)</strong></td><td style=text-align:left>结合引起传感器表面折射率实时变化</td><td style=text-align:left><strong>定量测定分子间结合亲和力($K_d$)；实时监测分子结合与解离动力学；评估药物与靶蛋白结合强度。</strong></td><td style=text-align:left>响应信号值（RU）曲线</td><td style=text-align:left>RU 值随时间呈 S 型或线性爬升</td><td style=text-align:left>测量药物分子与靶点蛋白结合的亲和力</td></tr></tbody></table><p><strong>注意 Co-IP 和 Pull-down 的区分：</strong> 前者体内（in vivo），后者体外（in vitro）；前者验证真实结合情况；后者证明无其他介导。</p><h3 id=2-蛋白质-dna-相互作用-protein-dna-技术汇总表>2. 蛋白质-DNA 相互作用 (Protein-DNA) 技术汇总表</h3><table><thead><tr><th style=text-align:left>名字</th><th style=text-align:left>基本原理（分子间如何作用）</th><th style=text-align:left>适用范围</th><th style=text-align:left>检测手段</th><th style=text-align:left>预期现象</th><th style=text-align:left>示例</th></tr></thead><tbody><tr><td style=text-align:left><strong>Y1H(In vivo)</strong></td><td style=text-align:left>（in vivo）待测蛋白结合 DNA 诱饵，驱动 RNA 聚合酶转录</td><td style=text-align:left><strong>验证已知转录因子与特定 DNA 序列的结合；从文库中筛选能够结合目标 DNA 序列的未知转录因子。</strong></td><td style=text-align:left>报告基因表达</td><td style=text-align:left>酵母在缺失特定营养培养基上正常生长</td><td style=text-align:left>证明转录因子 A 结合在抗盐基因启动子上</td></tr><tr><td style=text-align:left><strong>EMSA(In vitro)</strong></td><td style=text-align:left>蛋白结合 DNA 后体积增大，迁移速率减慢</td><td style=text-align:left><strong>在体外精确验证结合 DNA 的特定碱基序列位点；确定结合特异性及竞争性；分析结合所需辅助因子。</strong></td><td style=text-align:left>标记 DNA 探针电泳</td><td style=text-align:left>出现位置高于游离探针的“滞后带”</td><td style=text-align:left>验证转录因子是否直接结合启动子序列</td></tr><tr><td style=text-align:left><strong>ChIP(In vivo)</strong></td><td style=text-align:left>用甲醛将蛋白与 DNA “焊死”，再用抗体富集片段</td><td style=text-align:left><strong>在体内（活细胞真实情境）验证蛋白与 DNA 的结合；分析转录因子在全基因组范围内的靶位点。</strong></td><td style=text-align:left>PCR 或测序 (ChIP-seq)</td><td style=text-align:left>测序结果中目标基因区域出现明显“峰值”</td><td style=text-align:left>研究全基因组范围内转录因子的结合图谱</td></tr><tr><td style=text-align:left><strong>DNA 酶足迹法(In vitro)</strong></td><td style=text-align:left>蛋白结合 DNA 形成物理屏障，阻碍 DNase I 切割</td><td style=text-align:left><strong>精确确定蛋白质结合在 DNA 上的具体碱基位置（核苷酸级）；研究蛋白质结合对 DNA 结构的遮蔽。</strong></td><td style=text-align:left>变性聚丙烯酰胺凝胶电泳</td><td style=text-align:left>电泳图谱中出现一段没有条带的“空白区”</td><td style=text-align:left>确定阻遏蛋白结合在操作位点的具体碱基</td></tr><tr><td style=text-align:left><strong>双荧光素酶(In vivo)</strong></td><td style=text-align:left>转录因子结合启动子驱动荧光素酶基因转录</td><td style=text-align:left><strong>验证转录因子对靶基因的转录调节功能（促进或抑制转录）；定量评估不同启动子片段的转录活性。</strong></td><td style=text-align:left>化学发光仪检测</td><td style=text-align:left>实验组荧光强度显著高于/低于对照组</td><td style=text-align:left>证明某转录因子对靶基因有激活或抑制作用</td></tr></tbody></table></article><section id=comments class=comments-section><h2>评论</h2><div id=giscus-container><script src=https://giscus.app/client.js data-repo=an-jack511/an-jack511.github.io data-category=Comments data-mapping=pathname data-reactions-enabled=1 data-emit-metadata=0 data-theme=light crossorigin=anonymous async></script></div><noscript>请启用 JavaScript 查看评论。</noscript></section></main><aside class=sidebar role=complementary><div class="sidebar-block pinned-posts"><h3>置顶文章</h3><ul><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E7%AC%94%E8%AE%B0/>生物笔记</a></li><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E5%9F%BA%E7%A1%80%E7%A9%BA%E9%94%99%E8%AF%AF/>生物基础空错误</a></li></ul></div><div class="sidebar-block recent-posts"><h3>近期文章</h3><ul><li><a href=/posts/2026-1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88-20260125/>杂谈 IV</a></li><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E7%AC%94%E8%AE%B0/>生物笔记</a></li><li><a href=/posts/2026-1/%E7%BA%AA%E5%BF%B5-%E4%B8%A4%E5%8D%83%E4%BA%8C%E4%BA%94%E8%87%B3%E4%B8%A4%E5%8D%83%E4%BA%8C%E5%85%AD/>两千二五至两千二六</a></li><li><a href=/posts/befront/%E7%94%9F%E7%89%A9%E5%9F%BA%E7%A1%80%E7%A9%BA%E9%94%99%E8%AF%AF/>生物基础空错误</a></li><li><a href=/posts/2025-x2/%E6%B8%B8%E8%AE%B0-%E9%AB%98%E8%80%83%E5%90%AC%E5%8F%A3-i/>高考听口 I</a></li><li><a href=/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88iii-20251130/>杂谈III</a></li><li><a href=/posts/2025-x1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9C%9F%E4%B8%AD%E5%90%8E-20251115/>期中后</a></li><li><a href=/posts/2025-x1/%E6%B2%89%E6%80%9D%E5%BD%95-%E5%91%93%E8%AF%AD%E8%AE%B0%E6%A2%A6%E7%BC%96-20251106/>呓语记梦</a></li></ul></div><div class="sidebar-block tips"><h3>快捷</h3><ul><li><a href=/archives/>文章归档</a></li></ul></div></aside></div><ul class=article-share></ul><ul class="pager article-pager"><li class="pager-newer pager-noitem">&lt; Newer</li><li class=pager-older><a href=/posts/2026-1/%E9%9A%8F%E6%84%9F%E5%BD%95-%E6%9D%82%E8%B0%88-20260125/ data-toggle=tooltip data-placement=top title="杂谈 IV">Older ></a></li></ul></div><div class=site-footer><div class=copyright></div><ul class=site-footer-items><li class=site-footer-item-about><a href=/about/ title=About>About</a></li></ul><div class=powerdby>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://github.com/taikii/whiteplain>Whiteplain</a></div></div><script src=/js/ux.js></script></body></html>
