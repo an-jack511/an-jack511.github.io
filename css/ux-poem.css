@@ -1,0 +1,68 @@
+/* ========================================
+   诗歌排版样式
+   ======================================== */
+
+.ux-poem {
+  max-width: 58ch;
+  margin: 1.5rem auto;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  font-family: "思源宋体", "Source Han Serif SC", "Noto Serif SC", serif;
+  line-height: 1.85;
+}
+
+.ux-poem__title {
+  font-family: "黑体", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.ux-poem__date {
+  font-family: "楷体", "KaiTi", "STKaiti", serif;
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-bottom: 1.1rem;
+}
+
+.ux-poem__content {
+  text-align: center;
+  word-break: keep-all;
+  white-space: pre-wrap;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.ux-poem__content p {
+  margin: 0.7rem 0;
+}
+
+.ux-poem__content h3,
+.ux-poem__content h4 {
+  font-family: "黑体", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  margin: 1.1rem 0 0.4rem;
+  font-weight: 700;
+}
+
+.ux-poem__content em,
+.ux-poem__content strong {
+  font-family: "楷体", "KaiTi", "STKaiti", serif;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .ux-poem {
+    max-width: 90vw;
+    padding: 1rem 1rem;
+    margin: 1.2rem auto;
+  }
+
+  .ux-poem__title {
+    font-size: 1.45rem;
+  }
+
+  .ux-poem__content {
+    font-size: 1.02rem;
+    line-height: 1.95;
+  }
+}
