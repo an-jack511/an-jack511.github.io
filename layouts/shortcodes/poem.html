@@ -1,6 +1,6 @@
 <div class="ux-poem">
   {{ with .Get "title" }}<div class="ux-poem__title">{{ . }}</div>{{ end }}
   {{ with .Get "date" }}<div class="ux-poem__date">{{ . }}</div>{{ end }}
-  {{ $poem := .Inner | replaceRE "\n(?!\n)" "  \n" }}
+  {{ $poem := .Inner | replace "\n" "  \n" | replace "  \n  \n" "\n\n" }}
   <div class="ux-poem__content">{{ $poem | markdownify }}</div>
 </div>
