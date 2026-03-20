@@ -33,10 +33,14 @@
   line-height: 2.1;
 }
 
+/* 诗歌节段间距: 这里改为更大的空间，便于纸质排版感 */
+/* 诗歌节段间距: 这里改为更大的空间，便于纸质排版感 */
+/* 修改点：从 1rem 调大到 2rem（放大一倍） */
 .ux-poem__content p {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
+/* 诗歌节标题间距 */
 .ux-poem__content h3,
 .ux-poem__content h4 {
   font-family: "黑体", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;

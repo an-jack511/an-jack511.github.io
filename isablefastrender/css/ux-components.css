@@ -245,14 +245,32 @@ a, a:link, a:visited {
   }
 }
 
+/* 处理内容宽度溢出 */
+.article blockquote,
+.article > div,
+.article > pre,
+.article table {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.article blockquote {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 /* ========================================
    图片样式：统一大小和点击放大功能
    ======================================== */
 
 .article img {
-  max-width: 600px;
-  width: 100%;
+  max-width: 50vw;
+  max-height: 50vh;
+  width: auto;
   height: auto;
+  display: block;
+  margin: 20px auto;
   box-sizing: border-box;
   border: solid 1px lightgray;
   padding: 4px;
