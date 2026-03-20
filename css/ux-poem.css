@@ -30,17 +30,17 @@
   word-break: keep-all;
   white-space: pre-wrap;
   font-size: 1.05rem;
-  line-height: 2.0;
+  line-height: 2.1;
 }
 
 .ux-poem__content p {
-  margin: 0.7rem 0;
+  margin: 1rem 0;
 }
 
 .ux-poem__content h3,
 .ux-poem__content h4 {
   font-family: "黑体", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
-  margin: 1.1rem 0 0.4rem;
+  margin: 1.5rem 0 0.5rem;
   font-weight: 700;
 }
 
