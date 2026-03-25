@@ -143,6 +143,16 @@ blockquote blockquote blockquote blockquote {
   border: solid 1px lightgray;
   padding: 4px;
 }
+
+blockquote img,
+.article .blockquote-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem auto;
+  object-fit: contain;
+}
 .article > table {
   width: auto;
   overflow-x: auto;

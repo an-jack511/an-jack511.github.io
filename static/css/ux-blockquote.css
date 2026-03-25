@@ -20,6 +20,17 @@ blockquote {
   overflow: hidden;
 }
 
+/* 引用内图片自适应, 避免超出宽度只留滚动条 */
+blockquote img,
+.blockquote-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem auto;
+  object-fit: contain;
+}
+
 blockquote p {
   margin: 1.2em;
   margin: 0.6rem 0;
@@ -47,7 +58,7 @@ blockquote p {
 /* 展开区域 */
 .blockquote-content {
   transition: max-height .28s ease, opacity .18s;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .blockquote-content.collapsed {
@@ -55,6 +66,7 @@ blockquote p {
   opacity: 0;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 /* 折叠控制 */
