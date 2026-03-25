@@ -10,7 +10,16 @@
       blockquote.innerHTML = '';
       blockquote.appendChild(content);
       blockquote.appendChild(toggle);
-      if (content.textContent.trim().length > 300) { content.classList.add('collapsed'); toggle.innerText = '展开'; } else { toggle.innerText = '收起'; }
+      // 含图片的引用内容不默认折叠，避免“预览不全”的问题
+      if (content.querySelector('img')) {
+        content.classList.remove('collapsed');
+        toggle.innerText = '收起';
+      } else if (content.textContent.trim().length > 300) {
+        content.classList.add('collapsed');
+        toggle.innerText = '展开';
+      } else {
+        toggle.innerText = '收起';
+      }
       toggle.addEventListener('click', (e) => { e.stopPropagation(); const isCollapsed = content.classList.toggle('collapsed'); toggle.innerText = isCollapsed ? '展开' : '收起'; });
     });
   }
