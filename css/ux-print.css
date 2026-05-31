@@ -75,24 +75,25 @@
 
   /* 文章图片 */
   .article-image {
-    max-width: 100%;
-    height: auto;
-    margin: 8pt 0;
-    page-break-inside: avoid;
+    max-width: calc(100% - 16pt) !important;
+    height: auto !important;
+    margin: 8pt 0 !important;
+    display: block !important;
   }
 
   /* 文章内容中的图片 */
   img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    max-height: 85vh;
-    page-break-inside: avoid;
-    break-inside: avoid;
-    visibility: visible !important;
     display: block !important;
+    visibility: visible !important;
+    max-width: calc(100% - 16pt) !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: calc((297mm - 30mm) / 3) !important;
+    object-fit: contain !important;
     -webkit-print-color-adjust: exact !important;
     color-adjust: exact !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   /* 打印时图片缩放但不要被截断 */
@@ -101,37 +102,20 @@
   blockquote img,
   .blockquote-content img,
   .ux-block img,
-  .ux-block__content img {
-    max-width: calc(100vw - 20mm) !important;
-    max-height: 85vh !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0.6rem auto !important;
-    display: block !important;
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-    overflow: visible !important;
-  }
-
-  /* 如果图片太高，则允许截断以防空白过大 */
-  .article img[src], blockquote img[src] {
-    page-break-inside: auto !important;
-    break-inside: auto !important;
-  }
-
-  /* 打印时保留图片尺寸, 避免被可选小图规则覆盖*/
-  .article img,
-  .article-image,
-  blockquote img,
-  .blockquote-content img,
+  .ux-block__content img,
   img[width*="100"],
   img[width*="200"],
   img[width*="300"] {
-    max-width: 100% !important;
-    max-height: none !important;
-    height: auto !important;
+    max-width: calc(100% - 16pt) !important;
+    max-height: calc((297mm - 30mm) / 3) !important;
     width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 12pt auto !important;
+    display: block !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   /* 允许块级内容在页间截断，避免大片空白 */
