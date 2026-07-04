@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://an-jack511.github.io/about/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta name="generator" content="Hugo 0.162.1">
+  <meta name="generator" content="Hugo 0.163.3">
   <link href="/about/index.xml" rel="alternate" type="application/rss+xml" title="AnJaCk" />
   <link href="/about/index.xml" rel="feed" type="application/rss+xml" title="AnJaCk" />
   <link rel="stylesheet" href="/css/style.css" media="all" />
@@ -40,7 +40,21 @@
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true,
-      packages: {'[+]': ['physics']}
+      packages: {'[+]': ['physics']},
+      macros: {
+        dif: ['\\mathop{}\\!\\mathrm{d}#1', 1],
+        dd: ['\\mathop{}\\!\\mathrm{d}#1', 1],
+        D: ['\\frac{\\dif #1}{\\dif #2}', 2],
+        DD: ['\\frac{\\dif^2 #1}{\\dif #2^2}', 2],
+        Dn: ['\\frac{\\dif^{#3} #1}{\\dif #2^{#3}}', 3],
+        ddx: ['\\frac{\\dif #1}{\\dif x}', 1],
+        ddt: ['\\frac{\\dif #1}{\\dif t}', 1],
+        pD: ['\\frac{\\partial #1}{\\partial #2}', 2],
+        pDD: ['\\frac{\\partial^2 #1}{\\partial #2^2}', 2],
+        pDn: ['\\frac{\\partial^{#3} #1}{\\partial #2^{#3}}', 3],
+        bf: ['\\mathbf{#1}', 1],
+        bm: ['\\boldsymbol{#1}', 1]
+      }
     },
     options: {
       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
