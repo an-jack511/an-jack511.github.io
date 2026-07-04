@@ -103,12 +103,26 @@ KaTeX / MathJax 常用符号速查
 - 行内公式：`$a^2 + b^2 = c^2$`。
 - 行间公式：`$$\int_0^1 x^2 dx$$`。
 - 常用符号：
+   - 加粗（Markdown）：`**文本**` 或 `__文本__`
+   - 公式内加粗：`\mathbf{x}`、`\bm{\alpha}` 或自定义宏 `\bf{x}`、`\bm{\alpha}`
    - 上标/下标：`x^2`, `a_{i}`
    - 分数：`\frac{a}{b}`
    - 根号：`\sqrt{2}`
    - 求和：`\sum_{i=1}^n i`
    - 积分：`\int_a^b f(x) dx`
+   - 求导：`\D{y}{x}`、`\DD{y}{x}`、`\Dn{y}{x}{n}`
+   - 微分：`\dif x`、`\dd x`（`d` 是正体）
    - 希腊字母：`\alpha, \beta, \gamma` 等
+
+快速写法：
+- 粗体文本：`**粗体**` 或 `__粗体__`
+- 公式内粗体：`$\mathbf{x}$`、`$\bm{\alpha}$`、`$\bf{x}$`
+- 变量微分：`\dif x`、`\dd x`
+- 一阶导数：`\D{f}{x}`
+- 二阶导数：`\DD{f}{x}`
+- n 阶导数：`\Dn{f}{x}{n}`
+- 常见记号：`\ddx{y}`, `\ddt{r}`
+- 偏导数：`\pD{u}{x}`, `\pDD{u}{x}`, `\pDn{u}{x}{n}`
 
 进阶：如果你使用 MathJax 的 `physics` 扩展，可以直接写 `\vec{v}`、`\nabla` 等符号。
 
