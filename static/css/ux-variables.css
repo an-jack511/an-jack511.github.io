@@ -3,43 +3,38 @@
    ======================================== */
 
 :root {
-  --ux-bg: #f7f5f0;
+  --ux-bg: #f5f7fb;
   --ux-ink: var(--text);
-  --ux-muted: #716d65;
-  --accent: #a24f35;
-  --accent-soft: #efe0d7;
-  --card-bg: #fffdf9;
-  --ux-page-shift: 0px;
+  --ux-muted: rgba(0,0,0,0.54);
+  --accent: #3498db;
+  --card-bg: #f3f4f6;
+  --ux-page-shift: 120px; /* 页面右移量，可调（已调整为 120px） */
   /* 自定义主题变量（来自 custom.css） */
-  --bg: #f7f5f0;
-  --text: #272522;
-  --link: #8f422d;
-  --shadow: 0 18px 50px rgba(62, 52, 39, 0.08);
+  --bg: #ffffff;
+  --text: #111827;
+  --link: #1d4ed8;
 }
 
 /* 暗色主题（通过 body.dark-mode 或 data-theme="dark" 启用） */
 [data-theme="dark"],
 body.dark-mode {
-  --bg: #171715;
-  --text: #e9e4dc;
-  --link: #e0a58e;
-  --accent: #d3886d;
-  --accent-soft: #3a2923;
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  --bg: #0b0f12;
+  --text: #e6e6e6;
+  --link: #60a5fa;
 }
 
 /* 深色模式下的卡片与表面颜色、边框变量 */
 [data-theme="dark"],
 body.dark-mode {
-  --card-bg: #201f1c;
+  --card-bg: #111315;
   --surface: rgba(255,255,255,0.02);
-  --border: rgba(255,255,255,0.10);
+  --border: rgba(255,255,255,0.06);
   --ux-ink: var(--text);
   --ux-muted: rgba(255,255,255,0.72);
 }
 
 /* 默认（亮色）边框与表面 */
 :root {
-  --surface: #fffdf9;
-  --border: rgba(64, 54, 42, 0.12);
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.06);
 }

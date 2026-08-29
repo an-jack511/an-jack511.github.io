@@ -12,10 +12,13 @@
     const tocList = tocElement.querySelector('ul');
     if(tocList){ modalContent.appendChild(tocList.cloneNode(true)); }
     modal.appendChild(modalContent); document.body.appendChild(btn); document.body.appendChild(modal);
-    btn.addEventListener('click', ()=> modal.classList.add('active'));
-    closeBtn.addEventListener('click', ()=> modal.classList.remove('active'));
-    modal.addEventListener('click', e=>{ if(e.target===modal) modal.classList.remove('active'); });
-    modalContent.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> modal.classList.remove('active')));
+    const open = ()=> { modal.classList.add('active'); document.documentElement.classList.add('toc-open'); closeBtn.focus(); };
+    const close = ()=> { modal.classList.remove('active'); document.documentElement.classList.remove('toc-open'); btn.focus(); };
+    btn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', e=>{ if(e.target===modal) close(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape' && modal.classList.contains('active')) close(); });
+    modalContent.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
   }
 
   function positionTOC(){
@@ -34,7 +37,7 @@
     // find toc element robustly
     const tocElement = document.querySelector('.ux-toc-inline #TableOfContents, aside.ux-toc #TableOfContents, .ux-toc-block #TableOfContents, #TableOfContents');
     if(tocElement) createMobileToc(tocElement);
-    positionTOC(); window.addEventListener('resize', positionTOC); window.addEventListener('orientationchange', positionTOC); window.addEventListener('scroll', positionTOC, {passive:true});
+    positionTOC(); window.addEventListener('resize', positionTOC); window.addEventListener('orientationchange', positionTOC);
     const articleNode = document.querySelector('.main .article'); if(articleNode && window.MutationObserver){ const mo = new MutationObserver(()=> positionTOC()); mo.observe(articleNode, { childList:true, subtree:true }); }
   }
 

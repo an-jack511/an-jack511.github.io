@@ -6,14 +6,13 @@
 .site-navi {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .site-title {
   margin: 0;
-  font-size: 1.35rem;
-  letter-spacing: .08em;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 
@@ -22,22 +21,20 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 6px;
-  margin-left: auto;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .site-navi-items a {
   color: var(--text);
   text-decoration: none;
-  padding: 7px 11px;
-  border-radius: 999px;
+  padding: 4px 8px;
+  border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 
 .site-navi-items a:hover {
-  background-color: var(--accent-soft);
-  color: var(--accent);
+  background-color: var(--surface);
 }
 
 /* 页头吸顶 */
@@ -45,15 +42,13 @@
   position: sticky;
   top: 0;
   z-index: 1200;
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  backdrop-filter: blur(16px);
+  background: transparent;
   border-bottom: 1px solid var(--border);
-  max-width: none;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 14px max(28px, calc((100vw - 1120px) / 2));
+  padding-left: 24px;
+  padding-right: 24px;
 }
-
-.site-header-bottom { display: none; }
 
 /* 吸顶 header 滚动后的背景 */
 .site-header.scrolled, header.scrolled {

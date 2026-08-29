@@ -44,6 +44,15 @@
   }
 }
 
+/* 中等宽度没有足够空间放置浮动目录时，改为正文内目录。 */
+@media (min-width: 769px) and (max-width: 1359px) {
+  .ux-toc-inline {
+    display: block;
+    max-width: 752px;
+    margin: 0 auto 24px;
+  }
+}
+
 /* TOC 基础样式 */
 .ux-toc {
   position: relative;
@@ -83,7 +92,7 @@
   color: var(--ux-ink);
   text-decoration: none;
   display: inline-block;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 /* 滚动条样式 */
@@ -373,4 +382,44 @@ body:not(.dark-mode) .mobile-toc-btn {
   background: var(--card-bg);
   color: var(--text) !important;
   border-color: var(--border);
+}
+
+/* 统一移动目录为右侧抽屉，覆盖上方遗留的重复弹窗声明。 */
+.mobile-toc-modal {
+  align-items: stretch;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.mobile-toc-content {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: min(86vw, 360px);
+  max-width: 360px;
+  max-height: none;
+  height: 100dvh;
+  border-radius: 0;
+  padding: 18px;
+}
+
+.mobile-toc-content nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.mobile-toc-content nav ul ul {
+  padding-left: 1rem;
+}
+
+.mobile-toc-content a {
+  display: block;
+  padding: 7px 8px;
+  line-height: 1.45;
+}
+
+html.toc-open,
+html.toc-open body {
+  overflow: hidden;
 }

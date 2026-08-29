@@ -11,7 +11,7 @@
 {{ if and (not $disabled) $hasItems }}
   <div class="sidebar-block ux-toc-block" aria-label="文章目录">
     <h3>目录</h3>
-    <div id="TableOfContents" class="ux-toc-body">
+    <div class="ux-toc-body">
       {{ $toc | safeHTML }}
     </div>
   </div>
