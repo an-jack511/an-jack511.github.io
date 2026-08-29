@@ -6,13 +6,14 @@
 .site-navi {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .site-title {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
+  letter-spacing: .08em;
   flex-shrink: 0;
 }
 
@@ -21,20 +22,22 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 16px;
+  gap: 6px;
+  margin-left: auto;
   flex-wrap: wrap;
 }
 
 .site-navi-items a {
   color: var(--text);
   text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 7px 11px;
+  border-radius: 999px;
   transition: background-color 0.2s ease;
 }
 
 .site-navi-items a:hover {
-  background-color: var(--surface);
+  background-color: var(--accent-soft);
+  color: var(--accent);
 }
 
 /* 页头吸顶 */
@@ -42,13 +45,15 @@
   position: sticky;
   top: 0;
   z-index: 1200;
-  background: transparent;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
-  max-width: 1100px;
+  max-width: none;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 14px max(28px, calc((100vw - 1120px) / 2));
 }
+
+.site-header-bottom { display: none; }
 
 /* 吸顶 header 滚动后的背景 */
 .site-header.scrolled, header.scrolled {

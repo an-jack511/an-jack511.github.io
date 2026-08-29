@@ -5,12 +5,12 @@
 /* 布局容器 */
 .container-article {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 28px;
+  grid-template-columns: minmax(0, 760px) 280px;
+  gap: 44px;
   align-items: start;
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 44px 28px 72px;
 }
 
 .main {
@@ -20,16 +20,14 @@
 
 .sidebar {
   grid-column: 2;
-  width: 320px;
+  width: 280px;
   position: sticky;
-  top: 72px;
+  top: 92px;
   align-self: flex-start;
 }
 
 /* 全站整体平移：为左侧 TOC 预留空间 */
-.site-header, header, .container-article, .site-footer {
-  transform: translateX(var(--ux-page-shift));
-}
+.site-header, header, .container-article, .site-footer { transform: none; }
 
 /* 在小屏上禁用页面右移 */
 @media (max-width: 768px) {
@@ -60,10 +58,16 @@
 
 /* 列表项间距：文章卡片之间的垂直间隙 */
 .list .article {
-  margin-bottom: 48px;
-  padding: 0;
-  border: none;
+  margin-bottom: 22px;
+  padding: 28px 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, border-color .2s ease;
 }
+
+.list .article:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent) 38%, var(--border)); }
 
 .list .article:last-child {
   margin-bottom: 0;
@@ -72,10 +76,16 @@
 /* 侧栏块 */
 .sidebar-block {
   background: var(--card-bg);
-  padding: 16px;
-  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
   margin-bottom: 16px;
 }
+
+.sidebar-block h3 { color: var(--accent); letter-spacing: .08em; font-size: .82rem; text-transform: uppercase; }
+.sidebar-block ul { list-style: none; padding: 0; }
+.sidebar-block a { display: block; padding: 5px 0; line-height: 1.45; }
+.sidebar-block a:hover { color: var(--accent); }
 
 .sidebar-block h3 {
   margin: 0 0 8px 0;

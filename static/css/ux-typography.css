@@ -6,21 +6,29 @@
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-size: 16px;
-  line-height: 1.6;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.78;
+  margin: 0;
   transition: background-color .18s ease, color .18s ease;
 }
 
 /* 标题大小 */
 h1 {
-  font-size: 2.4rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1.2rem;
 }
 
 h2 {
-  font-size: 2.0rem;
+  font-size: clamp(1.45rem, 2.7vw, 2rem);
   margin-bottom: 1.0rem;
 }
+
+h1, h2, h3, .site-navi, .article-meta, .article-readmore, .site-footer {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+::selection { background: var(--accent-soft); color: var(--text); }
 
 /* 访问过的链接保持朴素但可点击 */
 a:visited {
